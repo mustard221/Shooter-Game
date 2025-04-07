@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dx0sa6a24ghjo"]
+
+[ext_resource type="Script" path="res://player.gd" id="2_u5fw2"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(553, 280)
+script = ExtResource("2_u5fw2")

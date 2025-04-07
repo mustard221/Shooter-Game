@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dx0sa6a24ghjo"]
+
+[ext_resource type="Script" path="res://player.gd" id="2_u5fw2"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" type="Sprite2D" parent="."]
+position = Vector2(773, 353)
+script = ExtResource("2_u5fw2")
+size = null
+line_size = null
+white = null
+turn_rate = null
+speed = 100.0
+ammo = null
