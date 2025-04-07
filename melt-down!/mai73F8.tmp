@@ -4,20 +4,21 @@
 [ext_resource type="Script" path="res://player.gd" id="2_u5fw2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qw5tt"]
-size = Vector2(102, 153)
+size = Vector2(144, 78)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(333, 199)
+position = Vector2(750, 352)
 script = ExtResource("2_u5fw2")
+turn_rate = null
+speed = null
+back_speed = null
+turn = null
+traction = null
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
 script = ExtResource("2_rqshe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(44, 51)
 shape = SubResource("RectangleShape2D_qw5tt")
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(44, 51)

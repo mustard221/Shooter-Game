@@ -1,18 +1,38 @@
 extends CharacterBody2D
 
-@export var turn_rate:float=50
-@export var speed:float=100
-
-var acceleration:Vector2
+@export var speed: float = 1500
+@export var back_speed: float = 400  # positive value, we negate it in code
+@export var turn_speed_deg: float = 90
+@export var friction: float = -5  # keep small for now to see movement
 
 func _physics_process(delta: float) -> void:
-	if ! Engine.is_editor_hint():	
-		# rotate w/ left and right
-		var l = Input.get_axis("turn_left_input", "turn_right_input")
-		rotate(l * delta * deg_to_rad(turn_rate))
-		
-		# move by applying acceration
-		var m = Input.get_axis("forward_input", "back_input")
-		acceleration = transform.y * m * speed
+	var moving = false
+
+	# Movement input
+	if Input.is_action_pressed("forward_input"):
+		var acceleration = -transform.y * speed
 		velocity += acceleration * delta
-		move_and_slide()
+		moving = true
+		print("Moving forward")
+
+	if Input.is_action_pressed("back_input"):
+		var acceleration = transform.y * back_speed
+		velocity += acceleration * delta
+		moving = true
+
+	# Rotation input (only rotate when moving)
+	if moving:
+		var turning_input = Input.get_axis("turn_left_input", "turn_right_input")
+		var turn_speed = deg_to_rad(turn_speed_deg)
+		turn_speed = turn_speed / 2
+		rotation += turning_input * turn_speed * delta
+
+	# Apply friction
+	apply_friction(delta)
+
+	# Move character
+	move_and_slide()
+
+func apply_friction(delta):
+	var friction_force = velocity * friction * delta
+	velocity += friction_force
