@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j32y63t384lv"
-path="res://.godot/imported/BL001.png-3a2f385740d169363dca9aebd50e3ff5.ctex"
+uid="uid://gcis5hw7is18"
+path="res://.godot/imported/road4.png-196c6f8cee6b43cfea9906180f376a00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CP_V1.1.0_nyknck/CP_V1.1.0_nyknck/Animations/BL001.png"
-dest_files=["res://.godot/imported/BL001.png-3a2f385740d169363dca9aebd50e3ff5.ctex"]
+source_file="res://Assets/road4.png"
+dest_files=["res://.godot/imported/road4.png-196c6f8cee6b43cfea9906180f376a00.ctex"]
 
 [params]
 
