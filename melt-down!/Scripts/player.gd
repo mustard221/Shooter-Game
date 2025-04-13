@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var speed: float = 1000
 @export var back_speed: float = 400  # positive value, we negate it in code
-@export var turn_speed_deg: float = 150
+@export var turn_speed_deg: float = 250
 @export var friction: float = -5  # keep small for now to see movement
 
 func _physics_process(delta: float) -> void:

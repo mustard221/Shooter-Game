@@ -1,475 +1,130 @@
-[gd_scene load_steps=8 format=3 uid="uid://dx0sa6a24ghjo"]
+[gd_scene load_steps=12 format=3 uid="uid://dx0sa6a24ghjo"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_cdrgg"]
 [ext_resource type="Texture2D" uid="uid://c8tct87y27vml" path="res://Assets/road1.png" id="1_egjng"]
 [ext_resource type="Texture2D" uid="uid://di4kbc1hkgrut" path="res://Assets/van.png" id="2_1epeb"]
-[ext_resource type="Texture2D" uid="uid://cm23nberx6t5y" path="res://Assets/road2.png" id="2_o4t5q"]
+[ext_resource type="Texture2D" uid="uid://br72c5vt28w2l" path="res://Assets/road7.png" id="2_t6tpg"]
+[ext_resource type="Texture2D" uid="uid://c6ycbpmho1d6p" path="res://Assets/road3.png" id="3_03adt"]
 [ext_resource type="Texture2D" uid="uid://cc63u7y0hckvi" path="res://Assets/turret.png" id="3_je1ue"]
 [ext_resource type="Script" path="res://Scenes/cone.gd" id="4_ixduw"]
+[ext_resource type="Texture2D" uid="uid://dqxsroh60f4bt" path="res://Assets/ezgif-split/ezgif-split/tile010.png" id="5_i2opb"]
+[ext_resource type="Texture2D" uid="uid://ce1yj2gvojo2c" path="res://Assets/ezgif-split/ezgif-split/tile015.png" id="6_7jro8"]
+[ext_resource type="Texture2D" uid="uid://b52o20kcxhtf" path="res://Assets/roa54.png" id="8_na6wm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qw5tt"]
 size = Vector2(30, 46)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Road1" type="Sprite2D" parent="."]
-position = Vector2(391, 183)
-texture = ExtResource("1_egjng")
+[node name="Road" type="Node2D" parent="."]
 
-[node name="Road2" type="Sprite2D" parent="Road1"]
+[node name="Roa55" type="Sprite2D" parent="Road"]
 texture_filter = 1
-position = Vector2(-16, -15)
+texture_repeat = 2
+position = Vector2(579, -26.6847)
 rotation = 1.5708
-texture = ExtResource("2_o4t5q")
+scale = Vector2(1.63175, 3)
+texture = ExtResource("8_na6wm")
 
-[node name="Road3" type="Sprite2D" parent="Road1"]
-position = Vector2(-32, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road1" type="Sprite2D" parent="Road1"]
-position = Vector2(0, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road4" type="Sprite2D" parent="Road1"]
+[node name="Roa54" type="Sprite2D" parent="Road/Roa55"]
 texture_filter = 1
+texture_repeat = 2
+position = Vector2(16.7196, -2.63144e-16)
+scale = Vector2(1.01852, 1)
+texture = ExtResource("8_na6wm")
+
+[node name="Roa56" type="Sprite2D" parent="Road/Roa55"]
+texture_filter = 1
+texture_repeat = 2
 position = Vector2(-16, 0)
+texture = ExtResource("8_na6wm")
+
+[node name="Road4" type="Sprite2D" parent="Road"]
+position = Vector2(475, -2)
 rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road5" type="Sprite2D" parent="Road1"]
-position = Vector2(-32, 0)
+scale = Vector2(2, 10)
 texture = ExtResource("1_egjng")
 
-[node name="Road6" type="Sprite2D" parent="Road1"]
-position = Vector2(0, -31)
-texture = ExtResource("1_egjng")
-
-[node name="Road2" type="Sprite2D" parent="Road1/Road6"]
+[node name="Road8" type="Sprite2D" parent="Road"]
 texture_filter = 1
-position = Vector2(-16, -15)
+position = Vector2(459, -26)
+scale = Vector2(12, 1)
+texture = ExtResource("2_t6tpg")
+
+[node name="Road5" type="Sprite2D" parent="Road"]
+position = Vector2(434.999, -50)
 rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road3" type="Sprite2D" parent="Road1/Road6"]
-position = Vector2(-32, -15)
+scale = Vector2(2, 15.0025)
 texture = ExtResource("1_egjng")
 
-[node name="Road1" type="Sprite2D" parent="Road1/Road6"]
-position = Vector2(0, -15)
+[node name="Road3" type="Sprite2D" parent="Road"]
+position = Vector2(334, 134)
+scale = Vector2(2.375, 21)
 texture = ExtResource("1_egjng")
 
-[node name="Road4" type="Sprite2D" parent="Road1/Road6"]
+[node name="Road7" type="Sprite2D" parent="Road"]
 texture_filter = 1
-position = Vector2(-16, 0)
+position = Vector2(355, 142)
 rotation = 1.5708
-texture = ExtResource("2_o4t5q")
+scale = Vector2(20, 1)
+texture = ExtResource("2_t6tpg")
 
-[node name="Road5" type="Sprite2D" parent="Road1/Road6"]
-position = Vector2(-32, 0)
+[node name="Road2" type="Sprite2D" parent="Road"]
+position = Vector2(379, 142)
+scale = Vector2(2, 20)
 texture = ExtResource("1_egjng")
 
-[node name="Road7" type="Sprite2D" parent="Road1"]
-position = Vector2(0, 62)
-texture = ExtResource("1_egjng")
-
-[node name="Road2" type="Sprite2D" parent="Road1/Road7"]
+[node name="Road6" type="Sprite2D" parent="Road"]
 texture_filter = 1
-position = Vector2(-16, -15)
+position = Vector2(355, -26)
 rotation = 1.5708
-texture = ExtResource("2_o4t5q")
+texture = ExtResource("3_03adt")
 
-[node name="Road3" type="Sprite2D" parent="Road1/Road7"]
-position = Vector2(-32, -15)
+[node name="Road9" type="Sprite2D" parent="Road"]
+position = Vector2(722.868, -1.99999)
+rotation = 1.5708
+scale = Vector2(2, 15.0191)
 texture = ExtResource("1_egjng")
 
-[node name="Road1" type="Sprite2D" parent="Road1/Road7"]
-position = Vector2(0, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road4" type="Sprite2D" parent="Road1/Road7"]
+[node name="Road10" type="Sprite2D" parent="Road"]
 texture_filter = 1
-position = Vector2(-16, 0)
+position = Vector2(723.01, -26)
+scale = Vector2(15.0013, 1)
+texture = ExtResource("2_t6tpg")
+
+[node name="Road11" type="Sprite2D" parent="Road"]
+position = Vector2(723.02, -50)
 rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road5" type="Sprite2D" parent="Road1/Road7"]
-position = Vector2(-32, 0)
+scale = Vector2(2, 15.0025)
 texture = ExtResource("1_egjng")
 
-[node name="Road6" type="Sprite2D" parent="Road1/Road7"]
-position = Vector2(0, -31)
-texture = ExtResource("1_egjng")
-
-[node name="Road2" type="Sprite2D" parent="Road1/Road7/Road6"]
+[node name="Tile010" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-16, -15)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
+texture_repeat = 2
+position = Vector2(399.5, 294.5)
+texture = ExtResource("5_i2opb")
 
-[node name="Road3" type="Sprite2D" parent="Road1/Road7/Road6"]
-position = Vector2(-32, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road1" type="Sprite2D" parent="Road1/Road7/Road6"]
-position = Vector2(0, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road4" type="Sprite2D" parent="Road1/Road7/Road6"]
+[node name="Tile011" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-16, 0)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
+texture_repeat = 2
+position = Vector2(399.5, 278.5)
+texture = ExtResource("5_i2opb")
 
-[node name="Road5" type="Sprite2D" parent="Road1/Road7/Road6"]
-position = Vector2(-32, 0)
-texture = ExtResource("1_egjng")
-
-[node name="Road8" type="Sprite2D" parent="Road1"]
-position = Vector2(0, 124)
-texture = ExtResource("1_egjng")
-
-[node name="Road2" type="Sprite2D" parent="Road1/Road8"]
+[node name="Tile015" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-16, -15)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road3" type="Sprite2D" parent="Road1/Road8"]
-position = Vector2(-32, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road1" type="Sprite2D" parent="Road1/Road8"]
-position = Vector2(0, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road4" type="Sprite2D" parent="Road1/Road8"]
-texture_filter = 1
-position = Vector2(-16, 0)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road5" type="Sprite2D" parent="Road1/Road8"]
-position = Vector2(-32, 0)
-texture = ExtResource("1_egjng")
-
-[node name="Road6" type="Sprite2D" parent="Road1/Road8"]
-position = Vector2(0, -31)
-texture = ExtResource("1_egjng")
-
-[node name="Road2" type="Sprite2D" parent="Road1/Road8/Road6"]
-texture_filter = 1
-position = Vector2(-16, -15)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road3" type="Sprite2D" parent="Road1/Road8/Road6"]
-position = Vector2(-32, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road1" type="Sprite2D" parent="Road1/Road8/Road6"]
-position = Vector2(0, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road4" type="Sprite2D" parent="Road1/Road8/Road6"]
-texture_filter = 1
-position = Vector2(-16, 0)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road5" type="Sprite2D" parent="Road1/Road8/Road6"]
-position = Vector2(-32, 0)
-texture = ExtResource("1_egjng")
-
-[node name="Road7" type="Sprite2D" parent="Road1/Road8"]
-position = Vector2(0, 62)
-texture = ExtResource("1_egjng")
-
-[node name="Road2" type="Sprite2D" parent="Road1/Road8/Road7"]
-texture_filter = 1
-position = Vector2(-16, -15)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road3" type="Sprite2D" parent="Road1/Road8/Road7"]
-position = Vector2(-32, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road1" type="Sprite2D" parent="Road1/Road8/Road7"]
-position = Vector2(0, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road4" type="Sprite2D" parent="Road1/Road8/Road7"]
-texture_filter = 1
-position = Vector2(-16, 0)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road5" type="Sprite2D" parent="Road1/Road8/Road7"]
-position = Vector2(-32, 0)
-texture = ExtResource("1_egjng")
-
-[node name="Road6" type="Sprite2D" parent="Road1/Road8/Road7"]
-position = Vector2(0, -31)
-texture = ExtResource("1_egjng")
-
-[node name="Road2" type="Sprite2D" parent="Road1/Road8/Road7/Road6"]
-texture_filter = 1
-position = Vector2(-16, -15)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road3" type="Sprite2D" parent="Road1/Road8/Road7/Road6"]
-position = Vector2(-32, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road1" type="Sprite2D" parent="Road1/Road8/Road7/Road6"]
-position = Vector2(0, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road4" type="Sprite2D" parent="Road1/Road8/Road7/Road6"]
-texture_filter = 1
-position = Vector2(-16, 0)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road5" type="Sprite2D" parent="Road1/Road8/Road7/Road6"]
-position = Vector2(-32, 0)
-texture = ExtResource("1_egjng")
-
-[node name="Road9" type="Sprite2D" parent="Road1"]
-position = Vector2(0, -247)
-texture = ExtResource("1_egjng")
-
-[node name="Road2" type="Sprite2D" parent="Road1/Road9"]
-texture_filter = 1
-position = Vector2(-16, -15)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road3" type="Sprite2D" parent="Road1/Road9"]
-position = Vector2(-32, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road1" type="Sprite2D" parent="Road1/Road9"]
-position = Vector2(0, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road4" type="Sprite2D" parent="Road1/Road9"]
-texture_filter = 1
-position = Vector2(-16, 0)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road5" type="Sprite2D" parent="Road1/Road9"]
-position = Vector2(-32, 0)
-texture = ExtResource("1_egjng")
-
-[node name="Road6" type="Sprite2D" parent="Road1/Road9"]
-position = Vector2(0, -31)
-texture = ExtResource("1_egjng")
-
-[node name="Road2" type="Sprite2D" parent="Road1/Road9/Road6"]
-texture_filter = 1
-position = Vector2(-16, -15)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road3" type="Sprite2D" parent="Road1/Road9/Road6"]
-position = Vector2(-32, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road1" type="Sprite2D" parent="Road1/Road9/Road6"]
-position = Vector2(0, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road4" type="Sprite2D" parent="Road1/Road9/Road6"]
-texture_filter = 1
-position = Vector2(-16, 0)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road5" type="Sprite2D" parent="Road1/Road9/Road6"]
-position = Vector2(-32, 0)
-texture = ExtResource("1_egjng")
-
-[node name="Road7" type="Sprite2D" parent="Road1/Road9"]
-position = Vector2(0, 62)
-texture = ExtResource("1_egjng")
-
-[node name="Road2" type="Sprite2D" parent="Road1/Road9/Road7"]
-texture_filter = 1
-position = Vector2(-16, -15)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road3" type="Sprite2D" parent="Road1/Road9/Road7"]
-position = Vector2(-32, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road1" type="Sprite2D" parent="Road1/Road9/Road7"]
-position = Vector2(0, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road4" type="Sprite2D" parent="Road1/Road9/Road7"]
-texture_filter = 1
-position = Vector2(-16, 0)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road5" type="Sprite2D" parent="Road1/Road9/Road7"]
-position = Vector2(-32, 0)
-texture = ExtResource("1_egjng")
-
-[node name="Road6" type="Sprite2D" parent="Road1/Road9/Road7"]
-position = Vector2(0, -31)
-texture = ExtResource("1_egjng")
-
-[node name="Road2" type="Sprite2D" parent="Road1/Road9/Road7/Road6"]
-texture_filter = 1
-position = Vector2(-16, -15)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road3" type="Sprite2D" parent="Road1/Road9/Road7/Road6"]
-position = Vector2(-32, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road1" type="Sprite2D" parent="Road1/Road9/Road7/Road6"]
-position = Vector2(0, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road4" type="Sprite2D" parent="Road1/Road9/Road7/Road6"]
-texture_filter = 1
-position = Vector2(-16, 0)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road5" type="Sprite2D" parent="Road1/Road9/Road7/Road6"]
-position = Vector2(-32, 0)
-texture = ExtResource("1_egjng")
-
-[node name="Road8" type="Sprite2D" parent="Road1/Road9"]
-position = Vector2(0, 124)
-texture = ExtResource("1_egjng")
-
-[node name="Road2" type="Sprite2D" parent="Road1/Road9/Road8"]
-texture_filter = 1
-position = Vector2(-16, -15)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road3" type="Sprite2D" parent="Road1/Road9/Road8"]
-position = Vector2(-32, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road1" type="Sprite2D" parent="Road1/Road9/Road8"]
-position = Vector2(0, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road4" type="Sprite2D" parent="Road1/Road9/Road8"]
-texture_filter = 1
-position = Vector2(-16, 0)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road5" type="Sprite2D" parent="Road1/Road9/Road8"]
-position = Vector2(-32, 0)
-texture = ExtResource("1_egjng")
-
-[node name="Road6" type="Sprite2D" parent="Road1/Road9/Road8"]
-position = Vector2(0, -31)
-texture = ExtResource("1_egjng")
-
-[node name="Road2" type="Sprite2D" parent="Road1/Road9/Road8/Road6"]
-texture_filter = 1
-position = Vector2(-16, -15)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road3" type="Sprite2D" parent="Road1/Road9/Road8/Road6"]
-position = Vector2(-32, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road1" type="Sprite2D" parent="Road1/Road9/Road8/Road6"]
-position = Vector2(0, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road4" type="Sprite2D" parent="Road1/Road9/Road8/Road6"]
-texture_filter = 1
-position = Vector2(-16, 0)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road5" type="Sprite2D" parent="Road1/Road9/Road8/Road6"]
-position = Vector2(-32, 0)
-texture = ExtResource("1_egjng")
-
-[node name="Road7" type="Sprite2D" parent="Road1/Road9/Road8"]
-position = Vector2(0, 62)
-texture = ExtResource("1_egjng")
-
-[node name="Road2" type="Sprite2D" parent="Road1/Road9/Road8/Road7"]
-texture_filter = 1
-position = Vector2(-16, -15)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road3" type="Sprite2D" parent="Road1/Road9/Road8/Road7"]
-position = Vector2(-32, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road1" type="Sprite2D" parent="Road1/Road9/Road8/Road7"]
-position = Vector2(0, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road4" type="Sprite2D" parent="Road1/Road9/Road8/Road7"]
-texture_filter = 1
-position = Vector2(-16, 0)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road5" type="Sprite2D" parent="Road1/Road9/Road8/Road7"]
-position = Vector2(-32, 0)
-texture = ExtResource("1_egjng")
-
-[node name="Road6" type="Sprite2D" parent="Road1/Road9/Road8/Road7"]
-position = Vector2(0, -31)
-texture = ExtResource("1_egjng")
-
-[node name="Road2" type="Sprite2D" parent="Road1/Road9/Road8/Road7/Road6"]
-texture_filter = 1
-position = Vector2(-16, -15)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road3" type="Sprite2D" parent="Road1/Road9/Road8/Road7/Road6"]
-position = Vector2(-32, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road1" type="Sprite2D" parent="Road1/Road9/Road8/Road7/Road6"]
-position = Vector2(0, -15)
-texture = ExtResource("1_egjng")
-
-[node name="Road4" type="Sprite2D" parent="Road1/Road9/Road8/Road7/Road6"]
-texture_filter = 1
-position = Vector2(-16, 0)
-rotation = 1.5708
-texture = ExtResource("2_o4t5q")
-
-[node name="Road5" type="Sprite2D" parent="Road1/Road9/Road8/Road7/Road6"]
-position = Vector2(-32, 0)
-texture = ExtResource("1_egjng")
+texture_repeat = 2
+position = Vector2(469, 64)
+texture = ExtResource("6_7jro8")
 
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(333, 199)
+position = Vector2(375, 201)
 script = ExtResource("1_cdrgg")
 
 [node name="Spawner" type="Node2D" parent="Player"]
-position = Vector2(319, -65)
+position = Vector2(0, 46)
 
 [node name="Van" type="Sprite2D" parent="Player"]
 texture_filter = 1
-position = Vector2(42, 13)
 rotation = 3.14159
 texture = ExtResource("2_1epeb")
 
@@ -479,16 +134,27 @@ position = Vector2(-1.70549e-05, 4)
 script = ExtResource("4_ixduw")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player/Van/Cone"]
-position = Vector2(-2.53518e-06, 1)
 texture = ExtResource("3_je1ue")
 
 [node name="Shoot" type="Marker2D" parent="Player/Van/Cone"]
-position = Vector2(-4.91142e-05, 18)
+position = Vector2(-1.00004, 15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(42, 9)
+position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_qw5tt")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(43, 24)
+position = Vector2(1, 2)
 zoom = Vector2(3.5, 3.5)
+
+[node name="Tile013" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(399.5, 262.5)
+texture = ExtResource("5_i2opb")
+
+[node name="Tile016" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(399.5, 246.5)
+texture = ExtResource("5_i2opb")
