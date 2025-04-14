@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dx0sa6a24ghjo"]
+[gd_scene load_steps=35 format=3 uid="uid://dx0sa6a24ghjo"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_cdrgg"]
 [ext_resource type="Texture2D" uid="uid://c8tct87y27vml" path="res://Assets/road1.png" id="1_egjng"]
@@ -7,16 +7,153 @@
 [ext_resource type="Texture2D" uid="uid://c6ycbpmho1d6p" path="res://Assets/road3.png" id="3_03adt"]
 [ext_resource type="Texture2D" uid="uid://cc63u7y0hckvi" path="res://Assets/turret.png" id="3_je1ue"]
 [ext_resource type="Script" path="res://Scenes/cone.gd" id="4_ixduw"]
-[ext_resource type="Texture2D" uid="uid://dqxsroh60f4bt" path="res://Assets/ezgif-split/ezgif-split/tile010.png" id="5_i2opb"]
+[ext_resource type="Texture2D" uid="uid://bp18ee6j26yn5" path="res://Assets/ezgif-split(1)/grass000.png" id="5_u5ksw"]
 [ext_resource type="Texture2D" uid="uid://ce1yj2gvojo2c" path="res://Assets/ezgif-split/ezgif-split/tile015.png" id="6_7jro8"]
+[ext_resource type="Texture2D" uid="uid://csmbvwch0j2l2" path="res://Assets/ezgif-split(1)/grass001.png" id="6_l7jbj"]
+[ext_resource type="Texture2D" uid="uid://c0sg7j7c5ubvb" path="res://Assets/ezgif-split(1)/grass002.png" id="7_vb6yp"]
+[ext_resource type="Texture2D" uid="uid://drf7qd40qjinc" path="res://Assets/ezgif-split(1)/grass004.png" id="8_j81vd"]
 [ext_resource type="Texture2D" uid="uid://b52o20kcxhtf" path="res://Assets/roa54.png" id="8_na6wm"]
+[ext_resource type="Texture2D" uid="uid://b24cp3na8rupl" path="res://Assets/ezgif-split(1)/grass005.png" id="9_tu57x"]
+[ext_resource type="Texture2D" uid="uid://cy6c8heod1aq7" path="res://Assets/ezgif-split(1)/CP_V1.0.4.png" id="10_wvedv"]
+[ext_resource type="Texture2D" uid="uid://cwq8e8j7r4nob" path="res://Assets/ezgif-split/ezgif-split/tile009.png" id="11_64qf8"]
+[ext_resource type="Texture2D" uid="uid://c0p5u1tpbl1q8" path="res://Assets/ezgif-split(4)/thing012.png" id="16_eiqjw"]
+[ext_resource type="Texture2D" uid="uid://bhqt887ujdfd4" path="res://Assets/ezgif-split(4)/thing013.png" id="17_2bcgj"]
+[ext_resource type="Texture2D" uid="uid://cm23nberx6t5y" path="res://Assets/road2.png" id="18_0rakg"]
+[ext_resource type="Texture2D" uid="uid://ebqf4ivgu4f7" path="res://Assets/ezgif-split(1)/grass006.png" id="19_4dcch"]
+[ext_resource type="Texture2D" uid="uid://cnclkypcbhi3n" path="res://Assets/ezgif-split(1)/tile013.png" id="20_gta46"]
+[ext_resource type="Texture2D" uid="uid://smliibayt3vs" path="res://Assets/ezgif-split(1)/grass008.png" id="20_whgep"]
+[ext_resource type="Texture2D" uid="uid://b5uvrvtbouuge" path="res://Assets/ezgif-split(1)/grass009.png" id="21_m36e2"]
+[ext_resource type="Texture2D" uid="uid://cedsjyb308l8u" path="res://Assets/ezgif-split(5)/tile001.png" id="21_rmhfu"]
+[ext_resource type="Texture2D" uid="uid://x6y72w6mtyyu" path="res://Assets/ezgif-split(5)/tile000.png" id="22_hsvo0"]
+[ext_resource type="Texture2D" uid="uid://chgbmkrep328h" path="res://Assets/ezgif-split(1)/grass010.png" id="22_jr6dt"]
+[ext_resource type="Texture2D" uid="uid://dy173xv4tkuw4" path="res://Assets/ezgif-split(7)/tile001.png" id="23_i586f"]
+[ext_resource type="Texture2D" uid="uid://mxlvuvc8a2hs" path="res://Assets/ezgif-split(4)/thing008.png" id="28_4mbwo"]
+[ext_resource type="Texture2D" uid="uid://jxeqdmared0f" path="res://Assets/ezgif-split(4)/thing010.png" id="29_twk0a"]
+[ext_resource type="Texture2D" uid="uid://cw4ar028q056o" path="res://Assets/ezgif-split(7)/tile005.png" id="30_62p35"]
+[ext_resource type="Texture2D" uid="uid://d271itritlybu" path="res://Assets/ezgif-split(7)/tile004.png" id="31_1vylw"]
+[ext_resource type="Texture2D" uid="uid://c2bgqv5e0m3hh" path="res://Assets/ezgif-split(7)/tile000.png" id="32_e4br2"]
+[ext_resource type="Texture2D" uid="uid://rr3yxh0tfvx5" path="res://Assets/ezgif-split(7)/tile006.png" id="33_bme3i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qw5tt"]
 size = Vector2(30, 46)
 
 [node name="Node2D" type="Node2D"]
 
+[node name="GrassTiles" type="Node2D" parent="."]
+
+[node name="Grass006" type="Sprite2D" parent="GrassTiles"]
+texture_filter = 1
+position = Vector2(519, 94)
+scale = Vector2(1, 5.70351)
+texture = ExtResource("19_4dcch")
+
+[node name="Grass008" type="Sprite2D" parent="GrassTiles"]
+texture_filter = 1
+position = Vector2(417, 55)
+texture = ExtResource("20_whgep")
+
+[node name="Grass009" type="Sprite2D" parent="GrassTiles"]
+texture_filter = 1
+position = Vector2(451, 56)
+scale = Vector2(5.61328, 1)
+texture = ExtResource("21_m36e2")
+
+[node name="Grass010" type="Sprite2D" parent="GrassTiles"]
+texture_filter = 1
+position = Vector2(519, 152)
+texture = ExtResource("22_jr6dt")
+
+[node name="Grass000" type="Sprite2D" parent="GrassTiles"]
+texture_filter = 1
+position = Vector2(417, 30)
+texture = ExtResource("5_u5ksw")
+
+[node name="Grass001" type="Sprite2D" parent="GrassTiles"]
+texture_filter = 1
+position = Vector2(456, 30)
+scale = Vector2(5.9375, 1)
+texture = ExtResource("6_l7jbj")
+
+[node name="Grass002" type="Sprite2D" parent="GrassTiles"]
+texture_filter = 1
+position = Vector2(519, 30)
+texture = ExtResource("7_vb6yp")
+
+[node name="Grass004" type="Sprite2D" parent="GrassTiles"]
+texture_filter = 1
+position = Vector2(510, 99.75)
+scale = Vector2(1, 5.54878)
+texture = ExtResource("8_j81vd")
+
+[node name="Grass" type="TextureRect" parent="GrassTiles"]
+texture_filter = 1
+offset_left = 598.0
+offset_top = 31.0
+offset_right = 650.0
+offset_bottom = 168.0
+texture = ExtResource("10_wvedv")
+stretch_mode = 1
+
+[node name="Grass2" type="TextureRect" parent="GrassTiles"]
+texture_filter = 1
+offset_left = 411.0
+offset_top = 150.0
+offset_right = 564.0
+offset_bottom = 286.0
+texture = ExtResource("10_wvedv")
+stretch_mode = 1
+
+[node name="Grass005" type="Sprite2D" parent="GrassTiles"]
+texture_filter = 1
+position = Vector2(513, 54)
+scale = Vector2(1.0625, 1.03659)
+texture = ExtResource("9_tu57x")
+
+[node name="Grass3" type="TextureRect" parent="GrassTiles"]
+texture_filter = 1
+offset_left = 411.0
+offset_top = 54.0
+offset_right = 504.0
+offset_bottom = 150.0
+texture = ExtResource("10_wvedv")
+stretch_mode = 1
+
+[node name="Grass4" type="TextureRect" parent="GrassTiles"]
+texture_filter = 1
+offset_left = 529.0
+offset_top = 31.0
+offset_right = 565.0
+offset_bottom = 151.0
+texture = ExtResource("10_wvedv")
+stretch_mode = 1
+
 [node name="Road" type="Node2D" parent="."]
+
+[node name="Road17" type="TextureRect" parent="Road"]
+texture_filter = 1
+texture_repeat = 2
+offset_left = 709.0
+offset_top = -33.0
+offset_right = 1326.0
+offset_bottom = -17.0
+texture = ExtResource("18_0rakg")
+stretch_mode = 1
+
+[node name="Roa54" type="Sprite2D" parent="Road"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(579, 0.597507)
+rotation = 1.5708
+scale = Vector2(1.66197, 3)
+texture = ExtResource("8_na6wm")
+
+[node name="Roa56" type="Sprite2D" parent="Road"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(579, -52.7927)
+rotation = 1.5708
+scale = Vector2(1.63175, 3)
+texture = ExtResource("8_na6wm")
 
 [node name="Roa55" type="Sprite2D" parent="Road"]
 texture_filter = 1
@@ -24,19 +161,6 @@ texture_repeat = 2
 position = Vector2(579, -26.6847)
 rotation = 1.5708
 scale = Vector2(1.63175, 3)
-texture = ExtResource("8_na6wm")
-
-[node name="Roa54" type="Sprite2D" parent="Road/Roa55"]
-texture_filter = 1
-texture_repeat = 2
-position = Vector2(16.7196, -2.63144e-16)
-scale = Vector2(1.01852, 1)
-texture = ExtResource("8_na6wm")
-
-[node name="Roa56" type="Sprite2D" parent="Road/Roa55"]
-texture_filter = 1
-texture_repeat = 2
-position = Vector2(-16, 0)
 texture = ExtResource("8_na6wm")
 
 [node name="Road4" type="Sprite2D" parent="Road"]
@@ -81,42 +205,285 @@ rotation = 1.5708
 texture = ExtResource("3_03adt")
 
 [node name="Road9" type="Sprite2D" parent="Road"]
-position = Vector2(722.868, -1.99999)
+position = Vector2(651.812, -2.00025)
 rotation = 1.5708
-scale = Vector2(2, 15.0191)
+scale = Vector2(2, 6.13714)
 texture = ExtResource("1_egjng")
 
 [node name="Road10" type="Sprite2D" parent="Road"]
 texture_filter = 1
-position = Vector2(723.01, -26)
-scale = Vector2(15.0013, 1)
+position = Vector2(651.5, -26)
+scale = Vector2(6.06252, 1)
 texture = ExtResource("2_t6tpg")
 
 [node name="Road11" type="Sprite2D" parent="Road"]
-position = Vector2(723.02, -50)
+position = Vector2(964.461, -49.1582)
 rotation = 1.5708
-scale = Vector2(2, 15.0025)
+scale = Vector2(2.10511, 45.1826)
 texture = ExtResource("1_egjng")
 
-[node name="Tile010" type="Sprite2D" parent="."]
-texture_filter = 1
-texture_repeat = 2
-position = Vector2(399.5, 294.5)
-texture = ExtResource("5_i2opb")
+[node name="Road12" type="Sprite2D" parent="Road"]
+position = Vector2(685, 166)
+scale = Vector2(2.375, 21.25)
+texture = ExtResource("1_egjng")
 
-[node name="Tile011" type="Sprite2D" parent="."]
+[node name="Road13" type="Sprite2D" parent="Road"]
 texture_filter = 1
-texture_repeat = 2
-position = Vector2(399.5, 278.5)
-texture = ExtResource("5_i2opb")
+position = Vector2(708, 156.191)
+rotation = 1.5708
+scale = Vector2(22.4613, 1)
+texture = ExtResource("2_t6tpg")
 
-[node name="Tile015" type="Sprite2D" parent="."]
+[node name="Road14" type="Sprite2D" parent="Road"]
+position = Vector2(732, 159.5)
+scale = Vector2(2, 22.0625)
+texture = ExtResource("1_egjng")
+
+[node name="Road15" type="Sprite2D" parent="Road"]
+texture_filter = 1
+position = Vector2(708, -26)
+rotation = 3.14159
+texture = ExtResource("3_03adt")
+
+[node name="Road16" type="Sprite2D" parent="Road"]
+position = Vector2(1029.32, -0.420454)
+rotation = 1.5708
+scale = Vector2(2.15767, 37.0828)
+texture = ExtResource("1_egjng")
+
+[node name="Props" type="Node2D" parent="."]
+position = Vector2(590, 47)
+
+[node name="Thing012" type="Sprite2D" parent="Props"]
+texture_filter = 1
+texture = ExtResource("16_eiqjw")
+
+[node name="Thing013" type="Sprite2D" parent="Props"]
+texture_filter = 1
+position = Vector2(-177, 122)
+texture = ExtResource("16_eiqjw")
+
+[node name="Thing014" type="Sprite2D" parent="Props"]
+texture_filter = 1
+position = Vector2(-125, 134)
+texture = ExtResource("16_eiqjw")
+
+[node name="Thing015" type="Sprite2D" parent="Props"]
+texture_filter = 1
+position = Vector2(25, 86)
+texture = ExtResource("16_eiqjw")
+
+[node name="Thing016" type="Sprite2D" parent="Props"]
+texture_filter = 1
+position = Vector2(-170, 167.5)
+texture = ExtResource("16_eiqjw")
+
+[node name="Thing017" type="Sprite2D" parent="Props"]
+texture_filter = 1
+position = Vector2(-76, 125)
+texture = ExtResource("16_eiqjw")
+
+[node name="Thing018" type="Sprite2D" parent="Props"]
+texture_filter = 1
+position = Vector2(-141, 212)
+texture = ExtResource("17_2bcgj")
+
+[node name="Thing019" type="Sprite2D" parent="Props"]
+texture_filter = 1
+position = Vector2(-73, 179)
+texture = ExtResource("17_2bcgj")
+
+[node name="Thing020" type="Sprite2D" parent="Props"]
+texture_filter = 1
+position = Vector2(23, 36)
+texture = ExtResource("17_2bcgj")
+
+[node name="Thing021" type="Sprite2D" parent="Props"]
+texture_filter = 1
+position = Vector2(-142, 80)
+texture = ExtResource("16_eiqjw")
+
+[node name="Thing022" type="Sprite2D" parent="Props"]
+texture_filter = 1
+position = Vector2(-158, 51)
+texture = ExtResource("17_2bcgj")
+
+[node name="Thing023" type="Sprite2D" parent="Props"]
+texture_filter = 1
+position = Vector2(-108, 28)
+texture = ExtResource("17_2bcgj")
+
+[node name="Thing024" type="Sprite2D" parent="Props"]
+texture_filter = 1
+position = Vector2(-59, 42)
+texture = ExtResource("16_eiqjw")
+
+[node name="Path" type="Node2D" parent="."]
+
+[node name="Tile010" type="Sprite2D" parent="Path"]
+texture_filter = 1
+position = Vector2(624, 250.5)
+scale = Vector2(3.125, 8.57576)
+texture = ExtResource("11_64qf8")
+
+[node name="Tile009" type="Sprite2D" parent="Path"]
+texture_filter = 1
+position = Vector2(402, 22.75)
+scale = Vector2(1, 0.984848)
+texture = ExtResource("11_64qf8")
+
+[node name="Tile052" type="Sprite2D" parent="Path"]
+z_index = 2
 texture_filter = 1
 texture_repeat = 2
-position = Vector2(469, 64)
+position = Vector2(306, -176)
+rotation = 1.5708
+scale = Vector2(0.9987, 1.00069)
 texture = ExtResource("6_7jro8")
 
+[node name="Tile013" type="TextureRect" parent="Path"]
+texture_filter = 1
+offset_left = 394.0
+offset_top = 31.0
+offset_right = 411.0
+offset_bottom = 302.0
+texture = ExtResource("20_gta46")
+stretch_mode = 1
+
+[node name="Tile014" type="TextureRect" parent="Path"]
+z_index = 1
+texture_filter = 1
+offset_left = 298.0
+offset_top = -165.0
+offset_right = 315.0
+offset_bottom = 302.0
+texture = ExtResource("20_gta46")
+stretch_mode = 1
+flip_h = true
+
+[node name="Tile015" type="TextureRect" parent="Path"]
+texture_filter = 1
+offset_left = 1319.0
+offset_top = -84.0
+offset_right = 1336.0
+offset_bottom = 920.0
+rotation = 1.5708
+texture = ExtResource("20_gta46")
+stretch_mode = 1
+flip_h = true
+
+[node name="Tile016" type="TextureRect" parent="Path"]
+texture_filter = 1
+offset_left = 564.0
+offset_top = 14.0
+offset_right = 581.0
+offset_bottom = 168.0
+rotation = 1.5708
+texture = ExtResource("20_gta46")
+stretch_mode = 1
+flip_h = true
+
+[node name="Tile017" type="TextureRect" parent="Path"]
+texture_filter = 1
+offset_left = 666.0
+offset_top = 14.0
+offset_right = 683.0
+offset_bottom = 83.0
+rotation = 1.5708
+texture = ExtResource("20_gta46")
+stretch_mode = 1
+flip_h = true
+
+[node name="Tile018" type="TextureRect" parent="Path"]
+texture_filter = 1
+offset_left = 599.0
+offset_top = 14.0
+offset_right = 921.0
+offset_bottom = 49.0
+rotation = 1.5708
+texture = ExtResource("20_gta46")
+stretch_mode = 1
+flip_h = true
+
+[node name="Tile019" type="TextureRect" parent="Path"]
+texture_filter = 1
+offset_left = 649.0
+offset_top = 165.0
+offset_right = 668.0
+offset_bottom = 215.0
+rotation = 1.5708
+texture = ExtResource("20_gta46")
+stretch_mode = 1
+flip_h = true
+
+[node name="Tile020" type="TextureRect" parent="Path"]
+texture_filter = 1
+offset_left = 666.0
+offset_top = 31.0
+offset_right = 971.0
+offset_bottom = 48.0
+rotation = 1.5708
+texture = ExtResource("20_gta46")
+stretch_mode = 1
+flip_h = true
+
+[node name="Tile021" type="TextureRect" parent="Path"]
+texture_filter = 1
+offset_left = 649.0
+offset_top = 317.0
+offset_right = 668.0
+offset_bottom = 367.0
+rotation = 1.5708
+texture = ExtResource("20_gta46")
+stretch_mode = 1
+flip_h = true
+
+[node name="Tile011" type="Sprite2D" parent="Path"]
+texture_filter = 1
+position = Vector2(443.625, -122)
+scale = Vector2(17.8359, 4.86364)
+texture = ExtResource("11_64qf8")
+
+[node name="Tile001" type="Sprite2D" parent="Path"]
+texture_filter = 1
+position = Vector2(357, -144)
+texture = ExtResource("21_rmhfu")
+
+[node name="Tile000" type="Sprite2D" parent="Path"]
+texture_filter = 1
+position = Vector2(445, -144)
+texture = ExtResource("22_hsvo0")
+
+[node name="Tile002" type="Sprite2D" parent="Path"]
+texture_filter = 1
+position = Vector2(403, -113)
+texture = ExtResource("23_i586f")
+
+[node name="Tile022" type="TextureRect" parent="Path"]
+z_index = -1
+texture_filter = 1
+offset_left = 689.0
+offset_top = -180.0
+offset_right = 706.0
+offset_bottom = 196.0
+rotation = 1.5708
+texture = ExtResource("20_gta46")
+stretch_mode = 1
+flip_h = true
+
+[node name="Tile023" type="TextureRect" parent="Path"]
+texture_filter = 1
+offset_left = 605.0
+offset_top = -164.0
+offset_right = 689.0
+offset_bottom = -147.0
+rotation = 1.5708
+texture = ExtResource("20_gta46")
+stretch_mode = 1
+flip_h = true
+
 [node name="Player" type="CharacterBody2D" parent="."]
+z_index = 6
 position = Vector2(375, 201)
 script = ExtResource("1_cdrgg")
 
@@ -124,11 +491,13 @@ script = ExtResource("1_cdrgg")
 position = Vector2(0, 46)
 
 [node name="Van" type="Sprite2D" parent="Player"]
+z_index = 9
 texture_filter = 1
 rotation = 3.14159
 texture = ExtResource("2_1epeb")
 
 [node name="Cone" type="Sprite2D" parent="Player/Van"]
+z_index = 10
 texture_filter = 1
 position = Vector2(-1.70549e-05, 4)
 script = ExtResource("4_ixduw")
@@ -147,14 +516,39 @@ shape = SubResource("RectangleShape2D_qw5tt")
 position = Vector2(1, 2)
 zoom = Vector2(3.5, 3.5)
 
-[node name="Tile013" type="Sprite2D" parent="."]
+[node name="Thing008" type="Sprite2D" parent="."]
 texture_filter = 1
-texture_repeat = 2
-position = Vector2(399.5, 262.5)
-texture = ExtResource("5_i2opb")
+position = Vector2(381, 3)
+texture = ExtResource("28_4mbwo")
 
-[node name="Tile016" type="Sprite2D" parent="."]
+[node name="Thing010" type="Sprite2D" parent="."]
 texture_filter = 1
-texture_repeat = 2
-position = Vector2(399.5, 246.5)
-texture = ExtResource("5_i2opb")
+position = Vector2(683, -92)
+texture = ExtResource("29_twk0a")
+
+[node name="Tile005" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(618, 211)
+rotation = -1.5708
+texture = ExtResource("30_62p35")
+
+[node name="Tile004" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(618, 272)
+rotation = -1.5708
+texture = ExtResource("31_1vylw")
+
+[node name="Tile000" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(553, -110)
+texture = ExtResource("32_e4br2")
+
+[node name="Tile006" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(500, -118)
+texture = ExtResource("33_bme3i")
+
+[node name="Grass008" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(510, 153)
+texture = ExtResource("20_whgep")
