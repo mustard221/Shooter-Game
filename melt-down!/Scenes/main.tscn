@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=3 uid="uid://dx0sa6a24ghjo"]
+[gd_scene load_steps=99 format=3 uid="uid://dx0sa6a24ghjo"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_cdrgg"]
 [ext_resource type="Texture2D" uid="uid://c8tct87y27vml" path="res://Assets/Visuals/Road/road1.png" id="1_egjng"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cc63u7y0hckvi" path="res://Assets/Visuals/Van/turret.png" id="3_je1ue"]
 [ext_resource type="Script" path="res://Scenes/cone.gd" id="4_ixduw"]
 [ext_resource type="Texture2D" uid="uid://bp18ee6j26yn5" path="res://Assets/Visuals/Grass/grass000.png" id="5_u5ksw"]
+[ext_resource type="Texture2D" uid="uid://kjn38g5h12gx" path="res://Assets/Visuals/Vehicles/tile000.png" id="5_ykuap"]
 [ext_resource type="Texture2D" uid="uid://csmbvwch0j2l2" path="res://Assets/Visuals/Grass/grass001.png" id="6_l7jbj"]
 [ext_resource type="Texture2D" uid="uid://c0sg7j7c5ubvb" path="res://Assets/Visuals/Grass/grass002.png" id="7_vb6yp"]
 [ext_resource type="Texture2D" uid="uid://drf7qd40qjinc" path="res://Assets/Visuals/Grass/grass004.png" id="8_j81vd"]
@@ -56,6 +57,13 @@
 [ext_resource type="Texture2D" uid="uid://c84qxuvue2diy" path="res://Assets/Visuals/Objects/thing006.png" id="54_wy228"]
 [ext_resource type="Texture2D" uid="uid://c3w2p57mbmgi" path="res://Assets/Visuals/Objects/thing007.png" id="55_pt0s0"]
 [ext_resource type="Texture2D" uid="uid://df1nsqausqw5s" path="res://Assets/Visuals/Objects/thing009.png" id="56_gcxqd"]
+[ext_resource type="Texture2D" uid="uid://ccr122ksg02dx" path="res://Assets/Visuals/Vehicles/tile001.png" id="58_8txi1"]
+[ext_resource type="Texture2D" uid="uid://cbacw46b55thv" path="res://Assets/Visuals/Vehicles/tile000-export.png" id="59_b13a7"]
+[ext_resource type="Texture2D" uid="uid://ctv1qdv4ax3a" path="res://Assets/Visuals/Vehicles/tile000expo.png" id="60_3repp"]
+[ext_resource type="Texture2D" uid="uid://cclw72h4amwau" path="res://Assets/Visuals/Vehicles/tile0expo.png" id="61_nagxa"]
+[ext_resource type="Texture2D" uid="uid://6e1f8asiuoof" path="res://Assets/Visuals/Vehicles/van2.png" id="62_5s32k"]
+[ext_resource type="Script" path="res://Scenes/physics.gd" id="63_cogkx"]
+[ext_resource type="Texture2D" uid="uid://df0cd8xg713pj" path="res://Assets/Visuals/Vehicles/tile000export.png" id="63_xd3td"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qw5tt"]
 size = Vector2(30, 47)
@@ -155,6 +163,9 @@ size = Vector2(5, 14)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6w4fl"]
 size = Vector2(7, 14)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ypyhg"]
+size = Vector2(26, 43)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" type="CharacterBody2D" parent="."]
@@ -178,6 +189,7 @@ position = Vector2(-1.70549e-05, 4)
 script = ExtResource("4_ixduw")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player/Van/Cone"]
+rotation = 1.5708
 texture = ExtResource("3_je1ue")
 
 [node name="Shoot" type="Marker2D" parent="Player/Van/Cone"]
@@ -190,11 +202,13 @@ shape = SubResource("RectangleShape2D_qw5tt")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(1, 2)
-zoom = Vector2(2, 2)
+zoom = Vector2(6.5, 6.5)
 
 [node name="Main" type="Node2D" parent="."]
 z_index = 10
 position = Vector2(590, 47)
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="Tile007" type="Sprite2D" parent="Main"]
 z_index = 10
@@ -2393,6 +2407,8 @@ scale = Vector2(1.63175, 3)
 texture = ExtResource("8_na6wm")
 
 [node name="Path" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="CpV1_0_4" type="TextureRect" parent="Path"]
 offset_left = 844.0
@@ -5708,3 +5724,73 @@ texture = ExtResource("54_wy228")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Props/Thing155/CharacterBody2D"]
 position = Vector2(-1.5, 11.75)
 shape = SubResource("RectangleShape2D_v7han")
+
+[node name="Vehicles" type="Node2D" parent="."]
+position = Vector2(1072, -148)
+rotation = -3.14159
+
+[node name="Van3" type="Sprite2D" parent="Vehicles"]
+z_index = 4
+texture_filter = 1
+position = Vector2(-124, -222)
+rotation = 3.14159
+texture = ExtResource("62_5s32k")
+
+[node name="Tile001" type="Sprite2D" parent="Vehicles"]
+z_index = 4
+texture_filter = 1
+position = Vector2(-64, -236)
+rotation = 3.14159
+texture = ExtResource("58_8txi1")
+
+[node name="Tile000-export" type="Sprite2D" parent="Vehicles"]
+z_index = 4
+texture_filter = 1
+position = Vector2(-189, -215)
+texture = ExtResource("59_b13a7")
+
+[node name="Tile000Expo" type="Sprite2D" parent="Vehicles"]
+z_index = 4
+texture_filter = 1
+position = Vector2(449, -3.05176e-05)
+texture = ExtResource("60_3repp")
+
+[node name="Tile0Expo" type="Sprite2D" parent="Vehicles"]
+z_index = 4
+texture_filter = 1
+position = Vector2(321, -17)
+rotation = 3.14159
+texture = ExtResource("61_nagxa")
+
+[node name="Van2" type="Sprite2D" parent="Vehicles"]
+z_index = 4
+texture_filter = 1
+position = Vector2(689, 72.9999)
+rotation = 3.14159
+texture = ExtResource("62_5s32k")
+
+[node name="Tile000Export" type="Sprite2D" parent="Vehicles"]
+z_index = 4
+texture_filter = 1
+position = Vector2(92, 0)
+texture = ExtResource("63_xd3td")
+
+[node name="RigidBody2D" type="CharacterBody2D" parent="Vehicles"]
+z_index = 4
+texture_filter = 1
+script = ExtResource("63_cogkx")
+
+[node name="Tile002" type="Sprite2D" parent="Vehicles/RigidBody2D"]
+z_index = 4
+texture_filter = 1
+texture = ExtResource("58_8txi1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vehicles/RigidBody2D"]
+position = Vector2(-4, -11.5)
+shape = SubResource("RectangleShape2D_ypyhg")
+
+[node name="Tile000" type="Sprite2D" parent="Vehicles"]
+texture_filter = 1
+position = Vector2(29, -18)
+rotation = 3.14159
+texture = ExtResource("5_ykuap")
