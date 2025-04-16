@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=3 uid="uid://dx0sa6a24ghjo"]
+[gd_scene load_steps=104 format=3 uid="uid://dx0sa6a24ghjo"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_cdrgg"]
 [ext_resource type="Texture2D" uid="uid://c8tct87y27vml" path="res://Assets/Visuals/Road/road1.png" id="1_egjng"]
@@ -7,8 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://c6ycbpmho1d6p" path="res://Assets/Visuals/Road/road3.png" id="3_03adt"]
 [ext_resource type="Texture2D" uid="uid://cc63u7y0hckvi" path="res://Assets/Visuals/Van/turret.png" id="3_je1ue"]
 [ext_resource type="Script" path="res://Scripts/cone.gd" id="4_ixduw"]
+[ext_resource type="Script" path="res://Scripts/shoot.gd" id="5_m3qpq"]
 [ext_resource type="Texture2D" uid="uid://bp18ee6j26yn5" path="res://Assets/Visuals/Grass/grass000.png" id="5_u5ksw"]
 [ext_resource type="Texture2D" uid="uid://kjn38g5h12gx" path="res://Assets/Visuals/Vehicles/tile000.png" id="5_ykuap"]
+[ext_resource type="PackedScene" uid="uid://dxb2260cibgbe" path="res://Scenes/fire.tscn" id="6_hv8oq"]
 [ext_resource type="Texture2D" uid="uid://csmbvwch0j2l2" path="res://Assets/Visuals/Grass/grass001.png" id="6_l7jbj"]
 [ext_resource type="Texture2D" uid="uid://c0sg7j7c5ubvb" path="res://Assets/Visuals/Grass/grass002.png" id="7_vb6yp"]
 [ext_resource type="Texture2D" uid="uid://drf7qd40qjinc" path="res://Assets/Visuals/Grass/grass004.png" id="8_j81vd"]
@@ -66,7 +68,7 @@
 [ext_resource type="Texture2D" uid="uid://df0cd8xg713pj" path="res://Assets/Visuals/Vehicles/tile000export.png" id="63_xd3td"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qw5tt"]
-size = Vector2(30, 47)
+size = Vector2(30, 46.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hwh2"]
 size = Vector2(61, 35.375)
@@ -164,7 +166,66 @@ size = Vector2(5, 14)
 size = Vector2(7, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ypyhg"]
-size = Vector2(26, 43)
+size = Vector2(27, 43.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4st8"]
+size = Vector2(24, 42)
+
+[sub_resource type="GDScript" id="GDScript_b0eqg"]
+script/source = "extends \"res://Scripts/physics.gd\"
+
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+
+
+func _physics_process(delta: float) -> void:
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	# Handle jump.
+	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction := Input.get_axis(\"ui_left\", \"ui_right\")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	move_and_slide()
+"
+
+[sub_resource type="GDScript" id="GDScript_34tka"]
+script/source = "extends \"res://Scripts/physics.gd\"
+
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+
+
+func _physics_process(delta: float) -> void:
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	# Handle jump.
+	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction := Input.get_axis(\"ui_left\", \"ui_right\")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	move_and_slide()
+"
 
 [node name="Node2D" type="Node2D"]
 
@@ -189,16 +250,19 @@ position = Vector2(-1.70549e-05, 4)
 script = ExtResource("4_ixduw")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player/Van/Cone"]
-rotation = 1.5708
+rotation = -1.5708
 texture = ExtResource("3_je1ue")
 
 [node name="Shoot" type="Marker2D" parent="Player/Van/Cone"]
-position = Vector2(-1.00004, 15)
+position = Vector2(19, 5.0497e-05)
+script = ExtResource("5_m3qpq")
+iceCream = ExtResource("6_hv8oq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 z_index = 20
-position = Vector2(0, -4)
+position = Vector2(0, -4.25)
 shape = SubResource("RectangleShape2D_qw5tt")
+metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(1, 2)
@@ -5728,69 +5792,131 @@ shape = SubResource("RectangleShape2D_v7han")
 [node name="Vehicles" type="Node2D" parent="."]
 position = Vector2(1072, -148)
 rotation = -3.14159
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
-[node name="Van3" type="Sprite2D" parent="Vehicles"]
-z_index = 4
-texture_filter = 1
-position = Vector2(-124, -222)
-rotation = 3.14159
-texture = ExtResource("62_5s32k")
+[node name="CharacterBody2D5" type="CharacterBody2D" parent="Vehicles"]
+script = ExtResource("63_cogkx")
 
-[node name="Tile001" type="Sprite2D" parent="Vehicles"]
+[node name="Tile001" type="Sprite2D" parent="Vehicles/CharacterBody2D5"]
 z_index = 4
 texture_filter = 1
 position = Vector2(-64, -236)
 rotation = 3.14159
 texture = ExtResource("58_8txi1")
 
-[node name="Tile000-export" type="Sprite2D" parent="Vehicles"]
-z_index = 4
-texture_filter = 1
-position = Vector2(-189, -215)
-texture = ExtResource("59_b13a7")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vehicles/CharacterBody2D5"]
+position = Vector2(-59.0006, -227)
+rotation = 3.14159
+shape = SubResource("RectangleShape2D_ypyhg")
 
-[node name="Tile000Expo" type="Sprite2D" parent="Vehicles"]
-z_index = 4
-texture_filter = 1
-position = Vector2(449, -3.05176e-05)
-texture = ExtResource("60_3repp")
+[node name="CharacterBody2D6" type="CharacterBody2D" parent="Vehicles"]
+script = ExtResource("63_cogkx")
 
-[node name="Tile0Expo" type="Sprite2D" parent="Vehicles"]
+[node name="Tile0Expo" type="Sprite2D" parent="Vehicles/CharacterBody2D6"]
 z_index = 4
 texture_filter = 1
 position = Vector2(321, -17)
 rotation = 3.14159
 texture = ExtResource("61_nagxa")
 
-[node name="Van2" type="Sprite2D" parent="Vehicles"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vehicles/CharacterBody2D6"]
+position = Vector2(320, -7.00081)
+rotation = 3.14159
+shape = SubResource("RectangleShape2D_ypyhg")
+
+[node name="CharacterBody2D3" type="CharacterBody2D" parent="Vehicles"]
+script = ExtResource("63_cogkx")
+
+[node name="Tile000Expo" type="Sprite2D" parent="Vehicles/CharacterBody2D3"]
+z_index = 4
+texture_filter = 1
+position = Vector2(449, -1.52588e-05)
+texture = ExtResource("60_3repp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vehicles/CharacterBody2D3"]
+position = Vector2(449, -10.0011)
+shape = SubResource("RectangleShape2D_ypyhg")
+
+[node name="Char" type="CharacterBody2D" parent="Vehicles"]
+z_index = 4
+texture_filter = 1
+script = ExtResource("63_cogkx")
+
+[node name="Tile002" type="Sprite2D" parent="Vehicles/Char"]
+z_index = 4
+texture_filter = 1
+texture = ExtResource("58_8txi1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vehicles/Char"]
+position = Vector2(-4, -11.5)
+shape = SubResource("RectangleShape2D_ypyhg")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Vehicles"]
+position = Vector2(29, -18)
+rotation = 3.14159
+script = ExtResource("63_cogkx")
+
+[node name="Tile000" type="Sprite2D" parent="Vehicles/CharacterBody2D"]
+texture_filter = 1
+texture = ExtResource("5_ykuap")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vehicles/CharacterBody2D"]
+position = Vector2(0, -9.99992)
+shape = SubResource("RectangleShape2D_g4st8")
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="Vehicles"]
+script = ExtResource("63_cogkx")
+
+[node name="Van3" type="Sprite2D" parent="Vehicles/CharacterBody2D2"]
+z_index = 4
+texture_filter = 1
+position = Vector2(-124, -222)
+rotation = 3.14159
+texture = ExtResource("62_5s32k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vehicles/CharacterBody2D2"]
+position = Vector2(-124.5, -221.752)
+rotation = 3.14159
+shape = SubResource("RectangleShape2D_ypyhg")
+
+[node name="CharacterBody2D4" type="CharacterBody2D" parent="Vehicles"]
+script = SubResource("GDScript_b0eqg")
+
+[node name="Tile000-export" type="Sprite2D" parent="Vehicles/CharacterBody2D4"]
+z_index = 4
+texture_filter = 1
+position = Vector2(-189, -215)
+texture = ExtResource("59_b13a7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vehicles/CharacterBody2D4"]
+position = Vector2(-188.001, -225)
+shape = SubResource("RectangleShape2D_ypyhg")
+
+[node name="CharacterBody2D7" type="CharacterBody2D" parent="Vehicles"]
+script = SubResource("GDScript_34tka")
+
+[node name="Van2" type="Sprite2D" parent="Vehicles/CharacterBody2D7"]
 z_index = 4
 texture_filter = 1
 position = Vector2(689, 72.9999)
 rotation = 3.14159
 texture = ExtResource("62_5s32k")
 
-[node name="Tile000Export" type="Sprite2D" parent="Vehicles"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vehicles/CharacterBody2D7"]
+position = Vector2(688.5, 73.2483)
+rotation = 3.14159
+shape = SubResource("RectangleShape2D_ypyhg")
+
+[node name="CharacterBody2D8" type="CharacterBody2D" parent="Vehicles"]
+script = ExtResource("63_cogkx")
+
+[node name="Tile000Export" type="Sprite2D" parent="Vehicles/CharacterBody2D8"]
 z_index = 4
 texture_filter = 1
 position = Vector2(92, 0)
 texture = ExtResource("63_xd3td")
 
-[node name="RigidBody2D" type="CharacterBody2D" parent="Vehicles"]
-z_index = 4
-texture_filter = 1
-script = ExtResource("63_cogkx")
-
-[node name="Tile002" type="Sprite2D" parent="Vehicles/RigidBody2D"]
-z_index = 4
-texture_filter = 1
-texture = ExtResource("58_8txi1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Vehicles/RigidBody2D"]
-position = Vector2(-4, -11.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vehicles/CharacterBody2D8"]
+position = Vector2(93, -10.0002)
 shape = SubResource("RectangleShape2D_ypyhg")
-
-[node name="Tile000" type="Sprite2D" parent="Vehicles"]
-texture_filter = 1
-position = Vector2(29, -18)
-rotation = 3.14159
-texture = ExtResource("5_ykuap")
