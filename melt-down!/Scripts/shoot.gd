@@ -2,7 +2,7 @@ extends Marker2D
 
 @export var iceCream: PackedScene
 var cooldown := 0.0
-var delay := 0.075#seconds between shots
+var delay := 0.05#seconds between shots
 
 func _physics_process(delta: float) -> void:
 	cooldown -= delta

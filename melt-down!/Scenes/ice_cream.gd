@@ -1,20 +1,17 @@
 extends RigidBody2D
 
-@export var speed: float = 300.0
-var range: float = 60.0 
+@export var speed: float = 250.0
+
 var direction: Vector2
+var travel_direction: Vector2
 
 func _ready() -> void:
 	direction = (get_global_mouse_position() - global_position).normalized()
+	travel_direction = direction
 	linear_velocity = direction * speed
 
-func _physics_process(delta: float) -> void:
-	var distance = (global_position - get_global_mouse_position()).length()
-	print(distance)
-
-	if distance <= range:
-		linear_velocity = Vector2.ZERO
+func _on_timer_2_timeout() -> void:
+	linear_velocity = travel_direction * speed / 200
 
 func _on_timer_timeout() -> void:
 	queue_free()
-	pass # Replace with function body.

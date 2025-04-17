@@ -15,17 +15,18 @@ mass = 0.001
 physics_material_override = SubResource("PhysicsMaterial_5r3pb")
 gravity_scale = 0.0
 script = ExtResource("2_vw34e")
+speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="Rigidbody2D"]
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_71ecs")
 
 [node name="Timer" type="Timer" parent="Rigidbody2D"]
+wait_time = 2.0
 one_shot = true
 autostart = true
 
 [node name="Timer2" type="Timer" parent="Rigidbody2D"]
-wait_time = 0.1
+wait_time = 0.5
 one_shot = true
 autostart = true
 
