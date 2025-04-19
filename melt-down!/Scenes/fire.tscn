@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dxb2260cibgbe"]
 
 [ext_resource type="Texture2D" uid="uid://beda8ev1v5lpm" path="res://Assets/Visuals/Van/icecream.png" id="1_71ecs"]
-[ext_resource type="Script" path="res://Scenes/ice_cream.gd" id="2_vw34e"]
+[ext_resource type="Script" path="res://Scripts/ice_cream.gd" id="2_vw34e"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5r3pb"]
 friction = 0.0
