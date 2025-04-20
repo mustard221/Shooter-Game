@@ -17,7 +17,7 @@ func _physics_process(delta: float) -> void:
 		print("spawns at: ", shoot.global_position)
 		cooldown = delay  # reset cooldown
 	else:
-		iceCream.queue_free()
+		#iceCream.queue_free()
 		_on_timer_timeout()
 
 func _on_timer_timeout() -> void:
