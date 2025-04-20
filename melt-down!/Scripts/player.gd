@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
-@export var speed: float = 600
-@export var back_speed: float = 300 
-@export var turn_speed_deg: float = 200
-@export var friction: float = -5
+@export var speed: float = 1250
+@export var back_speed: float = 600 
+@export var turn_speed_deg: float = 210
+@export var friction: float = -10
 
 func _physics_process(delta: float) -> void:
 	var moving = false
