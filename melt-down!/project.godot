@@ -13,7 +13,10 @@ config_version=5
 config/name="Melt Down!"
 run/main_scene="res://Scenes/main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+
+[display]
+
+mouse_cursor/custom_image="res://Assets/Visuals/UI/Lucid-V1.2/PNG/Shadow/160/Cursor-5.png"
 
 [input]
 
