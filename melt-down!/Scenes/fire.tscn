@@ -17,7 +17,6 @@ gravity_scale = 0.0
 script = ExtResource("2_vw34e")
 
 [node name="Sprite2D" type="Sprite2D" parent="Rigidbody2D"]
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_71ecs")
 
 [node name="Timer" type="Timer" parent="Rigidbody2D"]
