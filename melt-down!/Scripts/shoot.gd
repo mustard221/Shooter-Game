@@ -1,5 +1,6 @@
 extends Marker2D
 
+@export var text: Label
 @export var iceCream: PackedScene
 @onready var cooldown_bar: TextureProgressBar = $"../../../../UI/Control/Cooldown"
 
@@ -13,6 +14,9 @@ var fire_delay: float = 0.05
 var can_shoot = true
 var reloaded = true
 
+func _ready() -> void:
+	text.visible = false
+	
 func _physics_process(delta: float) -> void:
 	#shoot logic
 	var aim_vector = get_global_mouse_position() - global_position
@@ -36,23 +40,26 @@ func _physics_process(delta: float) -> void:
 		ammo -= delta * (max_ammo / max_fire_time)
 		cooldown_bar.value = (ammo / max_ammo) * 100
 		time_held += delta
-
+		
 		if ammo <= 0.0:
 			ammo = 0.0
 			reloaded = false
 			can_shoot = false
+			text.visible = true
 
 	# reset time when not holding button
 	if !Input.is_action_pressed("fire") and time_held > 0:
 		time_held = 0
-
+		
 	# reload logic reset everything
-	if Input.is_action_pressed("reload"):
+	if Input.is_action_pressed("reload") and !reloaded:
 		reload_time -= delta
-		cooldown_bar.value = (1 - reload_time / 3.0) * 100
-		if time_held >= 0.0:
-			reloaded = true
-			can_shoot = true
-			ammo = max_ammo
-			reload_time = 3.0
-			cooldown_bar.value = cooldown_bar.value * 100
+		cooldown_bar.value = (1 - reload_time / 3.0) * 100  # Assuming 3 seconds to reload
+		
+	if reload_time <= 0.0:
+		text.visible = false
+		reloaded = true
+		can_shoot = true
+		ammo = max_ammo  
+		reload_time = 3.0  # reset reload timer to original value
+		cooldown_bar.value = cooldown_bar.value * 100

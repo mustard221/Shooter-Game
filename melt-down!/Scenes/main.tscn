@@ -1,15 +1,17 @@
-[gd_scene load_steps=140 format=3 uid="uid://dx0sa6a24ghjo"]
+[gd_scene load_steps=142 format=3 uid="uid://dx0sa6a24ghjo"]
 
+[ext_resource type="Texture2D" uid="uid://b6qquds8lvyub" path="res://Assets/Visuals/UI/borders/borders029.png" id="1_4ye7f"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_cdrgg"]
 [ext_resource type="Texture2D" uid="uid://c8tct87y27vml" path="res://Assets/Visuals/Road/road1.png" id="1_egjng"]
 [ext_resource type="Texture2D" uid="uid://di4kbc1hkgrut" path="res://Assets/Visuals/Van/van.png" id="2_1epeb"]
-[ext_resource type="LabelSettings" uid="uid://cutdwmwh3c0g7" path="res://Text_settings.tres" id="2_lgu76"]
+[ext_resource type="LabelSettings" uid="uid://cutdwmwh3c0g7" path="res://Settings/Text_settings.tres" id="2_lgu76"]
 [ext_resource type="Texture2D" uid="uid://br72c5vt28w2l" path="res://Assets/Visuals/Road/road7.png" id="2_t6tpg"]
+[ext_resource type="LabelSettings" uid="uid://dpb6ryh0x1pl6" path="res://Settings/UI_Txt_settings.tres" id="2_tqk4i"]
 [ext_resource type="Texture2D" uid="uid://c6ycbpmho1d6p" path="res://Assets/Visuals/Road/road3.png" id="3_03adt"]
 [ext_resource type="Texture2D" uid="uid://cc63u7y0hckvi" path="res://Assets/Visuals/Van/turret.png" id="3_je1ue"]
 [ext_resource type="Texture2D" uid="uid://c0prm03i8ao3m" path="res://Assets/Visuals/UI/bars/under.png" id="3_p3jf1"]
 [ext_resource type="Texture2D" uid="uid://fkmwuiie5tf" path="res://Assets/Visuals/UI/bars/outline.png" id="3_qb7s4"]
-[ext_resource type="Script" path="res://timer.gd" id="3_wxjw1"]
+[ext_resource type="Script" path="res://Scripts/timer.gd" id="3_wxjw1"]
 [ext_resource type="Texture2D" uid="uid://digkp44nrge44" path="res://Assets/Visuals/UI/bars/fullbar.png" id="4_84nka"]
 [ext_resource type="Script" path="res://Scripts/cone.gd" id="4_ixduw"]
 [ext_resource type="Script" path="res://Scripts/shoot.gd" id="5_m3qpq"]
@@ -281,14 +283,23 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="Border03" type="Sprite2D" parent="UI/Control"]
+visible = false
+modulate = Color(1, 1, 1, 0.980392)
+texture_filter = 1
+position = Vector2(250.219, 140)
+scale = Vector2(6, 6)
+texture = ExtResource("1_4ye7f")
+
 [node name="Clock" type="Sprite2D" parent="UI/Control"]
+visible = false
 z_index = 50
 texture_filter = 1
 position = Vector2(168, 135)
 scale = Vector2(5, 5)
 texture = ExtResource("7_2sukq")
 
-[node name="Label" type="Label" parent="UI/Control" node_paths=PackedStringArray("timer")]
+[node name="Time" type="Label" parent="UI/Control" node_paths=PackedStringArray("timer")]
 z_index = 44
 texture_filter = 1
 layout_direction = 1
@@ -297,17 +308,17 @@ offset_left = 225.0
 offset_top = 90.0
 offset_right = 369.0
 offset_bottom = 166.0
-label_settings = ExtResource("2_lgu76")
+label_settings = ExtResource("2_tqk4i")
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("3_wxjw1")
 timer = NodePath("Timer")
 
-[node name="Timer" type="Timer" parent="UI/Control/Label"]
+[node name="Timer" type="Timer" parent="UI/Control/Time"]
 wait_time = 60.0
 autostart = true
 
-[node name="Label3" type="Label" parent="UI/Control"]
+[node name="Customers" type="Label" parent="UI/Control"]
 z_index = 44
 texture_filter = 1
 layout_direction = 1
@@ -317,7 +328,7 @@ offset_top = 90.0
 offset_right = 2404.0
 offset_bottom = 166.0
 text = "Customers: x12"
-label_settings = ExtResource("2_lgu76")
+label_settings = ExtResource("2_tqk4i")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -334,6 +345,22 @@ nine_patch_stretch = true
 texture_under = ExtResource("3_p3jf1")
 texture_over = ExtResource("3_qb7s4")
 texture_progress = ExtResource("4_84nka")
+
+[node name="Instruction" type="Label" parent="UI/Control"]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 405.0
+offset_right = 1936.0
+offset_bottom = 481.0
+text = "Hold \"E\" to refill the ice-cream"
+label_settings = ExtResource("2_tqk4i")
+
+[node name="Border04" type="Sprite2D" parent="UI/Control"]
+modulate = Color(1, 1, 1, 0.980392)
+texture_filter = 1
+position = Vector2(2147, 140)
+scale = Vector2(11, 7)
+texture = ExtResource("1_4ye7f")
 
 [node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
 z_index = 10
@@ -368,17 +395,22 @@ z_index = 2
 rotation = -1.5708
 texture = ExtResource("3_je1ue")
 
-[node name="Shoot" type="Marker2D" parent="Player/Van/Cone"]
+[node name="Shoot" type="Marker2D" parent="Player/Van/Cone" node_paths=PackedStringArray("text")]
 position = Vector2(18, 4.79221e-05)
 script = ExtResource("5_m3qpq")
+text = NodePath("../../../../UI/Control/Instruction")
 iceCream = ExtResource("6_hv8oq")
 
 [node name="World" type="Node2D" parent="."]
 z_index = 10
 position = Vector2(590, 47)
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="Buildings" type="Node2D" parent="World"]
 position = Vector2(-215, 154)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="CpV1_0_5" type="Sprite2D" parent="World/Buildings"]
 z_index = 9
@@ -9773,213 +9805,385 @@ shape = SubResource("RectangleShape2D_ypyhg")
 
 [node name="Customers" type="Node2D" parent="NPCs"]
 
-[node name="Boy" type="Area2D" parent="NPCs/Customers" groups=["NPCs"]]
+[node name="Sprite2D12" type="Sprite2D" parent="NPCs/Customers"]
 z_index = 15
 texture_filter = 1
-position = Vector2(511, 83)
+position = Vector2(516, 88)
+texture = ExtResource("69_rxifo")
+
+[node name="Boy" type="Area2D" parent="NPCs/Customers/Sprite2D12" groups=["NPCs"]]
+z_index = 15
+texture_filter = 1
+position = Vector2(-5, -5)
 script = ExtResource("69_85j5n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Boy"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Sprite2D12/Boy"]
 position = Vector2(-21.75, 7)
 shape = SubResource("RectangleShape2D_j15qb")
 
-[node name="Sprite2D" type="Sprite2D" parent="NPCs/Customers/Boy"]
-texture_filter = 1
-position = Vector2(5, 5)
-texture = ExtResource("69_rxifo")
-
-[node name="Label" type="Label" parent="NPCs/Customers/Boy"]
+[node name="Dialogue" type="Label" parent="NPCs/Customers/Sprite2D12/Boy"]
 z_index = 25
 texture_filter = 1
-offset_left = 8.0
+offset_left = 15.0
 offset_top = -8.0
-offset_right = 48.0
+offset_right = 55.0
 offset_bottom = 15.0
 theme_override_fonts/font = ExtResource("7_y5dc6")
 text = "Hi"
 label_settings = ExtResource("2_lgu76")
 
-[node name="Girl" type="Area2D" parent="NPCs/Customers" groups=["NPCs"]]
-z_index = 13
+[node name="Sprite2D11" type="Sprite2D" parent="NPCs/Customers"]
+z_index = 15
 texture_filter = 1
 position = Vector2(582, 353)
+texture = ExtResource("70_5dm1b")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Girl"]
+[node name="Girl" type="Area2D" parent="NPCs/Customers/Sprite2D11" groups=["NPCs"]]
+z_index = 13
+texture_filter = 1
+script = ExtResource("69_85j5n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Sprite2D11/Girl"]
 position = Vector2(7, 9.5)
 shape = SubResource("RectangleShape2D_wkfup")
 
-[node name="Sprite2D" type="Sprite2D" parent="NPCs/Customers/Girl"]
+[node name="Dialogue" type="Label" parent="NPCs/Customers/Sprite2D11/Girl"]
+z_index = 25
 texture_filter = 1
-texture = ExtResource("70_5dm1b")
+offset_left = 15.0
+offset_top = -8.0
+offset_right = 55.0
+offset_bottom = 15.0
+theme_override_fonts/font = ExtResource("7_y5dc6")
+text = "Hi"
+label_settings = ExtResource("2_lgu76")
 
-[node name="OldMan" type="Area2D" parent="NPCs/Customers" groups=["NPCs"]]
-z_index = 10
+[node name="Sprite2D10" type="Sprite2D" parent="NPCs/Customers"]
+z_index = 15
 texture_filter = 1
 position = Vector2(921, -340)
+texture = ExtResource("68_aendt")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/OldMan"]
+[node name="OldMan" type="Area2D" parent="NPCs/Customers/Sprite2D10" groups=["NPCs"]]
+z_index = 10
+texture_filter = 1
+script = ExtResource("69_85j5n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Sprite2D10/OldMan"]
 position = Vector2(5, -15.5)
 shape = SubResource("RectangleShape2D_1xlhk")
 
-[node name="Sprite2D" type="Sprite2D" parent="NPCs/Customers/OldMan"]
+[node name="Dialogue" type="Label" parent="NPCs/Customers/Sprite2D10/OldMan"]
+z_index = 25
 texture_filter = 1
-texture = ExtResource("68_aendt")
+offset_left = 15.0
+offset_top = -8.0
+offset_right = 55.0
+offset_bottom = 15.0
+theme_override_fonts/font = ExtResource("7_y5dc6")
+text = "Hi"
+label_settings = ExtResource("2_lgu76")
 
-[node name="Man3" type="Area2D" parent="NPCs/Customers" groups=["NPCs"]]
+[node name="Sprite2D9" type="Sprite2D" parent="NPCs/Customers"]
+z_index = 15
+position = Vector2(1508, -82)
+texture = ExtResource("80_0p6a4")
+
+[node name="Man3" type="Area2D" parent="NPCs/Customers/Sprite2D9" groups=["NPCs"]]
 z_index = 10
 texture_filter = 1
-position = Vector2(1499, -84)
+position = Vector2(-9, -2)
+script = ExtResource("69_85j5n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Man3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Sprite2D9/Man3"]
 position = Vector2(9, 17)
 shape = SubResource("RectangleShape2D_itvh7")
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="NPCs/Customers/Man3"]
-position = Vector2(9, 2)
-texture = ExtResource("80_0p6a4")
+[node name="Dialogue" type="Label" parent="NPCs/Customers/Sprite2D9/Man3"]
+z_index = 25
+texture_filter = 1
+offset_left = 15.0
+offset_top = -8.0
+offset_right = 55.0
+offset_bottom = 15.0
+theme_override_fonts/font = ExtResource("7_y5dc6")
+text = "Hi"
+label_settings = ExtResource("2_lgu76")
 
-[node name="Trucker" type="Area2D" parent="NPCs/Customers" groups=["NPCs"]]
-z_index = 10
+[node name="Sprite2D8" type="Sprite2D" parent="NPCs/Customers"]
+z_index = 15
 texture_filter = 1
 position = Vector2(599, -320)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Trucker"]
-position = Vector2(-18, 12)
-shape = SubResource("RectangleShape2D_566as")
-
-[node name="Sprite2D" type="Sprite2D" parent="NPCs/Customers/Trucker"]
-texture_filter = 1
 texture = ExtResource("70_8j8mt")
 flip_h = true
 
-[node name="Punk" type="Area2D" parent="NPCs/Customers" groups=["NPCs"]]
-z_index = 18
+[node name="Trucker" type="Area2D" parent="NPCs/Customers/Sprite2D8" groups=["NPCs"]]
+z_index = 10
+texture_filter = 1
+script = ExtResource("69_85j5n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Sprite2D8/Trucker"]
+position = Vector2(-18, 12)
+shape = SubResource("RectangleShape2D_566as")
+
+[node name="Dialogue" type="Label" parent="NPCs/Customers/Sprite2D8/Trucker"]
+z_index = 25
+texture_filter = 1
+offset_left = 15.0
+offset_top = -8.0
+offset_right = 55.0
+offset_bottom = 15.0
+theme_override_fonts/font = ExtResource("7_y5dc6")
+text = "Hi"
+label_settings = ExtResource("2_lgu76")
+
+[node name="Sprite2D7" type="Sprite2D" parent="NPCs/Customers"]
+z_index = 15
 texture_filter = 1
 position = Vector2(1771, 256)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Punk"]
-position = Vector2(-5, 4)
-shape = SubResource("RectangleShape2D_7mseg")
-
-[node name="Sprite2D" type="Sprite2D" parent="NPCs/Customers/Punk"]
-texture_filter = 1
 texture = ExtResource("71_stwtk")
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
-[node name="Lady" type="Area2D" parent="NPCs/Customers" groups=["NPCs"]]
-z_index = 32
+[node name="Punk" type="Area2D" parent="NPCs/Customers/Sprite2D7" groups=["NPCs"]]
+z_index = 18
+texture_filter = 1
+script = ExtResource("69_85j5n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Sprite2D7/Punk"]
+position = Vector2(-5, 4)
+shape = SubResource("RectangleShape2D_7mseg")
+
+[node name="Dialogue" type="Label" parent="NPCs/Customers/Sprite2D7/Punk"]
+z_index = 25
+texture_filter = 1
+offset_left = 15.0
+offset_top = -8.0
+offset_right = 55.0
+offset_bottom = 15.0
+theme_override_fonts/font = ExtResource("7_y5dc6")
+text = "Hi"
+label_settings = ExtResource("2_lgu76")
+
+[node name="Sprite2D6" type="Sprite2D" parent="NPCs/Customers"]
+z_index = 15
 texture_filter = 1
 position = Vector2(1118, -493)
+texture = ExtResource("72_4u37h")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Lady"]
+[node name="Lady" type="Area2D" parent="NPCs/Customers/Sprite2D6" groups=["NPCs"]]
+z_index = 32
+texture_filter = 1
+script = ExtResource("69_85j5n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Sprite2D6/Lady"]
 position = Vector2(-4.5, 14)
 shape = SubResource("RectangleShape2D_2y0k8")
 
-[node name="Sprite2D" type="Sprite2D" parent="NPCs/Customers/Lady"]
+[node name="Dialogue" type="Label" parent="NPCs/Customers/Sprite2D6/Lady"]
+z_index = 25
 texture_filter = 1
-texture = ExtResource("72_4u37h")
+offset_left = 15.0
+offset_top = -8.0
+offset_right = 55.0
+offset_bottom = 15.0
+theme_override_fonts/font = ExtResource("7_y5dc6")
+text = "Hi"
+label_settings = ExtResource("2_lgu76")
 
-[node name="Teenager" type="Area2D" parent="NPCs/Customers" groups=["NPCs"]]
-z_index = 11
+[node name="Sprite2D5" type="Sprite2D" parent="NPCs/Customers"]
+z_index = 15
 texture_filter = 1
 position = Vector2(1186, 285)
+texture = ExtResource("73_q511t")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Teenager"]
+[node name="Teenager" type="Area2D" parent="NPCs/Customers/Sprite2D5" groups=["NPCs"]]
+z_index = 11
+texture_filter = 1
+script = ExtResource("69_85j5n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Sprite2D5/Teenager"]
 position = Vector2(-12, -4)
 shape = SubResource("RectangleShape2D_k6qx2")
 
-[node name="Sprite2D" type="Sprite2D" parent="NPCs/Customers/Teenager"]
+[node name="Dialogue" type="Label" parent="NPCs/Customers/Sprite2D5/Teenager"]
+z_index = 25
 texture_filter = 1
-texture = ExtResource("73_q511t")
+offset_left = 15.0
+offset_top = -8.0
+offset_right = 55.0
+offset_bottom = 15.0
+theme_override_fonts/font = ExtResource("7_y5dc6")
+text = "Hi"
+label_settings = ExtResource("2_lgu76")
 
-[node name="Lady2" type="Area2D" parent="NPCs/Customers" groups=["NPCs"]]
-z_index = 11
+[node name="Sprite2D" type="Sprite2D" parent="NPCs/Customers"]
+z_index = 15
 texture_filter = 1
 position = Vector2(76, 38)
+texture = ExtResource("77_j0p33")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Lady2"]
+[node name="Lady2" type="Area2D" parent="NPCs/Customers/Sprite2D" groups=["NPCs"]]
+z_index = 11
+texture_filter = 1
+script = ExtResource("69_85j5n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Sprite2D/Lady2"]
 position = Vector2(13, 0.5)
 shape = SubResource("RectangleShape2D_djg7r")
 
-[node name="Sprite2D" type="Sprite2D" parent="NPCs/Customers/Lady2"]
+[node name="Dialogue" type="Label" parent="NPCs/Customers/Sprite2D/Lady2"]
+z_index = 25
 texture_filter = 1
-texture = ExtResource("77_j0p33")
+offset_left = 15.0
+offset_top = -8.0
+offset_right = 55.0
+offset_bottom = 15.0
+theme_override_fonts/font = ExtResource("7_y5dc6")
+text = "Hi"
+label_settings = ExtResource("2_lgu76")
 
-[node name="Teenager2" type="Area2D" parent="NPCs/Customers" groups=["NPCs"]]
-z_index = 11
+[node name="Sprite2D2" type="Sprite2D" parent="NPCs/Customers"]
+z_index = 15
 texture_filter = 1
 position = Vector2(849, -177)
+texture = ExtResource("73_rue7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Teenager2"]
+[node name="Teenager2" type="Area2D" parent="NPCs/Customers/Sprite2D2" groups=["NPCs"]]
+z_index = 11
+texture_filter = 1
+script = ExtResource("69_85j5n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Sprite2D2/Teenager2"]
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_niocx")
 
-[node name="Sprite2D" type="Sprite2D" parent="NPCs/Customers/Teenager2"]
+[node name="Dialogue" type="Label" parent="NPCs/Customers/Sprite2D2/Teenager2"]
+z_index = 25
 texture_filter = 1
-texture = ExtResource("73_rue7n")
+offset_left = 15.0
+offset_top = -8.0
+offset_right = 55.0
+offset_bottom = 15.0
+theme_override_fonts/font = ExtResource("7_y5dc6")
+text = "Hi"
+label_settings = ExtResource("2_lgu76")
 
-[node name="Guy" type="Area2D" parent="NPCs/Customers" groups=["NPCs"]]
-z_index = 10
+[node name="Sprite2D3" type="Sprite2D" parent="NPCs/Customers"]
+z_index = 15
 texture_filter = 1
 position = Vector2(625, -199)
+texture = ExtResource("76_xr05h")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Guy"]
+[node name="Guy" type="Area2D" parent="NPCs/Customers/Sprite2D3" groups=["NPCs"]]
+z_index = 10
+texture_filter = 1
+script = ExtResource("69_85j5n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Sprite2D3/Guy"]
 position = Vector2(12, 16)
 shape = SubResource("RectangleShape2D_8f0o4")
 
-[node name="Sprite2D" type="Sprite2D" parent="NPCs/Customers/Guy"]
-texture_filter = 1
-texture = ExtResource("76_xr05h")
-
-[node name="Man2" type="Area2D" parent="NPCs/Customers" groups=["NPCs"]]
-z_index = 22
+[node name="Sprite2D4" type="Sprite2D" parent="NPCs/Customers"]
+z_index = 15
 texture_filter = 1
 position = Vector2(987, 169)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Man2"]
-shape = SubResource("RectangleShape2D_a6ml6")
-
-[node name="Sprite2D" type="Sprite2D" parent="NPCs/Customers/Man2"]
-texture_filter = 1
 texture = ExtResource("77_0bs3t")
 
-[node name="Man" type="Area2D" parent="NPCs" groups=["NPCs"]]
+[node name="Man2" type="Area2D" parent="NPCs/Customers/Sprite2D4" groups=["NPCs"]]
+z_index = 22
+texture_filter = 1
+script = ExtResource("69_85j5n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Sprite2D4/Man2"]
+shape = SubResource("RectangleShape2D_a6ml6")
+
+[node name="Dialogue" type="Label" parent="NPCs/Customers/Sprite2D4/Man2"]
+z_index = 25
+texture_filter = 1
+offset_left = 15.0
+offset_top = -8.0
+offset_right = 55.0
+offset_bottom = 15.0
+theme_override_fonts/font = ExtResource("7_y5dc6")
+text = "Hi"
+label_settings = ExtResource("2_lgu76")
+
+[node name="Sprite2D" type="Sprite2D" parent="NPCs"]
+z_index = 15
+position = Vector2(1278, -122)
+texture = ExtResource("78_loxfg")
+
+[node name="Man" type="Area2D" parent="NPCs/Sprite2D" groups=["NPCs"]]
 z_index = 19
 texture_filter = 1
-position = Vector2(1278, -121)
+position = Vector2(0, 1)
+script = ExtResource("69_85j5n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Man"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D/Man"]
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_8o3wu")
 
-[node name="Sprite2D" type="Sprite2D" parent="NPCs/Man"]
-position = Vector2(0, -1)
-texture = ExtResource("78_loxfg")
+[node name="Dialogue" type="Label" parent="NPCs/Sprite2D/Man"]
+z_index = 25
+texture_filter = 1
+offset_left = 15.0
+offset_top = -8.0
+offset_right = 55.0
+offset_bottom = 15.0
+theme_override_fonts/font = ExtResource("7_y5dc6")
+text = "Hi"
+label_settings = ExtResource("2_lgu76")
 
-[node name="Oldman2" type="Area2D" parent="NPCs" groups=["NPCs"]]
-z_index = 11
+[node name="Sprite2D2" type="Sprite2D" parent="NPCs"]
+z_index = 15
 texture_filter = 1
 position = Vector2(335, -76)
+texture = ExtResource("78_oxayk")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Oldman2"]
+[node name="Oldman2" type="Area2D" parent="NPCs/Sprite2D2" groups=["NPCs"]]
+z_index = 11
+texture_filter = 1
+script = ExtResource("69_85j5n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D2/Oldman2"]
 position = Vector2(0, 9)
 shape = SubResource("RectangleShape2D_yeccl")
 
-[node name="Sprite2D" type="Sprite2D" parent="NPCs/Oldman2"]
+[node name="Dialogue" type="Label" parent="NPCs/Sprite2D2/Oldman2"]
+z_index = 25
 texture_filter = 1
-texture = ExtResource("78_oxayk")
+offset_left = 15.0
+offset_top = -8.0
+offset_right = 55.0
+offset_bottom = 15.0
+theme_override_fonts/font = ExtResource("7_y5dc6")
+text = "Hi"
+label_settings = ExtResource("2_lgu76")
 
-[node name="Scientist" type="Area2D" parent="NPCs" groups=["NPCs"]]
-z_index = 33
+[node name="Sprite2D3" type="Sprite2D" parent="NPCs"]
+z_index = 15
 texture_filter = 1
 position = Vector2(896, 316)
+texture = ExtResource("80_3tb31")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Scientist"]
+[node name="Scientist" type="Area2D" parent="NPCs/Sprite2D3" groups=["NPCs"]]
+z_index = 33
+texture_filter = 1
+script = ExtResource("69_85j5n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D3/Scientist"]
 shape = SubResource("RectangleShape2D_6h1rq")
 
-[node name="Sprite2D" type="Sprite2D" parent="NPCs/Scientist"]
+[node name="Dialogue" type="Label" parent="NPCs/Sprite2D3/Scientist"]
+z_index = 25
 texture_filter = 1
-texture = ExtResource("80_3tb31")
+offset_left = 15.0
+offset_top = -8.0
+offset_right = 55.0
+offset_bottom = 15.0
+theme_override_fonts/font = ExtResource("7_y5dc6")
+text = "Hi"
+label_settings = ExtResource("2_lgu76")
