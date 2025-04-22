@@ -1,4 +1,4 @@
-[gd_scene load_steps=121 format=3 uid="uid://dx0sa6a24ghjo"]
+[gd_scene load_steps=122 format=3 uid="uid://dx0sa6a24ghjo"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_cdrgg"]
 [ext_resource type="Texture2D" uid="uid://c8tct87y27vml" path="res://Assets/Visuals/Road/road1.png" id="1_egjng"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://br72c5vt28w2l" path="res://Assets/Visuals/Road/road7.png" id="2_t6tpg"]
 [ext_resource type="Texture2D" uid="uid://c6ycbpmho1d6p" path="res://Assets/Visuals/Road/road3.png" id="3_03adt"]
 [ext_resource type="Texture2D" uid="uid://cc63u7y0hckvi" path="res://Assets/Visuals/Van/turret.png" id="3_je1ue"]
+[ext_resource type="Texture2D" uid="uid://olbfgmy7locy" path="res://Assets/Visuals/UI/bars/tp.png" id="3_vt6ro"]
 [ext_resource type="Script" path="res://Scripts/cone.gd" id="4_ixduw"]
 [ext_resource type="Script" path="res://Scripts/shoot.gd" id="5_m3qpq"]
 [ext_resource type="Texture2D" uid="uid://bp18ee6j26yn5" path="res://Assets/Visuals/Grass/grass000.png" id="5_u5ksw"]
@@ -86,6 +87,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_424im"]
 font = ExtResource("7_y5dc6")
+font_size = 96
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qw5tt"]
 size = Vector2(30, 46.5)
@@ -221,6 +223,58 @@ func _physics_process(delta: float) -> void:
 
 [node name="Node2D" type="Node2D"]
 
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="UI"]
+layout_direction = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1151.0
+offset_bottom = -647.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Clock" type="Sprite2D" parent="UI/Control"]
+z_index = 50
+texture_filter = 1
+position = Vector2(168, 135)
+scale = Vector2(5, 5)
+texture = ExtResource("7_2sukq")
+
+[node name="Label" type="Label" parent="UI/Control"]
+z_index = 44
+texture_filter = 1
+layout_direction = 1
+layout_mode = 0
+offset_left = 225.0
+offset_top = 90.0
+offset_right = 369.0
+offset_bottom = 166.0
+text = "1:00"
+label_settings = SubResource("LabelSettings_424im")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="UI/Control/Label"]
+
+[node name="Label3" type="Label" parent="UI/Control"]
+z_index = 44
+texture_filter = 1
+layout_direction = 1
+layout_mode = 0
+offset_left = 1900.0
+offset_top = 90.0
+offset_right = 2404.0
+offset_bottom = 166.0
+text = "Customers: x12"
+label_settings = SubResource("LabelSettings_424im")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Player" type="CharacterBody2D" parent="."]
 z_index = 10
 position = Vector2(375, 201)
@@ -230,34 +284,7 @@ script = ExtResource("1_cdrgg")
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(1, 2)
 zoom = Vector2(6.5, 6.5)
-
-[node name="Clock" type="Sprite2D" parent="Player/Camera2D"]
-z_index = 50
-texture_filter = 1
-position = Vector2(-175, -105)
-texture = ExtResource("7_2sukq")
-
-[node name="Label" type="Label" parent="Player/Camera2D"]
-z_index = 44
-texture_filter = 1
-offset_left = -165.0
-offset_top = -112.0
-offset_right = -105.0
-offset_bottom = -89.0
-text = "1:00"
-label_settings = SubResource("LabelSettings_424im")
-
-[node name="Timer" type="Timer" parent="Player/Camera2D/Label"]
-
-[node name="Label3" type="Label" parent="Player/Camera2D"]
-z_index = 44
-texture_filter = 1
-offset_left = 100.0
-offset_top = -112.0
-offset_right = 160.0
-offset_bottom = -67.0
-text = "Customers:"
-label_settings = SubResource("LabelSettings_424im")
+rotation_smoothing_enabled = true
 
 [node name="Van" type="Sprite2D" parent="Player"]
 z_index = 4
@@ -276,6 +303,13 @@ z_index = 2
 rotation = -1.5708
 texture = ExtResource("3_je1ue")
 
+[node name="Bar" type="Sprite2D" parent="Player/Van/Cone/Sprite2D"]
+z_index = 55
+texture_filter = 1
+position = Vector2(-0.000152588, 24)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_vt6ro")
+
 [node name="Shoot" type="Marker2D" parent="Player/Van/Cone"]
 position = Vector2(16, 4.28915e-05)
 script = ExtResource("5_m3qpq")
@@ -293,6 +327,8 @@ metadata/_edit_group_ = true
 
 [node name="Buildings" type="Node2D" parent="World"]
 position = Vector2(-215, 154)
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="CpV1_0_5" type="Sprite2D" parent="World/Buildings"]
 z_index = 9
@@ -477,7 +513,6 @@ shape = SubResource("RectangleShape2D_n4umf")
 
 [node name="CpV1_0_19" type="Sprite2D" parent="World/Buildings"]
 z_index = 16
-z_as_relative = false
 texture_filter = 1
 position = Vector2(-352.688, -313)
 scale = Vector2(2.00962, 1)
