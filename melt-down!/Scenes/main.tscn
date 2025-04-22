@@ -1,11 +1,16 @@
-[gd_scene load_steps=136 format=3 uid="uid://dx0sa6a24ghjo"]
+[gd_scene load_steps=140 format=3 uid="uid://dx0sa6a24ghjo"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_cdrgg"]
 [ext_resource type="Texture2D" uid="uid://c8tct87y27vml" path="res://Assets/Visuals/Road/road1.png" id="1_egjng"]
 [ext_resource type="Texture2D" uid="uid://di4kbc1hkgrut" path="res://Assets/Visuals/Van/van.png" id="2_1epeb"]
+[ext_resource type="LabelSettings" uid="uid://cutdwmwh3c0g7" path="res://Text_settings.tres" id="2_lgu76"]
 [ext_resource type="Texture2D" uid="uid://br72c5vt28w2l" path="res://Assets/Visuals/Road/road7.png" id="2_t6tpg"]
 [ext_resource type="Texture2D" uid="uid://c6ycbpmho1d6p" path="res://Assets/Visuals/Road/road3.png" id="3_03adt"]
 [ext_resource type="Texture2D" uid="uid://cc63u7y0hckvi" path="res://Assets/Visuals/Van/turret.png" id="3_je1ue"]
+[ext_resource type="Texture2D" uid="uid://c0prm03i8ao3m" path="res://Assets/Visuals/UI/bars/under.png" id="3_p3jf1"]
+[ext_resource type="Texture2D" uid="uid://fkmwuiie5tf" path="res://Assets/Visuals/UI/bars/outline.png" id="3_qb7s4"]
+[ext_resource type="Script" path="res://timer.gd" id="3_wxjw1"]
+[ext_resource type="Texture2D" uid="uid://digkp44nrge44" path="res://Assets/Visuals/UI/bars/fullbar.png" id="4_84nka"]
 [ext_resource type="Script" path="res://Scripts/cone.gd" id="4_ixduw"]
 [ext_resource type="Script" path="res://Scripts/shoot.gd" id="5_m3qpq"]
 [ext_resource type="Texture2D" uid="uid://bp18ee6j26yn5" path="res://Assets/Visuals/Grass/grass000.png" id="5_u5ksw"]
@@ -83,10 +88,6 @@
 [ext_resource type="Texture2D" uid="uid://dpwiywwp3t1kq" path="res://Assets/Visuals/Characters/Walking/tile010.png" id="78_oxayk"]
 [ext_resource type="Texture2D" uid="uid://rk268rco8keg" path="res://Assets/Visuals/Characters/Walking/tile091.png" id="80_0p6a4"]
 [ext_resource type="Texture2D" uid="uid://dub5ach2fxwk3" path="res://Assets/Visuals/Characters/Walking/tile024.png" id="80_3tb31"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_424im"]
-font = ExtResource("7_y5dc6")
-font_size = 96
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qw5tt"]
 size = Vector2(30, 46.5)
@@ -287,7 +288,7 @@ position = Vector2(168, 135)
 scale = Vector2(5, 5)
 texture = ExtResource("7_2sukq")
 
-[node name="Label" type="Label" parent="UI/Control"]
+[node name="Label" type="Label" parent="UI/Control" node_paths=PackedStringArray("timer")]
 z_index = 44
 texture_filter = 1
 layout_direction = 1
@@ -296,12 +297,15 @@ offset_left = 225.0
 offset_top = 90.0
 offset_right = 369.0
 offset_bottom = 166.0
-text = "1:00"
-label_settings = SubResource("LabelSettings_424im")
+label_settings = ExtResource("2_lgu76")
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("3_wxjw1")
+timer = NodePath("Timer")
 
 [node name="Timer" type="Timer" parent="UI/Control/Label"]
+wait_time = 60.0
+autostart = true
 
 [node name="Label3" type="Label" parent="UI/Control"]
 z_index = 44
@@ -313,11 +317,11 @@ offset_top = 90.0
 offset_right = 2404.0
 offset_bottom = 166.0
 text = "Customers: x12"
-label_settings = SubResource("LabelSettings_424im")
+label_settings = ExtResource("2_lgu76")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Cooldown" type="ProgressBar" parent="UI/Control"]
+[node name="Cooldown" type="TextureProgressBar" parent="UI/Control"]
 z_index = 66
 texture_filter = 1
 layout_mode = 0
@@ -325,9 +329,11 @@ offset_left = 1076.0
 offset_top = 500.0
 offset_right = 1472.0
 offset_bottom = 549.0
-theme_override_fonts/font = ExtResource("7_y5dc6")
-theme_override_font_sizes/font_size = 55
-fill_mode = 1
+value = 100.0
+nine_patch_stretch = true
+texture_under = ExtResource("3_p3jf1")
+texture_over = ExtResource("3_qb7s4")
+texture_progress = ExtResource("4_84nka")
 
 [node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
 z_index = 10
@@ -9791,6 +9797,7 @@ offset_right = 48.0
 offset_bottom = 15.0
 theme_override_fonts/font = ExtResource("7_y5dc6")
 text = "Hi"
+label_settings = ExtResource("2_lgu76")
 
 [node name="Girl" type="Area2D" parent="NPCs/Customers" groups=["NPCs"]]
 z_index = 13

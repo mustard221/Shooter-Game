@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyjwhonncct85"
-path="res://.godot/imported/yelow.png-ca95730ac539ce684e748fb1537506f5.ctex"
+uid="uid://digkp44nrge44"
+path="res://.godot/imported/fullbar.png-3644b7deb4f74a4d3aa4105c137aad91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Visuals/UI/bars/yelow.png"
-dest_files=["res://.godot/imported/yelow.png-ca95730ac539ce684e748fb1537506f5.ctex"]
+source_file="res://Assets/Visuals/UI/bars/fullbar.png"
+dest_files=["res://.godot/imported/fullbar.png-3644b7deb4f74a4d3aa4105c137aad91.ctex"]
 
 [params]
 
