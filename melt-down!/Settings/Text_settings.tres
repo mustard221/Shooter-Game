@@ -3,4 +3,5 @@
 [ext_resource type="FontFile" uid="uid://i4wc5crjmg2d" path="res://Assets/Visuals/UI/monogram/ttf/monogram.ttf" id="1_6xlmf"]
 
 [resource]
+line_spacing = -2.5
 font = ExtResource("1_6xlmf")
