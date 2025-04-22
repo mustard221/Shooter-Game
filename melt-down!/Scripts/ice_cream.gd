@@ -1,15 +1,16 @@
 extends RigidBody2D
 
-@export var speed: float = 250.0
+@export var speed: float = 150.0
 
 var direction: Vector2
 var travel_direction: Vector2
 #shoot toward mouse
 func _ready() -> void:
-	direction = (get_global_mouse_position() - global_position).normalized()
+	var aim_vector = get_global_mouse_position() - global_position
+	direction = aim_vector.normalized()
 	travel_direction = direction
 	linear_velocity = direction * speed
-	
+
 	# subtle squashed random scale
 	scale.x = randf_range(0.9, 1.3)
 	scale.y = randf_range(0.6, 1.0)
@@ -19,7 +20,7 @@ func _ready() -> void:
 
 # slow down velocity after shooting
 func _on_timer_2_timeout() -> void:
-	linear_velocity = travel_direction * speed / 200
+	linear_velocity = travel_direction * speed / 100
 
 #looks like it melts then disappears
 func _on_timer_timeout() -> void:
