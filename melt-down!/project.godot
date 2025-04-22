@@ -18,6 +18,10 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 
 mouse_cursor/custom_image="res://Assets/Visuals/UI/Lucid-V1.2/PNG/Shadow/160/Cursor-5.png"
 
+[global_group]
+
+Player=""
+
 [input]
 
 turn_left_input={
