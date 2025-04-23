@@ -1,15 +1,24 @@
 extends CharacterBody2D
 
+@onready var sound: AudioStreamPlayer = $"Van/Driving-65528"
+@onready var crash: AudioStreamPlayer = $Van/crash
 @export var speed: float = 1500
 @export var back_speed: float = 600 
 @export var turn_speed_deg: float = 210
 @export var friction: float = -10
 
-func _physics_process(delta: float) -> void:
-	var moving = false
-	var moving_forward = false  # track if going forward
+var can_move = false  # movement locked until timer ends
 
-	# movement
+func _on_tuttimer_timeout() -> void:
+	can_move = true
+
+func _physics_process(delta: float) -> void:
+	if !can_move:
+		return  # skip everything until timer ends
+
+	var moving = false
+	var moving_forward = false
+
 	if Input.is_action_pressed("forward_input"):
 		var acceleration = -transform.y * speed
 		velocity += acceleration * delta
@@ -22,19 +31,27 @@ func _physics_process(delta: float) -> void:
 		moving = true
 		moving_forward = false
 
-	# rotation
 	if moving:
 		var turning_input = Input.get_axis("turn_left_input", "turn_right_input")
 		var turn_speed = deg_to_rad(turn_speed_deg) / 2
 		var direction = 1 if moving_forward else -1
 		rotation += turning_input * turn_speed * direction * delta
+		
+	if moving and moving_forward:
+		if !sound.playing:
+			sound.play()
+	else:
+		sound.stop()
 
 	apply_friction(delta)
 
-	# checking for collision
 	var collision = move_and_collide(velocity * delta)
-	if collision:
-		velocity = Vector2.ZERO
+	
+	if collision and !crash.playing:
+		crash.play()
+		moving = false
+		moving_forward = false
+		velocity = -velocity * 1  # slight recoil
 
 func apply_friction(delta):
 	var friction_force = velocity * friction * delta

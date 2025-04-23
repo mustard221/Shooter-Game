@@ -9,7 +9,7 @@ friction = 0.0
 [node name="Node2D" type="Node2D"]
 
 [node name="Rigidbody2D" type="RigidBody2D" parent="."]
-z_index = 18
+z_index = 77
 texture_filter = 1
 mass = 0.001
 physics_material_override = SubResource("PhysicsMaterial_5r3pb")
