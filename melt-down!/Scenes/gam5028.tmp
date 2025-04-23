@@ -1,4 +1,4 @@
-[gd_scene load_steps=176 format=3 uid="uid://ccfosk8ja5712"]
+[gd_scene load_steps=174 format=3 uid="uid://ccfosk8ja5712"]
 
 [ext_resource type="Texture2D" uid="uid://o1kjsdn1d7ik" path="res://Assets/Visuals/UI/More ui/Buttons/box2.png" id="1_cfb0c"]
 [ext_resource type="Texture2D" uid="uid://8qylt2t3t05g" path="res://Assets/Visuals/UI/white icons/PNG/Shadow/16/Clock.png" id="2_61iva"]
@@ -36,9 +36,7 @@
 [ext_resource type="Script" path="res://Scripts/npc_move.gd" id="35_4egss"]
 [ext_resource type="Script" path="res://Scripts/npc2.gd" id="36_b8vyc"]
 [ext_resource type="Script" path="res://Scripts/tut.gd" id="37_l4utk"]
-[ext_resource type="Script" path="res://Scripts/texture_progress_bar.gd" id="38_ldlki"]
 [ext_resource type="FontFile" uid="uid://i4wc5crjmg2d" path="res://Assets/Visuals/UI/font/ttf/monogram.ttf" id="38_wyj3j"]
-[ext_resource type="AudioStream" uid="uid://dr2dcoobj833e" path="res://Assets/Sound/yay-92370 (mp3cut.net).mp3" id="39_h7v0m"]
 [ext_resource type="Texture2D" uid="uid://cgcckbl7jce6v" path="res://Assets/Visuals/UI/buttons colourful/icon075.png" id="39_kov4a"]
 [ext_resource type="Texture2D" uid="uid://bw4850d4uukl5" path="res://Assets/Visuals/UI/buttons colourful/icon076.png" id="40_moxd1"]
 [ext_resource type="Texture2D" uid="uid://ceq5gn0snsyh1" path="res://Assets/Visuals/UI/buttons colourful/icon077.png" id="41_74700"]
@@ -336,6 +334,7 @@ texture = ExtResource("18_462wh")
 script = ExtResource("19_m1rni")
 
 [node name="UI" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Control" type="Control" parent="UI"]
 layout_direction = 1
@@ -598,45 +597,38 @@ script = ExtResource("35_4egss")
 
 [node name="walkTime" type="Timer" parent="NPCs/Customers/Sprite2D12"]
 wait_time = 30.0
-one_shot = true
 
 [node name="Boy" type="Area2D" parent="NPCs/Customers/Sprite2D12"]
-z_index = 100
-z_as_relative = false
+z_index = 15
 texture_filter = 1
 position = Vector2(-4, -9)
-collision_layer = 7
-collision_mask = 7
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("36_b8vyc")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="NPCs/Customers/Sprite2D12/Boy"]
 texture_filter = 1
-offset_left = -16.0
-offset_top = -30.0
-offset_right = 24.0
-offset_bottom = 10.0
-fill_mode = 3
-nine_patch_stretch = true
+offset_left = -12.0
+offset_top = -27.0
+offset_right = 28.0
+offset_bottom = 13.0
+rounded = true
 texture_under = ExtResource("44_vp6m4")
 texture_progress = ExtResource("45_2diep")
-script = ExtResource("38_ldlki")
-
-[node name="Yay-92370(mp3Cut_net)" type="AudioStreamPlayer" parent="NPCs/Customers/Sprite2D12/Boy/TextureProgressBar"]
-stream = ExtResource("39_h7v0m")
-pitch_scale = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Customers/Sprite2D12/Boy"]
 position = Vector2(-5, 9)
 shape = SubResource("RectangleShape2D_j15qb")
+metadata/_edit_lock_ = true
 
 [node name="Aimtut" type="TextureRect" parent="NPCs/Customers/Sprite2D12/Boy"]
 top_level = true
 z_index = 50
 texture_filter = 1
-offset_left = 1526.0
-offset_top = 358.0
-offset_right = 2156.0
-offset_bottom = 588.0
+offset_left = 1520.0
+offset_top = 349.0
+offset_right = 2150.0
+offset_bottom = 579.0
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("9_vs8x1")
 stretch_mode = 4
@@ -11696,8 +11688,6 @@ shape = SubResource("RectangleShape2D_ypyhg")
 [connection signal="timeout" from="UI/Control/Tutorial/Mouse-left/Timer2" to="Player/Van/Cone/Shoot" method="_on_timer_2_timeout"]
 [connection signal="timeout" from="UI/Control/Tutorial/Mouse-left/Timer2" to="NPCs/Customers/Sprite2D12" method="_on_timer_timeout"]
 [connection signal="timeout" from="NPCs/Customers/Sprite2D12/walkTime" to="NPCs/Customers/Sprite2D12" method="_on_walk_time_timeout"]
-[connection signal="area_entered" from="NPCs/Customers/Sprite2D12/Boy" to="Player/Van/Cone/Shoot" method="_on_area_entered"]
-[connection signal="area_entered" from="NPCs/Customers/Sprite2D12/Boy" to="NPCs/Customers/Sprite2D12/Boy/TextureProgressBar" method="_on_boy_area_entered"]
 [connection signal="body_entered" from="NPCs/Customers/Sprite2D12/Boy" to="NPCs/Customers/Sprite2D12/Boy" method="_on_body_entered"]
 [connection signal="body_exited" from="NPCs/Customers/Sprite2D12/Boy" to="NPCs/Customers/Sprite2D12/Boy" method="_on_body_exited"]
 [connection signal="timeout" from="NPCs/Customers/Sprite2D12/Boy/Aimtut/Tuttimer" to="NPCs/Customers/Sprite2D12/Boy/Aimtut" method="_on_tuttimer_timeout"]

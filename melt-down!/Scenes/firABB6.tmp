@@ -3,25 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://beda8ev1v5lpm" path="res://Assets/Visuals/Van/icecream.png" id="1_71ecs"]
 [ext_resource type="Script" path="res://Scripts/ice_cream.gd" id="2_vw34e"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wka18"]
-size = Vector2(32, 29)
-
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5r3pb"]
 friction = 0.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wka18"]
+size = Vector2(32, 29)
+
 [node name="Node2D" type="Node2D"]
-
-[node name="icecream" type="Area2D" parent="."]
-z_index = 20
-z_as_relative = false
-collision_layer = 7
-collision_mask = 7
-
-[node name="icecream" type="CollisionShape2D" parent="icecream"]
-light_mask = 7
-visibility_layer = 7
-position = Vector2(1, -4.5)
-shape = SubResource("RectangleShape2D_wka18")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 z_index = 77
@@ -30,6 +18,17 @@ mass = 0.001
 physics_material_override = SubResource("PhysicsMaterial_5r3pb")
 gravity_scale = 0.0
 script = ExtResource("2_vw34e")
+
+[node name="icecream" type="Area2D" parent="RigidBody2D"]
+z_index = 20
+collision_layer = 7
+collision_mask = 7
+
+[node name="icecream" type="CollisionShape2D" parent="RigidBody2D/icecream"]
+light_mask = 7
+visibility_layer = 7
+position = Vector2(1, -4.5)
+shape = SubResource("RectangleShape2D_wka18")
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
 texture = ExtResource("1_71ecs")
@@ -43,7 +42,6 @@ wait_time = 0.15
 one_shot = true
 autostart = true
 
-[connection signal="body_entered" from="icecream" to="icecream" method="_on_body_entered"]
-[connection signal="body_entered" from="icecream" to="RigidBody2D" method="_on_icecream_body_entered"]
+[connection signal="body_entered" from="RigidBody2D/icecream" to="RigidBody2D/icecream" method="_on_body_entered"]
 [connection signal="timeout" from="RigidBody2D/Timer" to="RigidBody2D" method="_on_timer_timeout"]
 [connection signal="timeout" from="RigidBody2D/Timer2" to="RigidBody2D" method="_on_timer_2_timeout"]

@@ -10,7 +10,7 @@ extends CharacterBody2D
 #var can_move = false  # movement locked until timer ends
 
 #func _on_tuttimer_timeout() -> void:
-#	can_move = true
+	#can_move = true
 
 func _physics_process(delta: float) -> void:
 	#if !can_move:
@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 		velocity += acceleration * delta
 		moving = true
 		moving_forward = false
-
+		
 	if moving:
 		var turning_input = Input.get_axis("turn_left_input", "turn_right_input")
 		var turn_speed = deg_to_rad(turn_speed_deg) / 2
