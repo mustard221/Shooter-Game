@@ -1,0 +1,93 @@
+[gd_scene load_steps=12 format=3 uid="uid://7osvnvdc8l45"]
+
+[ext_resource type="Texture2D" uid="uid://doe4l4u2ky218" path="res://Assets/Visuals/UI/Lucid-V1.2/PNG/Shadow/160/Left-Arrow.png" id="1_ttaej"]
+[ext_resource type="Script" path="res://Scripts/mouse.gd" id="2_yfl7r"]
+[ext_resource type="FontFile" uid="uid://b6duf2xgwpg4o" path="res://Assets/Visuals/UI/monogram/ttf/monogram-extended-italic.ttf" id="3_brgs1"]
+[ext_resource type="Texture2D" uid="uid://bhiqjqqp44dp" path="res://Assets/Visuals/UI/buttons/buttons000.png" id="3_s24y7"]
+[ext_resource type="Texture2D" uid="uid://d3hr1erql8153" path="res://Assets/Visuals/UI/buttons/buttons001.png" id="4_esx2h"]
+[ext_resource type="Texture2D" uid="uid://8uat5mciyl0o" path="res://Assets/Visuals/UI/buttons/buttons036.png" id="4_t2ie8"]
+[ext_resource type="Texture2D" uid="uid://svml8bn2kxyw" path="res://Assets/Visuals/UI/buttons/buttons037.png" id="5_4rblv"]
+[ext_resource type="Texture2D" uid="uid://bcny5bv6dlwhx" path="res://Assets/Visuals/UI/More ui/Buttons/box.png" id="6_o4ale"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_hi7al"]
+frames = 2
+speed_scale = 2.0
+frame_0/texture = ExtResource("3_s24y7")
+frame_1/texture = ExtResource("4_esx2h")
+frame_1/duration = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_50xro"]
+font = ExtResource("3_brgs1")
+font_size = 80
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_myrqg"]
+frames = 2
+speed_scale = 2.0
+frame_0/texture = ExtResource("4_t2ie8")
+frame_1/texture = ExtResource("5_4rblv")
+frame_1/duration = 1.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="Control" type="Control" parent="CanvasGroup"]
+layout_direction = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Buttons000" type="Sprite2D" parent="CanvasGroup/Control"]
+z_index = 99
+texture_filter = 1
+position = Vector2(1289, 849)
+scale = Vector2(4, 4)
+texture = SubResource("AnimatedTexture_hi7al")
+
+[node name="Label" type="Label" parent="CanvasGroup/Control"]
+z_index = 99
+texture_filter = 1
+layout_mode = 0
+offset_left = 1006.0
+offset_top = 521.0
+offset_right = 1314.0
+offset_bottom = 589.0
+scale = Vector2(2, 2)
+text = "Melt-down!"
+label_settings = SubResource("LabelSettings_50xro")
+
+[node name="Buttons036" type="Sprite2D" parent="CanvasGroup/Control"]
+z_index = 99
+texture_filter = 1
+position = Vector2(1286, 978)
+scale = Vector2(3, 3)
+texture = SubResource("AnimatedTexture_myrqg")
+
+[node name="Box2" type="Sprite2D" parent="CanvasGroup/Control"]
+modulate = Color(0.945098, 0.972549, 1, 0.803922)
+z_index = 98
+texture_filter = 1
+position = Vector2(1300, 597)
+scale = Vector2(4.02809, 3.07692)
+texture = ExtResource("6_o4ale")
+metadata/_edit_lock_ = true
+
+[node name="mouse" type="Sprite2D" parent="CanvasGroup"]
+texture_filter = 1
+position = Vector2(253, 134)
+rotation = 0.959931
+scale = Vector2(0.75, 0.5)
+script = ExtResource("2_yfl7r")
+
+[node name="mouse" type="Sprite2D" parent="CanvasGroup/mouse"]
+texture_filter = 1
+position = Vector2(85.6291, 85.0542)
+rotation = 0.523599
+scale = Vector2(0.4, 0.3)
+texture = ExtResource("1_ttaej")

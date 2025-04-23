@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://7osvnvdc8l45"]
+
+[ext_resource type="Script" path="res://Scripts/cursors.gd" id="1_j3075"]
+[ext_resource type="Texture2D" uid="uid://d3hqxccpjpnx5" path="res://Assets/Visuals/UI/More ui/Buttons/cursor.png" id="2_krk4t"]
+[ext_resource type="Script" path="res://Scenes/mouse.gd" id="3_4dbaa"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_j3075")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="Control" type="Control" parent="CanvasGroup"]
+layout_direction = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="mouse" type="Sprite2D" parent="CanvasGroup"]
+texture_filter = 1
+texture = ExtResource("2_krk4t")
+script = ExtResource("3_4dbaa")
