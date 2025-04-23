@@ -1,6 +1,6 @@
 [gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dpb6ryh0x1pl6"]
 
-[ext_resource type="FontFile" uid="uid://drf61iswe00bb" path="res://Assets/Visuals/UI/monogram/ttf/monogram-extended.ttf" id="1_6ooas"]
+[ext_resource type="FontFile" uid="uid://drf61iswe00bb" path="res://Assets/Visuals/UI/font/ttf/monogram-extended.ttf" id="1_6ooas"]
 
 [resource]
 line_spacing = -10.0

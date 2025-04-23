@@ -1,25 +1,24 @@
-[gd_scene load_steps=174 format=3 uid="uid://ccfosk8ja5712"]
+[gd_scene load_steps=172 format=3 uid="uid://ccfosk8ja5712"]
 
 [ext_resource type="Texture2D" uid="uid://o1kjsdn1d7ik" path="res://Assets/Visuals/UI/More ui/Buttons/box2.png" id="1_cfb0c"]
-[ext_resource type="Texture2D" uid="uid://8qylt2t3t05g" path="res://Assets/Visuals/UI/Lucid-V1.2/PNG/Shadow/16/Clock.png" id="2_61iva"]
+[ext_resource type="Texture2D" uid="uid://8qylt2t3t05g" path="res://Assets/Visuals/UI/white icons/PNG/Shadow/16/Clock.png" id="2_61iva"]
 [ext_resource type="LabelSettings" uid="uid://dpb6ryh0x1pl6" path="res://Settings/UI_Txt_settings.tres" id="3_an1ip"]
 [ext_resource type="Script" path="res://Scripts/timer.gd" id="4_1xuep"]
-[ext_resource type="Texture2D" uid="uid://dbdm7nu8ak6wc" path="res://Assets/Visuals/UI/Lucid-V1.2/PNG/Shadow/160/People.png" id="5_ga5q0"]
+[ext_resource type="Texture2D" uid="uid://dbdm7nu8ak6wc" path="res://Assets/Visuals/UI/white icons/PNG/Shadow/160/People.png" id="5_ga5q0"]
 [ext_resource type="Texture2D" uid="uid://c0prm03i8ao3m" path="res://Assets/Visuals/UI/bars/under.png" id="6_xu13q"]
 [ext_resource type="Texture2D" uid="uid://fkmwuiie5tf" path="res://Assets/Visuals/UI/bars/outline.png" id="7_urot5"]
 [ext_resource type="Texture2D" uid="uid://digkp44nrge44" path="res://Assets/Visuals/UI/bars/fullbar.png" id="8_jilws"]
 [ext_resource type="Texture2D" uid="uid://bcny5bv6dlwhx" path="res://Assets/Visuals/UI/More ui/Buttons/box.png" id="9_vs8x1"]
-[ext_resource type="Texture2D" uid="uid://cpxpm8on5wlq8" path="res://Assets/Visuals/UI/buttons/icon144.png" id="10_8ipur"]
-[ext_resource type="Texture2D" uid="uid://ccwnswkgwcs2p" path="res://Assets/Visuals/UI/buttons/icon145.png" id="11_7hjxp"]
-[ext_resource type="Texture2D" uid="uid://5pu413dhcbbp" path="res://Assets/Visuals/UI/buttons/icon146.png" id="12_ommmp"]
+[ext_resource type="Texture2D" uid="uid://cpxpm8on5wlq8" path="res://Assets/Visuals/UI/buttons colourful/icon144.png" id="10_8ipur"]
+[ext_resource type="Texture2D" uid="uid://ccwnswkgwcs2p" path="res://Assets/Visuals/UI/buttons colourful/icon145.png" id="11_7hjxp"]
+[ext_resource type="Texture2D" uid="uid://5pu413dhcbbp" path="res://Assets/Visuals/UI/buttons colourful/icon146.png" id="12_ommmp"]
 [ext_resource type="LabelSettings" uid="uid://cwbgb1kpw50gy" path="res://Settings/Tut.tres" id="13_y7x3u"]
 [ext_resource type="Script" path="res://Scripts/tutorial2.gd" id="14_oj4n3"]
-[ext_resource type="Texture2D" uid="uid://ccd8l7ehqn6rm" path="res://Assets/Visuals/UI/Lucid-V1.2/PNG/Shadow/160/Mouse-Middle.png" id="15_73404"]
+[ext_resource type="Texture2D" uid="uid://ccd8l7ehqn6rm" path="res://Assets/Visuals/UI/white icons/PNG/Shadow/160/Mouse-Middle.png" id="15_73404"]
 [ext_resource type="Script" path="res://Scripts/tutorial.gd" id="16_vq8tt"]
-[ext_resource type="Texture2D" uid="uid://cgk2kr23mmrmu" path="res://Assets/Visuals/UI/Lucid-V1.2/PNG/Shadow/160/Mouse-Left.png" id="17_5agjr"]
-[ext_resource type="Texture2D" uid="uid://cthrooxf04c6c" path="res://Assets/Visuals/UI/Lucid-V1.2/PNG/Shadow/160/Cursor-5.png" id="18_462wh"]
+[ext_resource type="Texture2D" uid="uid://cgk2kr23mmrmu" path="res://Assets/Visuals/UI/white icons/PNG/Shadow/160/Mouse-Left.png" id="17_5agjr"]
+[ext_resource type="Texture2D" uid="uid://cthrooxf04c6c" path="res://Assets/Visuals/UI/white icons/PNG/Shadow/160/Cursor-5.png" id="18_462wh"]
 [ext_resource type="Script" path="res://Scripts/mouse.gd" id="19_m1rni"]
-[ext_resource type="PackedScene" uid="uid://7osvnvdc8l45" path="res://Scenes/start.tscn" id="20_ji3sd"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="21_ln5cy"]
 [ext_resource type="Texture2D" uid="uid://di4kbc1hkgrut" path="res://Assets/Visuals/Van/van.png" id="22_04f8e"]
 [ext_resource type="AudioStream" uid="uid://c1wxnw0oxietc" path="res://Assets/Sound/bit-beats-1-168243.mp3" id="23_oifrf"]
@@ -37,10 +36,10 @@
 [ext_resource type="Script" path="res://Scripts/npc_move.gd" id="35_4egss"]
 [ext_resource type="Script" path="res://Scripts/npc2.gd" id="36_b8vyc"]
 [ext_resource type="Script" path="res://Scripts/tut.gd" id="37_l4utk"]
-[ext_resource type="FontFile" uid="uid://i4wc5crjmg2d" path="res://Assets/Visuals/UI/monogram/ttf/monogram.ttf" id="38_wyj3j"]
-[ext_resource type="Texture2D" uid="uid://cgcckbl7jce6v" path="res://Assets/Visuals/UI/buttons/icon075.png" id="39_kov4a"]
-[ext_resource type="Texture2D" uid="uid://bw4850d4uukl5" path="res://Assets/Visuals/UI/buttons/icon076.png" id="40_moxd1"]
-[ext_resource type="Texture2D" uid="uid://ceq5gn0snsyh1" path="res://Assets/Visuals/UI/buttons/icon077.png" id="41_74700"]
+[ext_resource type="FontFile" uid="uid://i4wc5crjmg2d" path="res://Assets/Visuals/UI/font/ttf/monogram.ttf" id="38_wyj3j"]
+[ext_resource type="Texture2D" uid="uid://cgcckbl7jce6v" path="res://Assets/Visuals/UI/buttons colourful/icon075.png" id="39_kov4a"]
+[ext_resource type="Texture2D" uid="uid://bw4850d4uukl5" path="res://Assets/Visuals/UI/buttons colourful/icon076.png" id="40_moxd1"]
+[ext_resource type="Texture2D" uid="uid://ceq5gn0snsyh1" path="res://Assets/Visuals/UI/buttons colourful/icon077.png" id="41_74700"]
 [ext_resource type="LabelSettings" uid="uid://cutdwmwh3c0g7" path="res://Settings/Text_settings.tres" id="42_w5r75"]
 [ext_resource type="Texture2D" uid="uid://bkug35evnf14n" path="res://Assets/Visuals/UI/More ui/Buttons/text-export.png" id="43_5hayd"]
 [ext_resource type="AudioStream" uid="uid://bsc6illvlgbkg" path="res://Assets/Sound/voice/child.mp3" id="44_57ou1"]
@@ -111,7 +110,6 @@
 [ext_resource type="Texture2D" uid="uid://cnclkypcbhi3n" path="res://Assets/Visuals/Grass/tile013.png" id="109_o2dwd"]
 [ext_resource type="Texture2D" uid="uid://db4cyh8otwmcr" path="res://Assets/Visuals/Concrete/CP_V1.0.4.png" id="110_0o3b4"]
 [ext_resource type="Texture2D" uid="uid://ceap2yciryw3x" path="res://Assets/Visuals/Concrete/n.png" id="111_fcq67"]
-[ext_resource type="Script" path="res://Scripts/physics.gd" id="112_kimu5"]
 [ext_resource type="Texture2D" uid="uid://ccr122ksg02dx" path="res://Assets/Visuals/Vehicles/tile001.png" id="113_w3gcj"]
 [ext_resource type="Texture2D" uid="uid://cclw72h4amwau" path="res://Assets/Visuals/Vehicles/tile0expo.png" id="114_d8ec7"]
 [ext_resource type="Texture2D" uid="uid://ctv1qdv4ax3a" path="res://Assets/Visuals/Vehicles/tile000expo.png" id="115_27u7p"]
@@ -327,6 +325,7 @@ func _physics_process(delta: float) -> void:
 [node name="Node2D" type="Node2D"]
 
 [node name="UI" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Control" type="Control" parent="UI"]
 layout_direction = 1
@@ -516,8 +515,6 @@ position = Vector2(121, 52)
 texture = ExtResource("18_462wh")
 script = ExtResource("19_m1rni")
 
-[node name="Node2D" parent="UI/Control/mouse" instance=ExtResource("20_ji3sd")]
-
 [node name="Player" type="CharacterBody2D" parent="."]
 z_index = 10
 position = Vector2(372, 55)
@@ -590,11 +587,14 @@ pitch_scale = 0.75
 [node name="Customers" type="Node2D" parent="NPCs"]
 
 [node name="Sprite2D12" type="Sprite2D" parent="NPCs/Customers"]
-z_index = 20
+z_index = 25
 texture_filter = 1
-position = Vector2(566, -93)
+position = Vector2(568, -90)
 texture = SubResource("AnimatedTexture_d7snd")
 script = ExtResource("35_4egss")
+
+[node name="walkTime" type="Timer" parent="NPCs/Customers/Sprite2D12"]
+wait_time = 30.0
 
 [node name="Boy" type="Area2D" parent="NPCs/Customers/Sprite2D12"]
 z_index = 15
@@ -609,7 +609,7 @@ position = Vector2(-5, 9)
 shape = SubResource("RectangleShape2D_j15qb")
 metadata/_edit_lock_ = true
 
-[node name="Aim" type="TextureRect" parent="NPCs/Customers/Sprite2D12/Boy"]
+[node name="Aimtut" type="TextureRect" parent="NPCs/Customers/Sprite2D12/Boy"]
 top_level = true
 z_index = 50
 texture_filter = 1
@@ -622,7 +622,7 @@ texture = ExtResource("9_vs8x1")
 stretch_mode = 4
 script = ExtResource("37_l4utk")
 
-[node name="Dialogue2" type="Label" parent="NPCs/Customers/Sprite2D12/Boy/Aim"]
+[node name="Dialogue2" type="Label" parent="NPCs/Customers/Sprite2D12/Boy/Aimtut"]
 z_index = 70
 texture_filter = 1
 layout_mode = 1
@@ -640,15 +640,15 @@ text = "  Aim at customers
  to serve ice-cream"
 label_settings = ExtResource("13_y7x3u")
 
-[node name="Tuttimer" type="Timer" parent="NPCs/Customers/Sprite2D12/Boy/Aim"]
+[node name="Tuttimer" type="Timer" parent="NPCs/Customers/Sprite2D12/Boy/Aimtut"]
 wait_time = 3.0
 one_shot = true
 
-[node name="Tuttimer2" type="Timer" parent="NPCs/Customers/Sprite2D12/Boy/Aim"]
+[node name="Tuttimer2" type="Timer" parent="NPCs/Customers/Sprite2D12/Boy/Aimtut"]
 wait_time = 6.0
 one_shot = true
 
-[node name="Icon060" type="Sprite2D" parent="NPCs/Customers/Sprite2D12/Boy/Aim"]
+[node name="Icon060" type="Sprite2D" parent="NPCs/Customers/Sprite2D12/Boy/Aimtut"]
 z_index = 70
 texture_filter = 1
 position = Vector2(-72, 104)
@@ -679,6 +679,10 @@ texture = ExtResource("43_5hayd")
 [node name="Child" type="AudioStreamPlayer" parent="NPCs/Customers/Sprite2D12/Boy"]
 stream = ExtResource("44_57ou1")
 volume_db = -10.0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="NPCs/Customers/Sprite2D12/Boy"]
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Sprite2D11" type="Sprite2D" parent="NPCs/Customers"]
 z_index = 15
@@ -11550,7 +11554,6 @@ rotation = -3.14159
 [node name="CharacterBody2D5" type="CharacterBody2D" parent="World/Vehicles"]
 collision_layer = 4
 collision_mask = 4
-script = ExtResource("112_kimu5")
 
 [node name="Tile001" type="Sprite2D" parent="World/Vehicles/CharacterBody2D5"]
 z_index = 4
@@ -11567,7 +11570,6 @@ shape = SubResource("RectangleShape2D_ypyhg")
 [node name="CharacterBody2D6" type="CharacterBody2D" parent="World/Vehicles"]
 collision_layer = 4
 collision_mask = 4
-script = ExtResource("112_kimu5")
 
 [node name="Tile0Expo" type="Sprite2D" parent="World/Vehicles/CharacterBody2D6"]
 z_index = 4
@@ -11584,7 +11586,6 @@ shape = SubResource("RectangleShape2D_ypyhg")
 [node name="CharacterBody2D3" type="CharacterBody2D" parent="World/Vehicles"]
 collision_layer = 4
 collision_mask = 4
-script = ExtResource("112_kimu5")
 
 [node name="Tile000Expo" type="Sprite2D" parent="World/Vehicles/CharacterBody2D3"]
 z_index = 4
@@ -11601,7 +11602,6 @@ z_index = 4
 texture_filter = 1
 collision_layer = 4
 collision_mask = 4
-script = ExtResource("112_kimu5")
 
 [node name="Tile002" type="Sprite2D" parent="World/Vehicles/Char"]
 z_index = 4
@@ -11617,7 +11617,6 @@ position = Vector2(29, -18)
 rotation = 3.14159
 collision_layer = 4
 collision_mask = 4
-script = ExtResource("112_kimu5")
 
 [node name="Tile000" type="Sprite2D" parent="World/Vehicles/CharacterBody2D"]
 texture_filter = 1
@@ -11630,7 +11629,6 @@ shape = SubResource("RectangleShape2D_g4st8")
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="World/Vehicles"]
 collision_layer = 4
 collision_mask = 4
-script = ExtResource("112_kimu5")
 
 [node name="Van3" type="Sprite2D" parent="World/Vehicles/CharacterBody2D2"]
 z_index = 4
@@ -11664,7 +11662,6 @@ shape = SubResource("RectangleShape2D_ypyhg")
 [node name="CharacterBody2D8" type="CharacterBody2D" parent="World/Vehicles"]
 collision_layer = 4
 collision_mask = 4
-script = ExtResource("112_kimu5")
 
 [node name="Tile000Export" type="Sprite2D" parent="World/Vehicles/CharacterBody2D8"]
 z_index = 4
@@ -11682,7 +11679,8 @@ shape = SubResource("RectangleShape2D_ypyhg")
 [connection signal="timeout" from="UI/Control/Tutorial/Mouse-left/Timer2" to="Player" method="_on_tuttimer_timeout"]
 [connection signal="timeout" from="UI/Control/Tutorial/Mouse-left/Timer2" to="Player/Van/Cone/Shoot" method="_on_timer_2_timeout"]
 [connection signal="timeout" from="UI/Control/Tutorial/Mouse-left/Timer2" to="NPCs/Customers/Sprite2D12" method="_on_timer_timeout"]
+[connection signal="timeout" from="NPCs/Customers/Sprite2D12/walkTime" to="NPCs/Customers/Sprite2D12" method="_on_walk_time_timeout"]
 [connection signal="body_entered" from="NPCs/Customers/Sprite2D12/Boy" to="NPCs/Customers/Sprite2D12/Boy" method="_on_body_entered"]
 [connection signal="body_exited" from="NPCs/Customers/Sprite2D12/Boy" to="NPCs/Customers/Sprite2D12/Boy" method="_on_body_exited"]
-[connection signal="timeout" from="NPCs/Customers/Sprite2D12/Boy/Aim/Tuttimer" to="NPCs/Customers/Sprite2D12/Boy/Aim" method="_on_tuttimer_timeout"]
-[connection signal="timeout" from="NPCs/Customers/Sprite2D12/Boy/Aim/Tuttimer2" to="NPCs/Customers/Sprite2D12/Boy/Aim" method="_on_tuttimer_2_timeout"]
+[connection signal="timeout" from="NPCs/Customers/Sprite2D12/Boy/Aimtut/Tuttimer" to="NPCs/Customers/Sprite2D12/Boy/Aimtut" method="_on_tuttimer_timeout"]
+[connection signal="timeout" from="NPCs/Customers/Sprite2D12/Boy/Aimtut/Tuttimer2" to="NPCs/Customers/Sprite2D12/Boy/Aimtut" method="_on_tuttimer_2_timeout"]

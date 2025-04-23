@@ -6,9 +6,9 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5r3pb"]
 friction = 0.0
 
-[node name="Node2D" type="Node2D"]
+[node name="icecream" type="Node2D"]
 
-[node name="Rigidbody2D" type="RigidBody2D" parent="."]
+[node name="icecream" type="RigidBody2D" parent="."]
 z_index = 77
 texture_filter = 1
 mass = 0.001
@@ -16,17 +16,17 @@ physics_material_override = SubResource("PhysicsMaterial_5r3pb")
 gravity_scale = 0.0
 script = ExtResource("2_vw34e")
 
-[node name="Sprite2D" type="Sprite2D" parent="Rigidbody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="icecream"]
 texture = ExtResource("1_71ecs")
 
-[node name="Timer" type="Timer" parent="Rigidbody2D"]
+[node name="Timer" type="Timer" parent="icecream"]
 one_shot = true
 autostart = true
 
-[node name="Timer2" type="Timer" parent="Rigidbody2D"]
+[node name="Timer2" type="Timer" parent="icecream"]
 wait_time = 0.15
 one_shot = true
 autostart = true
 
-[connection signal="timeout" from="Rigidbody2D/Timer" to="Rigidbody2D" method="_on_timer_timeout"]
-[connection signal="timeout" from="Rigidbody2D/Timer2" to="Rigidbody2D" method="_on_timer_2_timeout"]
+[connection signal="timeout" from="icecream/Timer" to="icecream" method="_on_timer_timeout"]
+[connection signal="timeout" from="icecream/Timer2" to="icecream" method="_on_timer_2_timeout"]
