@@ -9,7 +9,7 @@ extends Marker2D
 var ammo := 100.0
 var reload_time := 3.0
 var max_ammo := 100.0
-var max_fire_time := 5.0
+var max_fire_time := 10.0
 var time_held := 0.0
 var time_since_last_shot := 0.0 
 var fire_delay: float = 0.05 
@@ -18,6 +18,7 @@ var reloaded = true
 var can_fire = false
 
 func _ready() -> void:
+	add_to_group("main") 
 	text.visible = false
 	
 func _physics_process(delta: float) -> void:
@@ -53,7 +54,11 @@ func _physics_process(delta: float) -> void:
 				ammo = 0.0
 				reloaded = false
 				can_shoot = false
-				text.visible = true
+				# Ensure that 'text' is still valid before accessing it
+				if text and is_instance_valid(text):
+					text.visible = true
+				else:
+					return
 			
 		else:
 			if shoot_sound.playing:
@@ -73,7 +78,9 @@ func _physics_process(delta: float) -> void:
 		
 			if reload_time <= 0.0:
 				reload_sound.stop()
-				text.queue_free()
+				# Ensure that 'text' is still valid before accessing it
+				if is_instance_valid(text):
+					text.queue_free()
 				reloaded = true
 				can_shoot = true
 				ammo = max_ammo  
@@ -86,4 +93,4 @@ func _physics_process(delta: float) -> void:
 
 func _on_timer_2_timeout() -> void:
 	can_fire = true
-	pass # Replace with function body.
+	pass # Replace with function body

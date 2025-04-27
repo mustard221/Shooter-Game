@@ -2,23 +2,26 @@ extends TextureProgressBar
 
 @onready var sound: AudioStreamPlayer = $fill
 @onready var yay: AudioStreamPlayer = $"Yay-6120"
-@onready var text: Label = $"../Dialogue1"
+@onready var text: Label = $"../Dialogue"
 
 var timer: Timer
 var is_done: bool = false
 
 func _ready():
-	add_to_group("progress_bars")
+	add_to_group("progress_bars") 
 	
 	timer = Timer.new()
 	timer.wait_time = 0.1
 	add_child(timer)
-	create_tween()
 	
 	sound.volume_db = 0  # full volume
 	sound.stop()
+	
+	var area = get_parent()
+	if area and area is Area2D:
+		area.connect("area_entered", Callable(self, "_on_area_entered"))
 
-func _on_boy_area_entered(area: Area2D) -> void:
+func _on_area_entered(area: Area2D) -> void:
 	if area.name == "icecream" and not is_done:
 		timer.start()
 		shot()
@@ -33,4 +36,5 @@ func shot():
 		is_done = true
 		timer.stop()
 		yay.play()
-		text.text = "Yummy, thank you!"  # change the text when done
+		if text and is_instance_valid(text):
+			text.text = "Thank you!"  # change text when done

@@ -1,25 +1,44 @@
 extends Area2D
 
-#@onready var voice: AudioStreamPlayer = $Child
-var txt: Label
+@onready var voice: AudioStreamPlayer = $Voice
+@onready var txt: Label = $Dialogue
+
+var timer: Timer
+var blip_count := 0
+var max_blips := 5
+var has_played := false
 
 func _ready():
-	txt = get_node_or_null("Dialogue")
-	if txt:
-		txt.visible = false
-		
-	self.body_entered.connect(_on_body_entered) # automatically connect signals
-	self.body_exited.connect(_on_body_exited)
+	add_to_group("main") 
+	timer = Timer.new()  # create timer
+	timer.wait_time = 0.1  # set the delay between each noise
+	add_child(timer)  # add timer as child
+	
+	timer.timeout.connect(_on_timer_timeout)  
+	
+	txt.visible = false
+	
+	body_entered.connect(_on_body_entered)
+	body_exited.connect(_on_body_exited)
 
 func _on_body_entered(body: Node):
-	if body and body.name == "Player":  # check if correct node
-		print("player entered")
+	if body.name == "Player" and !has_played: 
 		txt.visible = true
-		#voice.play()
-		# collision logic using signals
+		blip_count = 0  
+		has_played = true  
+		timer.start() 
 
-func _on_body_exited(body: Node2D) -> void:
+func _on_body_exited(body: Node2D):
 	if body.name == "Player":
 		txt.visible = false
-		#voice.stop()
-		pass  # Replace with function body
+		timer.stop()  
+		blip_count = 0  
+		has_played = false  
+
+func _on_timer_timeout():
+	if blip_count < max_blips:
+		voice.play()  # play sound each time timer triggers
+		blip_count += 1  
+	else:
+		voice.stop()  # make sure it doesn't repeat
+		timer.stop()  

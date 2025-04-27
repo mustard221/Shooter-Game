@@ -9,6 +9,7 @@ var max_blips := 5
 var has_played := false
 
 func _ready():
+	add_to_group("main") 
 	timer = Timer.new()  # create timer
 	timer.wait_time = 0.1  # set the delay between each noise
 	add_child(timer)  # add timer as child

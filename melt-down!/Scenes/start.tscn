@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=3 uid="uid://7osvnvdc8l45"]
+[gd_scene load_steps=184 format=3 uid="uid://7osvnvdc8l45"]
 
 [ext_resource type="LabelSettings" uid="uid://cfa0504aovh73" path="res://Settings/start.tres" id="2_k643y"]
 [ext_resource type="Script" path="res://Scripts/mouse.gd" id="2_yfl7r"]
@@ -59,17 +59,62 @@
 [ext_resource type="Texture2D" uid="uid://c6ycbpmho1d6p" path="res://Assets/Visuals/Road/road3.png" id="57_rgrqk"]
 [ext_resource type="Texture2D" uid="uid://gcis5hw7is18" path="res://Assets/Visuals/Road/road4.png" id="58_qo51r"]
 [ext_resource type="Texture2D" uid="uid://b4wiwb0eqt8hc" path="res://Assets/Visuals/Road/road.png" id="59_8lakk"]
+[ext_resource type="Texture2D" uid="uid://bcy14fj67kbd5" path="res://Assets/Visuals/Characters/Walking/tile108.png" id="60_67cld"]
 [ext_resource type="Texture2D" uid="uid://cnclkypcbhi3n" path="res://Assets/Visuals/Grass/tile013.png" id="60_ei0bm"]
 [ext_resource type="Texture2D" uid="uid://db4cyh8otwmcr" path="res://Assets/Visuals/Concrete/CP_V1.0.4.png" id="61_kh651"]
+[ext_resource type="Texture2D" uid="uid://dunrm0s3s5rkd" path="res://Assets/Visuals/Characters/Walking/tile109.png" id="61_nmywm"]
+[ext_resource type="Script" path="res://Scripts/boy_move.gd" id="62_1621h"]
 [ext_resource type="Texture2D" uid="uid://ceap2yciryw3x" path="res://Assets/Visuals/Concrete/n.png" id="62_paks7"]
+[ext_resource type="Script" path="res://Scripts/npc2.gd" id="63_8wjua"]
 [ext_resource type="Script" path="res://Scripts/physics.gd" id="63_oaah8"]
+[ext_resource type="Texture2D" uid="uid://dgyxnuaelxm0j" path="res://Assets/Visuals/UI/More ui/Buttons/heart2.png" id="64_phuxp"]
 [ext_resource type="Texture2D" uid="uid://ccr122ksg02dx" path="res://Assets/Visuals/Vehicles/tile001.png" id="64_plfho"]
+[ext_resource type="Texture2D" uid="uid://cmh8f3c66x1aj" path="res://Assets/Visuals/UI/More ui/Buttons/heart.png" id="65_kgv3g"]
 [ext_resource type="Texture2D" uid="uid://cclw72h4amwau" path="res://Assets/Visuals/Vehicles/tile0expo.png" id="65_yi7ra"]
+[ext_resource type="Script" path="res://Scripts/texture_progress_bar.gd" id="66_1rvl1"]
 [ext_resource type="Texture2D" uid="uid://ctv1qdv4ax3a" path="res://Assets/Visuals/Vehicles/tile000expo.png" id="66_klfjo"]
+[ext_resource type="AudioStream" uid="uid://dr2dcoobj833e" path="res://Assets/Sound/fill.mp3" id="67_hp7b8"]
 [ext_resource type="Texture2D" uid="uid://kjn38g5h12gx" path="res://Assets/Visuals/Vehicles/tile000.png" id="67_uwhgo"]
+[ext_resource type="AudioStream" uid="uid://c5f8c6dvg42c1" path="res://Assets/Sound/complete.mp3" id="68_2g7c2"]
 [ext_resource type="Texture2D" uid="uid://6e1f8asiuoof" path="res://Assets/Visuals/Vehicles/van2.png" id="68_lkjlc"]
 [ext_resource type="Texture2D" uid="uid://df0cd8xg713pj" path="res://Assets/Visuals/Vehicles/tile000export.png" id="69_6a7t5"]
+[ext_resource type="FontFile" uid="uid://i4wc5crjmg2d" path="res://Assets/Visuals/UI/font/ttf/monogram.ttf" id="69_7fwmr"]
 [ext_resource type="AudioStream" uid="uid://bpbph0k4n8xuy" path="res://Assets/Sound/bit-beats-7-194291.mp3" id="70_2jsxm"]
+[ext_resource type="Script" path="res://Scripts/tut.gd" id="70_50wls"]
+[ext_resource type="LabelSettings" uid="uid://cwbgb1kpw50gy" path="res://Settings/Tut.tres" id="72_a82xa"]
+[ext_resource type="Texture2D" uid="uid://cgcckbl7jce6v" path="res://Assets/Visuals/UI/buttons colourful/icon075.png" id="73_6qt04"]
+[ext_resource type="Texture2D" uid="uid://bw4850d4uukl5" path="res://Assets/Visuals/UI/buttons colourful/icon076.png" id="74_mggqx"]
+[ext_resource type="Texture2D" uid="uid://ceq5gn0snsyh1" path="res://Assets/Visuals/UI/buttons colourful/icon077.png" id="75_olbns"]
+[ext_resource type="LabelSettings" uid="uid://cutdwmwh3c0g7" path="res://Settings/Text_settings.tres" id="76_ohlmy"]
+[ext_resource type="Texture2D" uid="uid://bkug35evnf14n" path="res://Assets/Visuals/UI/More ui/Buttons/text-export.png" id="77_dg5yh"]
+[ext_resource type="AudioStream" uid="uid://bsc6illvlgbkg" path="res://Assets/Sound/voice/child.mp3" id="78_got1e"]
+[ext_resource type="Texture2D" uid="uid://gmls3aah7vv7" path="res://Assets/Visuals/Characters/Walking/tile115.png" id="79_7f2i4"]
+[ext_resource type="Script" path="res://Scripts/npc.gd" id="80_pcw21"]
+[ext_resource type="Script" path="res://Scripts/texture_progress_bar2.gd" id="81_15cv1"]
+[ext_resource type="Texture2D" uid="uid://d0b76f56p3l7o" path="res://Assets/Visuals/Characters/Walking/tile041.png" id="82_28gjw"]
+[ext_resource type="Texture2D" uid="uid://dqqbmw5tl33th" path="res://Assets/Visuals/Characters/Walking/tile040.png" id="83_2anqr"]
+[ext_resource type="Script" path="res://Scripts/x.npc_move.gd" id="84_tlydd"]
+[ext_resource type="AudioStream" uid="uid://cyjftq2s7vwjx" path="res://Assets/Sound/voice/old man.mp3" id="85_a5xu7"]
+[ext_resource type="Texture2D" uid="uid://rk268rco8keg" path="res://Assets/Visuals/Characters/Walking/tile091.png" id="86_qo885"]
+[ext_resource type="AudioStream" uid="uid://b7jica27egp66" path="res://Assets/Sound/voice/man.mp3" id="87_kc70r"]
+[ext_resource type="Texture2D" uid="uid://bofci8uwc73wx" path="res://Assets/Visuals/Characters/Walking/tile005.png" id="88_8g871"]
+[ext_resource type="Texture2D" uid="uid://bhcsdi4g33cu8" path="res://Assets/Visuals/Characters/Walking/tile049.png" id="89_swoqo"]
+[ext_resource type="Texture2D" uid="uid://cmgu3gxy8uh2b" path="res://Assets/Visuals/Characters/Walking/tile030.png" id="90_w48rh"]
+[ext_resource type="AudioStream" uid="uid://do5vnlxf0extb" path="res://Assets/Sound/voice/lady.mp3" id="91_xgnjt"]
+[ext_resource type="Texture2D" uid="uid://chqab2gtc86eq" path="res://Assets/Visuals/Characters/Walking/tile043.png" id="92_eru0v"]
+[ext_resource type="Texture2D" uid="uid://8gprwwkkfp85" path="res://Assets/Visuals/Characters/Walking/tile042.png" id="93_pr24t"]
+[ext_resource type="Script" path="res://Scripts/y.npc_move.gd" id="94_1ktj8"]
+[ext_resource type="Texture2D" uid="uid://dsq20280caltx" path="res://Assets/Visuals/Characters/Walking/tile019.png" id="95_15w0j"]
+[ext_resource type="Texture2D" uid="uid://bu1d478gcdnaj" path="res://Assets/Visuals/Characters/Walking/tile018.png" id="96_cundo"]
+[ext_resource type="Texture2D" uid="uid://5so070urg6jn" path="res://Assets/Visuals/Characters/Walking/tile097.png" id="97_e4gyn"]
+[ext_resource type="Texture2D" uid="uid://bg3crqvmoevkq" path="res://Assets/Visuals/Characters/Walking/tile103.png" id="98_esxhm"]
+[ext_resource type="Texture2D" uid="uid://bcpxc5okx85gf" path="res://Assets/Visuals/Characters/Walking/tile013.png" id="99_uj628"]
+[ext_resource type="Texture2D" uid="uid://1msynb167qvu" path="res://Assets/Visuals/Characters/Walking/tile012.png" id="100_6fwfg"]
+[ext_resource type="Texture2D" uid="uid://dlni1mplb8njc" path="res://Assets/Visuals/Characters/Walking/tile056.png" id="101_o2ocr"]
+[ext_resource type="Texture2D" uid="uid://dpwiywwp3t1kq" path="res://Assets/Visuals/Characters/Walking/tile010.png" id="102_7urgu"]
+[ext_resource type="Texture2D" uid="uid://b8sacpcd7ttem" path="res://Assets/Visuals/Characters/Walking/tile011.png" id="103_v6bki"]
+[ext_resource type="Texture2D" uid="uid://dub5ach2fxwk3" path="res://Assets/Visuals/Characters/Walking/tile024.png" id="104_tejfp"]
+[ext_resource type="AudioStream" uid="uid://dkvktxfegs34w" path="res://Assets/Sound/game-start-6104.mp3" id="110_gk7e1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f46cg"]
 size = Vector2(46.7676, 26.75)
@@ -200,6 +245,98 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 "
 
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_d7mug"]
+frames = 2
+frame_0/texture = ExtResource("60_67cld")
+frame_1/texture = ExtResource("61_nmywm")
+frame_1/duration = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ab57w"]
+size = Vector2(63, 90)
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_ndts1"]
+frames = 3
+speed_scale = 4.0
+frame_0/texture = ExtResource("73_6qt04")
+frame_1/texture = ExtResource("74_mggqx")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("75_olbns")
+frame_2/duration = 0.5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_plpga"]
+size = Vector2(65, 63)
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_778ul"]
+frames = 2
+speed_scale = 0.8
+frame_0/texture = ExtResource("82_28gjw")
+frame_1/texture = ExtResource("83_2anqr")
+frame_1/duration = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_klall"]
+size = Vector2(86, 51)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mr7it"]
+size = Vector2(33, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqcva"]
+size = Vector2(56, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xl8b5"]
+size = Vector2(42, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_goofv"]
+size = Vector2(63, 48)
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_nrm11"]
+frames = 2
+frame_0/texture = ExtResource("92_eru0v")
+frame_1/texture = ExtResource("93_pr24t")
+frame_1/duration = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uxbkr"]
+size = Vector2(63, 42)
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_b3sid"]
+frames = 2
+frame_0/texture = ExtResource("95_15w0j")
+frame_1/texture = ExtResource("96_cundo")
+frame_1/duration = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tjb12"]
+size = Vector2(46, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqbw8"]
+size = Vector2(48, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnovn"]
+size = Vector2(44, 52)
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_enp4c"]
+frames = 2
+frame_0/texture = ExtResource("99_uj628")
+frame_1/texture = ExtResource("100_6fwfg")
+frame_1/duration = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2o10o"]
+size = Vector2(66, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wyj5q"]
+size = Vector2(83, 59)
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_065r0"]
+frames = 2
+speed_scale = 0.8
+frame_0/texture = ExtResource("102_7urgu")
+frame_1/texture = ExtResource("103_v6bki")
+frame_1/duration = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3rbn1"]
+size = Vector2(58, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7tun"]
+size = Vector2(64, 45)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xk43l"]
 texture = ExtResource("4_acnxm")
 modulate_color = Color(1, 0.862745, 1, 1)
@@ -233,9 +370,24 @@ size = Vector2(54.5, 28.5527)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eo8xd"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_dcgdk"]
+line_spacing = -2.0
+font = ExtResource("69_7fwmr")
+shadow_size = 0
+
 [node name="Node2D" type="Node2D"]
 z_index = 5
 position = Vector2(1, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1297, 776)
+zoom = Vector2(2, 2)
+
+[node name="Start2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("70_2jsxm")
+volume_db = 0.9
+pitch_scale = 0.95
+autoplay = true
 
 [node name="World" type="Node2D" parent="."]
 light_mask = 0
@@ -10879,16 +11031,1028 @@ texture = ExtResource("69_6a7t5")
 position = Vector2(93, -10.0002)
 shape = SubResource("RectangleShape2D_501s3")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1275, 798)
-zoom = Vector2(2, 2)
-metadata/_edit_lock_ = true
+[node name="NPCs" type="Node2D" parent="."]
+position = Vector2(355, 692)
 
-[node name="Start2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("70_2jsxm")
-volume_db = 0.9
-pitch_scale = 0.95
-autoplay = true
+[node name="Sprite2D12" type="Sprite2D" parent="NPCs"]
+z_index = 25
+texture_filter = 1
+position = Vector2(568, -90)
+texture = SubResource("AnimatedTexture_d7mug")
+script = ExtResource("62_1621h")
+
+[node name="walkingTime" type="Timer" parent="NPCs/Sprite2D12"]
+wait_time = 30.0
+one_shot = true
+
+[node name="Boy" type="Area2D" parent="NPCs/Sprite2D12"]
+z_index = 100
+z_as_relative = false
+texture_filter = 1
+position = Vector2(-4, -9)
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("63_8wjua")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="NPCs/Sprite2D12/Boy"]
+texture_filter = 1
+offset_left = -16.0
+offset_top = -30.0
+offset_right = 24.0
+offset_bottom = 10.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("64_phuxp")
+texture_progress = ExtResource("65_kgv3g")
+script = ExtResource("66_1rvl1")
+
+[node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D12/Boy/TextureProgressBar"]
+stream = ExtResource("67_hp7b8")
+pitch_scale = 5.0
+
+[node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D12/Boy/TextureProgressBar"]
+stream = ExtResource("68_2g7c2")
+volume_db = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D12/Boy"]
+position = Vector2(4.5, -7)
+shape = SubResource("RectangleShape2D_ab57w")
+
+[node name="Aimtut" type="TextureRect" parent="NPCs/Sprite2D12/Boy"]
+top_level = true
+z_index = 50
+texture_filter = 1
+offset_left = 1526.0
+offset_top = 358.0
+offset_right = 2156.0
+offset_bottom = 588.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_o4ale")
+stretch_mode = 4
+script = ExtResource("70_50wls")
+
+[node name="Dialogue2" type="Label" parent="NPCs/Sprite2D12/Boy/Aimtut"]
+z_index = 70
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.108466
+anchor_top = -1.35475
+anchor_right = -0.108465
+anchor_bottom = -1.35475
+offset_left = 83.3336
+offset_top = 346.592
+offset_right = 1043.33
+offset_bottom = 477.592
+theme_override_fonts/font = ExtResource("69_7fwmr")
+text = "  Aim at customers 
+ to serve ice-cream"
+label_settings = ExtResource("72_a82xa")
+
+[node name="Tuttimer" type="Timer" parent="NPCs/Sprite2D12/Boy/Aimtut"]
+wait_time = 3.0
+one_shot = true
+
+[node name="Tuttimer2" type="Timer" parent="NPCs/Sprite2D12/Boy/Aimtut"]
+wait_time = 6.0
+one_shot = true
+
+[node name="Icon060" type="Sprite2D" parent="NPCs/Sprite2D12/Boy/Aimtut"]
+z_index = 70
+texture_filter = 1
+position = Vector2(-72, 104)
+scale = Vector2(4, 4)
+texture = SubResource("AnimatedTexture_ndts1")
+
+[node name="Dialogue1" type="Label" parent="NPCs/Sprite2D12/Boy"]
+z_index = 25
+texture_filter = 1
+offset_left = 28.0
+offset_top = -22.0
+offset_right = 112.0
+offset_bottom = 13.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("69_7fwmr")
+text = " I'd love
+ something 
+ refreshing..."
+label_settings = ExtResource("76_ohlmy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Text-export" type="Sprite2D" parent="NPCs/Sprite2D12/Boy/Dialogue1"]
+z_index = -1
+position = Vector2(50, 16)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("77_dg5yh")
+
+[node name="Child" type="AudioStreamPlayer" parent="NPCs/Sprite2D12/Boy"]
+stream = ExtResource("78_got1e")
+volume_db = -15.0
+pitch_scale = 1.15
+
+[node name="Sprite2D11" type="Sprite2D" parent="NPCs"]
+z_index = 15
+texture_filter = 1
+position = Vector2(582, 353)
+texture = ExtResource("79_7f2i4")
+
+[node name="Girl" type="Area2D" parent="NPCs/Sprite2D11"]
+z_index = 13
+texture_filter = 1
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("80_pcw21")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="NPCs/Sprite2D11/Girl"]
+texture_filter = 1
+offset_left = -20.0
+offset_top = -39.0
+offset_right = 20.0
+offset_bottom = 1.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("64_phuxp")
+texture_progress = ExtResource("65_kgv3g")
+script = ExtResource("81_15cv1")
+
+[node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D11/Girl/TextureProgressBar"]
+stream = ExtResource("67_hp7b8")
+pitch_scale = 5.0
+
+[node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D11/Girl/TextureProgressBar"]
+stream = ExtResource("68_2g7c2")
+volume_db = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D11/Girl"]
+position = Vector2(12.5, 21.5)
+shape = SubResource("RectangleShape2D_plpga")
+
+[node name="Dialogue" type="Label" parent="NPCs/Sprite2D11/Girl"]
+z_index = 25
+texture_filter = 1
+offset_left = 17.0
+offset_top = -14.0
+offset_right = 119.0
+offset_bottom = 21.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("69_7fwmr")
+text = "If I don't have
+ice-cream soon, 
+I might cry."
+label_settings = ExtResource("76_ohlmy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Text-export" type="Sprite2D" parent="NPCs/Sprite2D11/Girl/Dialogue"]
+z_index = -1
+position = Vector2(50, 20)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("77_dg5yh")
+
+[node name="Voice" type="AudioStreamPlayer" parent="NPCs/Sprite2D11/Girl"]
+stream = ExtResource("78_got1e")
+volume_db = -15.0
+pitch_scale = 1.5
+
+[node name="Sprite2D10" type="Sprite2D" parent="NPCs"]
+z_index = 15
+texture_filter = 1
+position = Vector2(921, -340)
+texture = SubResource("AnimatedTexture_778ul")
+script = ExtResource("84_tlydd")
+
+[node name="walkTime" type="Timer" parent="NPCs/Sprite2D10"]
+wait_time = 10.0
+one_shot = true
+
+[node name="OldMan" type="Area2D" parent="NPCs/Sprite2D10"]
+z_index = 10
+texture_filter = 1
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("80_pcw21")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="NPCs/Sprite2D10/OldMan"]
+texture_filter = 1
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("64_phuxp")
+texture_progress = ExtResource("65_kgv3g")
+script = ExtResource("81_15cv1")
+
+[node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D10/OldMan/TextureProgressBar"]
+stream = ExtResource("67_hp7b8")
+pitch_scale = 5.0
+
+[node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D10/OldMan/TextureProgressBar"]
+stream = ExtResource("68_2g7c2")
+volume_db = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D10/OldMan"]
+position = Vector2(5, -10)
+shape = SubResource("RectangleShape2D_klall")
+
+[node name="Dialogue" type="Label" parent="NPCs/Sprite2D10/OldMan"]
+z_index = 25
+texture_filter = 1
+offset_left = 21.0
+offset_top = -14.0
+offset_right = 111.0
+offset_bottom = 21.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("69_7fwmr")
+text = "Some ice-cream
+would certainly
+make my day!"
+label_settings = ExtResource("76_ohlmy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Text-export" type="Sprite2D" parent="NPCs/Sprite2D10/OldMan/Dialogue"]
+z_index = -1
+position = Vector2(44, 16)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("77_dg5yh")
+
+[node name="Voice" type="AudioStreamPlayer" parent="NPCs/Sprite2D10/OldMan"]
+stream = ExtResource("85_a5xu7")
+volume_db = -15.0
+pitch_scale = 1.25
+
+[node name="Sprite2D9" type="Sprite2D" parent="NPCs"]
+z_index = 15
+texture_filter = 1
+position = Vector2(1500, -78)
+texture = ExtResource("86_qo885")
+
+[node name="Man3" type="Area2D" parent="NPCs/Sprite2D9"]
+z_index = 30
+texture_filter = 1
+position = Vector2(-8, -2)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("80_pcw21")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="NPCs/Sprite2D9/Man3"]
+texture_filter = 1
+offset_left = -12.0
+offset_top = -39.0
+offset_right = 28.0
+offset_bottom = 1.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("64_phuxp")
+texture_progress = ExtResource("65_kgv3g")
+script = ExtResource("81_15cv1")
+
+[node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D9/Man3/TextureProgressBar"]
+stream = ExtResource("67_hp7b8")
+pitch_scale = 5.0
+
+[node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D9/Man3/TextureProgressBar"]
+stream = ExtResource("68_2g7c2")
+volume_db = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D9/Man3"]
+position = Vector2(9, 14)
+shape = SubResource("RectangleShape2D_mr7it")
+
+[node name="Dialogue" type="Label" parent="NPCs/Sprite2D9/Man3"]
+z_index = 40
+texture_filter = 1
+offset_left = 34.0
+offset_top = -11.0
+offset_right = 130.0
+offset_bottom = 24.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("69_7fwmr")
+text = "This heat is
+just terrible!"
+label_settings = ExtResource("76_ohlmy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Text-export" type="Sprite2D" parent="NPCs/Sprite2D9/Man3/Dialogue"]
+z_index = -1
+position = Vector2(42, 12)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("77_dg5yh")
+
+[node name="Voice" type="AudioStreamPlayer" parent="NPCs/Sprite2D9/Man3"]
+stream = ExtResource("87_kc70r")
+volume_db = -15.0
+pitch_scale = 1.25
+
+[node name="Sprite2D8" type="Sprite2D" parent="NPCs"]
+z_index = 15
+texture_filter = 1
+position = Vector2(599, -320)
+texture = ExtResource("88_8g871")
+flip_h = true
+
+[node name="Trucker" type="Area2D" parent="NPCs/Sprite2D8"]
+z_index = 10
+texture_filter = 1
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("80_pcw21")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="NPCs/Sprite2D8/Trucker"]
+texture_filter = 1
+offset_left = -18.0
+offset_top = -40.0
+offset_right = 22.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("64_phuxp")
+texture_progress = ExtResource("65_kgv3g")
+script = ExtResource("81_15cv1")
+
+[node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D8/Trucker/TextureProgressBar"]
+stream = ExtResource("67_hp7b8")
+pitch_scale = 5.0
+
+[node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D8/Trucker/TextureProgressBar"]
+stream = ExtResource("68_2g7c2")
+volume_db = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D8/Trucker"]
+position = Vector2(-18, 12)
+shape = SubResource("RectangleShape2D_lqcva")
+
+[node name="Dialogue" type="Label" parent="NPCs/Sprite2D8/Trucker"]
+z_index = 30
+texture_filter = 1
+offset_left = 22.0
+offset_top = -18.0
+offset_right = 118.0
+offset_bottom = 17.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("69_7fwmr")
+text = "Ever get so hot 
+your shoes stick
+to the ground?"
+label_settings = ExtResource("76_ohlmy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Text-export" type="Sprite2D" parent="NPCs/Sprite2D8/Trucker/Dialogue"]
+z_index = -1
+position = Vector2(46, 16)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("77_dg5yh")
+
+[node name="Voice" type="AudioStreamPlayer" parent="NPCs/Sprite2D8/Trucker"]
+stream = ExtResource("87_kc70r")
+volume_db = -15.0
+pitch_scale = 0.9
+
+[node name="Sprite2D7" type="Sprite2D" parent="NPCs"]
+z_index = 30
+texture_filter = 1
+position = Vector2(1771, 256)
+texture = ExtResource("89_swoqo")
+
+[node name="Punk" type="Area2D" parent="NPCs/Sprite2D7"]
+z_index = 18
+texture_filter = 1
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("80_pcw21")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="NPCs/Sprite2D7/Punk"]
+texture_filter = 1
+offset_left = -19.0
+offset_top = -41.0
+offset_right = 21.0
+offset_bottom = -1.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("64_phuxp")
+texture_progress = ExtResource("65_kgv3g")
+script = ExtResource("81_15cv1")
+
+[node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D7/Punk/TextureProgressBar"]
+stream = ExtResource("67_hp7b8")
+pitch_scale = 5.0
+
+[node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D7/Punk/TextureProgressBar"]
+stream = ExtResource("68_2g7c2")
+volume_db = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D7/Punk"]
+position = Vector2(-5, 4)
+shape = SubResource("RectangleShape2D_xl8b5")
+
+[node name="Dialogue" type="Label" parent="NPCs/Sprite2D7/Punk"]
+z_index = 25
+texture_filter = 1
+offset_left = 22.0
+offset_top = -22.0
+offset_right = 118.0
+offset_bottom = 13.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("69_7fwmr")
+text = "Oh man, I'd 
+kill for some 
+ice-cream!"
+label_settings = ExtResource("76_ohlmy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Text-export" type="Sprite2D" parent="NPCs/Sprite2D7/Punk/Dialogue"]
+z_index = -1
+position = Vector2(38, 18)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("77_dg5yh")
+
+[node name="Voice" type="AudioStreamPlayer" parent="NPCs/Sprite2D7/Punk"]
+stream = ExtResource("87_kc70r")
+volume_db = -15.0
+pitch_scale = 0.75
+
+[node name="Sprite2D6" type="Sprite2D" parent="NPCs"]
+z_index = 15
+texture_filter = 1
+position = Vector2(1118, -493)
+texture = ExtResource("90_w48rh")
+
+[node name="Lady" type="Area2D" parent="NPCs/Sprite2D6"]
+z_index = 32
+texture_filter = 1
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("80_pcw21")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="NPCs/Sprite2D6/Lady"]
+texture_filter = 1
+offset_left = -20.0
+offset_top = -39.0
+offset_right = 20.0
+offset_bottom = 1.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("64_phuxp")
+texture_progress = ExtResource("65_kgv3g")
+script = ExtResource("81_15cv1")
+
+[node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D6/Lady/TextureProgressBar"]
+stream = ExtResource("67_hp7b8")
+pitch_scale = 5.0
+
+[node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D6/Lady/TextureProgressBar"]
+stream = ExtResource("68_2g7c2")
+volume_db = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D6/Lady"]
+position = Vector2(-4.5, 14)
+shape = SubResource("RectangleShape2D_goofv")
+
+[node name="Dialogue" type="Label" parent="NPCs/Sprite2D6/Lady"]
+z_index = 25
+texture_filter = 1
+offset_left = 26.0
+offset_top = -12.0
+offset_right = 122.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("69_7fwmr")
+text = "Oh dear, the 
+sun sure is 
+shining today!"
+label_settings = ExtResource("76_ohlmy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Text-export" type="Sprite2D" parent="NPCs/Sprite2D6/Lady/Dialogue"]
+z_index = -1
+position = Vector2(38, 18)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("77_dg5yh")
+
+[node name="Voice" type="AudioStreamPlayer" parent="NPCs/Sprite2D6/Lady"]
+stream = ExtResource("91_xgnjt")
+volume_db = -15.0
+pitch_scale = 1.15
+
+[node name="Sprite2D5" type="Sprite2D" parent="NPCs"]
+z_index = 15
+texture_filter = 1
+position = Vector2(1186, 285)
+texture = SubResource("AnimatedTexture_nrm11")
+script = ExtResource("94_1ktj8")
+
+[node name="walkTime" type="Timer" parent="NPCs/Sprite2D5"]
+wait_time = 10.0
+one_shot = true
+
+[node name="Teenager" type="Area2D" parent="NPCs/Sprite2D5"]
+z_index = 11
+texture_filter = 1
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("80_pcw21")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="NPCs/Sprite2D5/Teenager"]
+texture_filter = 1
+offset_left = -18.0
+offset_top = -39.0
+offset_right = 22.0
+offset_bottom = 1.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("64_phuxp")
+texture_progress = ExtResource("65_kgv3g")
+script = ExtResource("81_15cv1")
+
+[node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D5/Teenager/TextureProgressBar"]
+stream = ExtResource("67_hp7b8")
+pitch_scale = 5.0
+
+[node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D5/Teenager/TextureProgressBar"]
+stream = ExtResource("68_2g7c2")
+volume_db = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D5/Teenager"]
+position = Vector2(-21.5, -4)
+shape = SubResource("RectangleShape2D_uxbkr")
+
+[node name="Dialogue" type="Label" parent="NPCs/Sprite2D5/Teenager"]
+z_index = 25
+texture_filter = 1
+offset_left = 21.0
+offset_top = -23.0
+offset_right = 170.0
+offset_bottom = 22.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("69_7fwmr")
+text = "I’d trade my 
+life savings for 
+ice-cream."
+label_settings = ExtResource("76_ohlmy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Text-export" type="Sprite2D" parent="NPCs/Sprite2D5/Teenager/Dialogue"]
+z_index = -1
+position = Vector2(44, 24)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("77_dg5yh")
+
+[node name="Voice" type="AudioStreamPlayer" parent="NPCs/Sprite2D5/Teenager"]
+stream = ExtResource("91_xgnjt")
+volume_db = -15.0
+pitch_scale = 1.45
+
+[node name="Sprite2D" type="Sprite2D" parent="NPCs"]
+z_index = 15
+texture_filter = 1
+position = Vector2(76, 38)
+texture = SubResource("AnimatedTexture_b3sid")
+script = ExtResource("94_1ktj8")
+
+[node name="walkTime" type="Timer" parent="NPCs/Sprite2D"]
+wait_time = 20.0
+one_shot = true
+
+[node name="Lady2" type="Area2D" parent="NPCs/Sprite2D"]
+z_index = 11
+texture_filter = 1
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("80_pcw21")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="NPCs/Sprite2D/Lady2"]
+texture_filter = 1
+offset_left = -20.0
+offset_top = -39.0
+offset_right = 20.0
+offset_bottom = 1.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("64_phuxp")
+texture_progress = ExtResource("65_kgv3g")
+script = ExtResource("81_15cv1")
+
+[node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D/Lady2/TextureProgressBar"]
+stream = ExtResource("67_hp7b8")
+pitch_scale = 5.0
+
+[node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D/Lady2/TextureProgressBar"]
+stream = ExtResource("68_2g7c2")
+volume_db = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D/Lady2"]
+position = Vector2(13, 0.5)
+shape = SubResource("RectangleShape2D_tjb12")
+
+[node name="Dialogue" type="Label" parent="NPCs/Sprite2D/Lady2"]
+z_index = 25
+texture_filter = 1
+offset_left = 34.0
+offset_top = -20.0
+offset_right = 88.0
+offset_bottom = 4.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("69_7fwmr")
+text = "Sure is a 
+hot day."
+label_settings = ExtResource("76_ohlmy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Text-export" type="Sprite2D" parent="NPCs/Sprite2D/Lady2/Dialogue"]
+z_index = -1
+position = Vector2(28, 12)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("77_dg5yh")
+
+[node name="Voice" type="AudioStreamPlayer" parent="NPCs/Sprite2D/Lady2"]
+stream = ExtResource("91_xgnjt")
+volume_db = -15.0
+
+[node name="Sprite2D2" type="Sprite2D" parent="NPCs"]
+z_index = 15
+texture_filter = 1
+position = Vector2(849, -177)
+texture = ExtResource("97_e4gyn")
+
+[node name="Teenager2" type="Area2D" parent="NPCs/Sprite2D2"]
+z_index = 11
+texture_filter = 1
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("80_pcw21")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="NPCs/Sprite2D2/Teenager2"]
+texture_filter = 1
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("64_phuxp")
+texture_progress = ExtResource("65_kgv3g")
+script = ExtResource("81_15cv1")
+
+[node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D2/Teenager2/TextureProgressBar"]
+stream = ExtResource("67_hp7b8")
+pitch_scale = 5.0
+
+[node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D2/Teenager2/TextureProgressBar"]
+stream = ExtResource("68_2g7c2")
+volume_db = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D2/Teenager2"]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_rqbw8")
+
+[node name="Dialogue" type="Label" parent="NPCs/Sprite2D2/Teenager2"]
+z_index = 30
+texture_filter = 1
+offset_left = -69.0
+offset_top = -12.0
+offset_right = 99.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("69_7fwmr")
+text = "I think the sun
+is trying to 
+melt me!"
+label_settings = ExtResource("76_ohlmy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Text-export" type="Sprite2D" parent="NPCs/Sprite2D2/Teenager2/Dialogue"]
+z_index = -1
+position = Vector2(42, 18)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("77_dg5yh")
+
+[node name="Voice" type="AudioStreamPlayer" parent="NPCs/Sprite2D2/Teenager2"]
+stream = ExtResource("91_xgnjt")
+volume_db = -15.0
+pitch_scale = 1.25
+
+[node name="Sprite2D3" type="Sprite2D" parent="NPCs"]
+z_index = 15
+texture_filter = 1
+position = Vector2(625, -199)
+texture = ExtResource("98_esxhm")
+
+[node name="Guy" type="Area2D" parent="NPCs/Sprite2D3"]
+z_index = 10
+texture_filter = 1
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("80_pcw21")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="NPCs/Sprite2D3/Guy"]
+texture_filter = 1
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("64_phuxp")
+texture_progress = ExtResource("65_kgv3g")
+script = ExtResource("81_15cv1")
+
+[node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D3/Guy/TextureProgressBar"]
+stream = ExtResource("67_hp7b8")
+pitch_scale = 5.0
+
+[node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D3/Guy/TextureProgressBar"]
+stream = ExtResource("68_2g7c2")
+volume_db = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D3/Guy"]
+position = Vector2(12, 16)
+shape = SubResource("RectangleShape2D_tnovn")
+
+[node name="Dialogue" type="Label" parent="NPCs/Sprite2D3/Guy"]
+z_index = 40
+texture_filter = 1
+offset_left = 16.0
+offset_top = -3.0
+offset_right = 124.0
+offset_bottom = 43.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("69_7fwmr")
+text = "The machine
+is broken, I 
+just want 
+something cold!"
+label_settings = ExtResource("76_ohlmy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Text-export" type="Sprite2D" parent="NPCs/Sprite2D3/Guy/Dialogue"]
+z_index = -1
+position = Vector2(42, 20)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("77_dg5yh")
+
+[node name="Voice" type="AudioStreamPlayer" parent="NPCs/Sprite2D3/Guy"]
+stream = ExtResource("87_kc70r")
+volume_db = -15.0
+pitch_scale = 2.5
+
+[node name="Sprite2D4" type="Sprite2D" parent="NPCs"]
+z_index = 15
+texture_filter = 1
+position = Vector2(987, 169)
+texture = SubResource("AnimatedTexture_enp4c")
+script = ExtResource("94_1ktj8")
+
+[node name="walkTime" type="Timer" parent="NPCs/Sprite2D4"]
+wait_time = 20.0
+one_shot = true
+
+[node name="Man2" type="Area2D" parent="NPCs/Sprite2D4"]
+z_index = 22
+texture_filter = 1
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("80_pcw21")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="NPCs/Sprite2D4/Man2"]
+texture_filter = 1
+offset_left = -20.0
+offset_top = -38.0
+offset_right = 20.0
+offset_bottom = 2.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("64_phuxp")
+texture_progress = ExtResource("65_kgv3g")
+script = ExtResource("81_15cv1")
+
+[node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D4/Man2/TextureProgressBar"]
+stream = ExtResource("67_hp7b8")
+pitch_scale = 5.0
+
+[node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D4/Man2/TextureProgressBar"]
+stream = ExtResource("68_2g7c2")
+volume_db = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D4/Man2"]
+position = Vector2(-2, 4.5)
+shape = SubResource("RectangleShape2D_2o10o")
+
+[node name="Dialogue" type="Label" parent="NPCs/Sprite2D4/Man2"]
+z_index = 25
+texture_filter = 1
+offset_left = 23.0
+offset_top = -19.0
+offset_right = 179.0
+offset_bottom = 26.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("69_7fwmr")
+text = "I hope there’s
+a hero with 
+some ice-cream."
+label_settings = ExtResource("76_ohlmy")
+justification_flags = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Text-export" type="Sprite2D" parent="NPCs/Sprite2D4/Man2/Dialogue"]
+z_index = -1
+position = Vector2(42, 26)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("77_dg5yh")
+
+[node name="Voice" type="AudioStreamPlayer" parent="NPCs/Sprite2D4/Man2"]
+stream = ExtResource("87_kc70r")
+volume_db = -15.0
+pitch_scale = 1.75
+
+[node name="Sprite2D13" type="Sprite2D" parent="NPCs"]
+z_index = 15
+texture_filter = 1
+position = Vector2(1278, -122)
+texture = ExtResource("101_o2ocr")
+
+[node name="Man" type="Area2D" parent="NPCs/Sprite2D13"]
+z_index = 19
+texture_filter = 1
+position = Vector2(0, 1)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("80_pcw21")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="NPCs/Sprite2D13/Man"]
+texture_filter = 1
+offset_left = -20.0
+offset_top = -39.0
+offset_right = 20.0
+offset_bottom = 1.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("64_phuxp")
+texture_progress = ExtResource("65_kgv3g")
+script = ExtResource("81_15cv1")
+
+[node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D13/Man/TextureProgressBar"]
+stream = ExtResource("67_hp7b8")
+pitch_scale = 5.0
+
+[node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D13/Man/TextureProgressBar"]
+stream = ExtResource("68_2g7c2")
+volume_db = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D13/Man"]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_wyj5q")
+
+[node name="Dialogue" type="Label" parent="NPCs/Sprite2D13/Man"]
+z_index = 25
+texture_filter = 1
+offset_left = -66.0
+offset_top = -21.0
+offset_right = 102.0
+offset_bottom = 25.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("69_7fwmr")
+text = "One taste of 
+ice-cream is
+all I want."
+label_settings = ExtResource("76_ohlmy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Text-export" type="Sprite2D" parent="NPCs/Sprite2D13/Man/Dialogue"]
+z_index = -1
+position = Vector2(38, 20)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("77_dg5yh")
+
+[node name="Voice" type="AudioStreamPlayer" parent="NPCs/Sprite2D13/Man"]
+stream = ExtResource("87_kc70r")
+volume_db = -15.0
+pitch_scale = 1.1
+
+[node name="Sprite2D14" type="Sprite2D" parent="NPCs"]
+z_index = 40
+texture_filter = 1
+position = Vector2(342, -84)
+texture = SubResource("AnimatedTexture_065r0")
+script = ExtResource("84_tlydd")
+
+[node name="walkTime" type="Timer" parent="NPCs/Sprite2D14"]
+wait_time = 20.0
+one_shot = true
+
+[node name="Oldman2" type="Area2D" parent="NPCs/Sprite2D14"]
+z_index = 11
+texture_filter = 1
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("80_pcw21")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="NPCs/Sprite2D14/Oldman2"]
+texture_filter = 1
+offset_left = -21.0
+offset_top = -40.0
+offset_right = 19.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("64_phuxp")
+texture_progress = ExtResource("65_kgv3g")
+script = ExtResource("81_15cv1")
+
+[node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D14/Oldman2/TextureProgressBar"]
+stream = ExtResource("67_hp7b8")
+pitch_scale = 5.0
+
+[node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D14/Oldman2/TextureProgressBar"]
+stream = ExtResource("68_2g7c2")
+volume_db = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D14/Oldman2"]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_3rbn1")
+
+[node name="Dialogue" type="Label" parent="NPCs/Sprite2D14/Oldman2"]
+z_index = 25
+texture_filter = 1
+offset_left = 21.0
+offset_top = -23.0
+offset_right = 117.0
+offset_bottom = 12.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("69_7fwmr")
+text = "You're never too
+old for a frozen
+treat, hehe!"
+label_settings = ExtResource("76_ohlmy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="NPCs/Sprite2D14/Oldman2/Dialogue"]
+z_index = -1
+position = Vector2(48, 16)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("77_dg5yh")
+
+[node name="Voice" type="AudioStreamPlayer" parent="NPCs/Sprite2D14/Oldman2"]
+stream = ExtResource("85_a5xu7")
+volume_db = -15.0
+pitch_scale = 0.85
+
+[node name="Sprite2D15" type="Sprite2D" parent="NPCs"]
+z_index = 30
+texture_filter = 1
+position = Vector2(896, 312)
+texture = ExtResource("104_tejfp")
+
+[node name="Scientist" type="Area2D" parent="NPCs/Sprite2D15"]
+z_index = 33
+texture_filter = 1
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("80_pcw21")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="NPCs/Sprite2D15/Scientist"]
+texture_filter = 1
+offset_left = -20.0
+offset_top = -38.0
+offset_right = 20.0
+offset_bottom = 2.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("64_phuxp")
+texture_progress = ExtResource("65_kgv3g")
+script = ExtResource("81_15cv1")
+
+[node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D15/Scientist/TextureProgressBar"]
+stream = ExtResource("67_hp7b8")
+pitch_scale = 5.0
+
+[node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D15/Scientist/TextureProgressBar"]
+stream = ExtResource("68_2g7c2")
+volume_db = 5.0
+pitch_scale = 1.25
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D15/Scientist"]
+position = Vector2(3, -0.5)
+shape = SubResource("RectangleShape2D_g7tun")
+
+[node name="Dialogue" type="Label" parent="NPCs/Sprite2D15/Scientist"]
+z_index = 25
+texture_filter = 1
+offset_left = 24.0
+offset_top = -14.0
+offset_right = 114.0
+offset_bottom = 10.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("69_7fwmr")
+text = "I can't focus
+with this heat."
+label_settings = ExtResource("76_ohlmy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Text-export" type="Sprite2D" parent="NPCs/Sprite2D15/Scientist/Dialogue"]
+z_index = -1
+position = Vector2(42, 12)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("77_dg5yh")
+
+[node name="Voice" type="AudioStreamPlayer" parent="NPCs/Sprite2D15/Scientist"]
+stream = ExtResource("87_kc70r")
+volume_db = -15.0
+pitch_scale = 2.0
 
 [node name="CanvasGroup" type="CanvasGroup" parent="."]
 z_index = 20
@@ -10901,11 +12065,11 @@ offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Box2" type="Sprite2D" parent="CanvasGroup/Control"]
-modulate = Color(0.945098, 0.972549, 1, 0.803922)
+modulate = Color(0.945098, 0.972549, 1, 0.941176)
 z_index = 100
 z_as_relative = false
 texture_filter = 1
-position = Vector2(1313, 596)
+position = Vector2(1315, 548)
 scale = Vector2(4.02809, 3.07692)
 texture = ExtResource("6_o4ale")
 
@@ -10918,16 +12082,16 @@ anchor_left = -0.00142601
 anchor_top = -0.00769207
 anchor_right = -0.00142601
 anchor_bottom = -0.00769207
-offset_left = -73.7266
-offset_top = -19.975
-offset_right = 226.273
-offset_bottom = 45.025
-scale = Vector2(0.5, 0.5)
+offset_left = -73.2301
+offset_top = -18.675
+offset_right = -13.2301
+offset_bottom = -5.675
+scale = Vector2(2.5, 2.5)
 text = "Melt-down!"
 label_settings = ExtResource("2_k643y")
 metadata/_edit_use_anchors_ = true
 
-[node name="Play" type="Button" parent="CanvasGroup/Control/Box2"]
+[node name="Play" type="Button" parent="CanvasGroup/Control/Box2" node_paths=PackedStringArray("timer")]
 top_level = true
 z_index = 99
 z_as_relative = false
@@ -10938,19 +12102,26 @@ anchor_left = -0.0199653
 anchor_top = -0.0277778
 anchor_right = -0.0199653
 anchor_bottom = -0.0277778
-offset_left = 1209.0
-offset_top = 840.0
-offset_right = 1281.0
-offset_bottom = 880.0
+offset_left = 1250.0
+offset_top = 874.0
+offset_right = 1322.0
+offset_bottom = 914.0
 grow_horizontal = 0
-scale = Vector2(4, 4)
+scale = Vector2(3, 3)
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_xk43l")
 theme_override_styles/hover = SubResource("StyleBoxTexture_r3fdg")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_qavpr")
 theme_override_styles/normal = SubResource("StyleBoxTexture_k703e")
 toggle_mode = true
 script = ExtResource("3_l27be")
+timer = NodePath("Timer")
 metadata/_edit_use_anchors_ = true
+
+[node name="Game-start-6104" type="AudioStreamPlayer" parent="CanvasGroup/Control/Box2/Play"]
+stream = ExtResource("110_gk7e1")
+
+[node name="Timer" type="Timer" parent="CanvasGroup/Control/Box2/Play"]
+wait_time = 0.5
 
 [node name="Quit" type="Button" parent="CanvasGroup/Control/Box2"]
 top_level = true
@@ -10961,11 +12132,11 @@ anchor_left = -0.0182292
 anchor_top = 0.0694444
 anchor_right = -0.0182292
 anchor_bottom = 0.0694444
-offset_left = 1223.0
-offset_top = 850.0
-offset_right = 1295.0
-offset_bottom = 888.0
-scale = Vector2(3.5, 3.5)
+offset_left = 1264.0
+offset_top = 848.0
+offset_right = 1336.0
+offset_bottom = 886.0
+scale = Vector2(2.5, 2.5)
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_g12bm")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k163i")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_jbcdb")
@@ -11001,5 +12172,47 @@ shape = SubResource("RectangleShape2D_m07en")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasGroup/Control/mouse2/mouse/mouse_area"]
 shape = SubResource("RectangleShape2D_eo8xd")
 
+[node name="Label2" type="Label" parent="CanvasGroup/Control"]
+z_index = 200
+z_as_relative = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -7.01515
+anchor_top = 0.520775
+anchor_right = -7.01515
+anchor_bottom = 0.520775
+offset_left = 1168.77
+offset_top = 652.202
+offset_right = 1453.61
+offset_bottom = 704.169
+scale = Vector2(3, 3)
+text = "Serve as many customers as possible
+before time runs out!"
+label_settings = SubResource("LabelSettings_dcgdk")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Box3" type="Sprite2D" parent="CanvasGroup/Control"]
+modulate = Color(0.945098, 0.972549, 1, 0.941176)
+z_index = 100
+z_as_relative = false
+texture_filter = 1
+position = Vector2(1314, 713.5)
+scale = Vector2(4.13483, 1.46154)
+texture = ExtResource("6_o4ale")
+
+[connection signal="timeout" from="NPCs/Sprite2D12/walkingTime" to="NPCs/Sprite2D12" method="_on_walking_time_timeout"]
+[connection signal="area_entered" from="NPCs/Sprite2D12/Boy" to="NPCs/Sprite2D12/Boy/TextureProgressBar" method="_on_boy_area_entered"]
+[connection signal="body_entered" from="NPCs/Sprite2D12/Boy" to="NPCs/Sprite2D12/Boy" method="_on_body_entered"]
+[connection signal="body_exited" from="NPCs/Sprite2D12/Boy" to="NPCs/Sprite2D12/Boy" method="_on_body_exited"]
+[connection signal="timeout" from="NPCs/Sprite2D12/Boy/Aimtut/Tuttimer" to="NPCs/Sprite2D12/Boy/Aimtut" method="_on_tuttimer_timeout"]
+[connection signal="timeout" from="NPCs/Sprite2D12/Boy/Aimtut/Tuttimer2" to="NPCs/Sprite2D12/Boy/Aimtut" method="_on_tuttimer_2_timeout"]
+[connection signal="timeout" from="NPCs/Sprite2D10/walkTime" to="NPCs/Sprite2D12" method="_on_walk_time_timeout"]
+[connection signal="timeout" from="NPCs/Sprite2D5/walkTime" to="NPCs/Sprite2D12" method="_on_walk_time_timeout"]
+[connection signal="timeout" from="NPCs/Sprite2D/walkTime" to="NPCs/Sprite2D12" method="_on_walk_time_timeout"]
+[connection signal="timeout" from="NPCs/Sprite2D4/walkTime" to="NPCs/Sprite2D12" method="_on_walk_time_timeout"]
+[connection signal="timeout" from="NPCs/Sprite2D14/walkTime" to="NPCs/Sprite2D12" method="_on_walk_time_timeout"]
 [connection signal="pressed" from="CanvasGroup/Control/Box2/Play" to="CanvasGroup/Control/Box2/Play" method="_on_pressed"]
+[connection signal="timeout" from="CanvasGroup/Control/Box2/Play/Timer" to="CanvasGroup/Control/Box2/Play" method="_on_timer_timeout"]
 [connection signal="pressed" from="CanvasGroup/Control/Box2/Quit" to="CanvasGroup/Control/Box2/Quit" method="_on_pressed"]

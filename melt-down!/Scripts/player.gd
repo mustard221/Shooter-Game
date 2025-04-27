@@ -2,19 +2,22 @@ extends CharacterBody2D
 
 @onready var sound: AudioStreamPlayer = $"Van/Driving-65528"
 @onready var crash: AudioStreamPlayer = $Van/crash
-@export var speed: float = 1500
-@export var back_speed: float = 600 
-@export var turn_speed_deg: float = 210
-@export var friction: float = -10
+@export var speed: float = 2500
+@export var back_speed: float = 1000
+@export var turn_speed_deg: float = 215
+@export var friction: float = -15
 
-#var can_move = false  # movement locked until timer ends
+var can_move = false  # movement locked until timer ends
 
-#func _on_tuttimer_timeout() -> void:
-	#can_move = true
+func _ready() -> void:
+	add_to_group("main") 
+
+func _on_tuttimer_timeout() -> void:
+	can_move = true
 
 func _physics_process(delta: float) -> void:
-	#if !can_move:
-	#	return  # skip everything until timer ends
+	if !can_move:
+		return  # skip everything until timer ends
 
 	var moving = false
 	var moving_forward = false
