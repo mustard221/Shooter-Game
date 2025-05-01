@@ -1,6 +1,4 @@
-extends Sprite2D
-
-@onready var animated_texture: AnimatedTexture = self.texture
+extends AnimatedSprite2D
 
 var speed = 5 
 var can_move = true
@@ -22,5 +20,4 @@ func _on_timer_timeout() -> void:
 	freeze_animation()
 	
 func freeze_animation() -> void:
-	if animated_texture:
-		animated_texture.pause = true
+	stop()

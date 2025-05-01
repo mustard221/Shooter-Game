@@ -1,4 +1,4 @@
-[gd_scene load_steps=226 format=3 uid="uid://ccfosk8ja5712"]
+[gd_scene load_steps=214 format=3 uid="uid://ccfosk8ja5712"]
 
 [ext_resource type="Script" path="res://Scripts/counter.gd" id="1_5tyly"]
 [ext_resource type="Texture2D" uid="uid://o1kjsdn1d7ik" path="res://Assets/Visuals/UI/More ui/Buttons/box2.png" id="1_cfb0c"]
@@ -47,8 +47,6 @@
 [ext_resource type="Script" path="res://Scripts/shoot.gd" id="30_xqqrc"]
 [ext_resource type="PackedScene" uid="uid://dxb2260cibgbe" path="res://Scenes/fire.tscn" id="31_liq0y"]
 [ext_resource type="AudioStream" uid="uid://bc2011j30na3u" path="res://Assets/Sound/garden-hose-spraying-71249.mp3" id="32_e5qi5"]
-[ext_resource type="Texture2D" uid="uid://bcy14fj67kbd5" path="res://Assets/Visuals/Characters/Walking/tile108.png" id="33_74vjn"]
-[ext_resource type="Texture2D" uid="uid://dunrm0s3s5rkd" path="res://Assets/Visuals/Characters/Walking/tile109.png" id="34_gilcy"]
 [ext_resource type="Script" path="res://Scripts/boy_move.gd" id="34_o34h1"]
 [ext_resource type="Script" path="res://Scripts/y.npc_move.gd" id="35_4egss"]
 [ext_resource type="Script" path="res://Scripts/npc2.gd" id="36_b8vyc"]
@@ -67,43 +65,33 @@
 [ext_resource type="Texture2D" uid="uid://cmh8f3c66x1aj" path="res://Assets/Visuals/UI/More ui/Buttons/heart.png" id="45_2diep"]
 [ext_resource type="Texture2D" uid="uid://gmls3aah7vv7" path="res://Assets/Visuals/Characters/Walking/tile115.png" id="45_3aa2s"]
 [ext_resource type="Script" path="res://Scripts/npc.gd" id="46_sfrw0"]
-[ext_resource type="Texture2D" uid="uid://dqqbmw5tl33th" path="res://Assets/Visuals/Characters/Walking/tile040.png" id="47_gr75w"]
 [ext_resource type="Texture2D" uid="uid://rk268rco8keg" path="res://Assets/Visuals/Characters/Walking/tile091.png" id="48_aahb8"]
 [ext_resource type="Texture2D" uid="uid://bofci8uwc73wx" path="res://Assets/Visuals/Characters/Walking/tile005.png" id="49_7yn68"]
 [ext_resource type="Texture2D" uid="uid://bhcsdi4g33cu8" path="res://Assets/Visuals/Characters/Walking/tile049.png" id="50_fojxg"]
 [ext_resource type="Texture2D" uid="uid://cmgu3gxy8uh2b" path="res://Assets/Visuals/Characters/Walking/tile030.png" id="51_3lotl"]
 [ext_resource type="Script" path="res://Scripts/texture_progress_bar2.gd" id="51_gnsp8"]
-[ext_resource type="Texture2D" uid="uid://d0b76f56p3l7o" path="res://Assets/Visuals/Characters/Walking/tile041.png" id="52_5b051"]
 [ext_resource type="AudioStream" uid="uid://cyjftq2s7vwjx" path="res://Assets/Sound/voice/old man.mp3" id="52_mqy28"]
-[ext_resource type="Texture2D" uid="uid://chqab2gtc86eq" path="res://Assets/Visuals/Characters/Walking/tile043.png" id="52_q71wj"]
-[ext_resource type="Texture2D" uid="uid://bu1d478gcdnaj" path="res://Assets/Visuals/Characters/Walking/tile018.png" id="53_fk2mj"]
 [ext_resource type="Script" path="res://Scripts/x.npc_move.gd" id="53_k307t"]
 [ext_resource type="Texture2D" uid="uid://5so070urg6jn" path="res://Assets/Visuals/Characters/Walking/tile097.png" id="54_fgva5"]
 [ext_resource type="AudioStream" uid="uid://b7jica27egp66" path="res://Assets/Sound/voice/man.mp3" id="54_uj8ai"]
 [ext_resource type="Texture2D" uid="uid://bg3crqvmoevkq" path="res://Assets/Visuals/Characters/Walking/tile103.png" id="55_woq6i"]
-[ext_resource type="Texture2D" uid="uid://bcpxc5okx85gf" path="res://Assets/Visuals/Characters/Walking/tile013.png" id="56_4gnag"]
 [ext_resource type="Texture2D" uid="uid://dlni1mplb8njc" path="res://Assets/Visuals/Characters/Walking/tile056.png" id="57_qjian"]
-[ext_resource type="Texture2D" uid="uid://dpwiywwp3t1kq" path="res://Assets/Visuals/Characters/Walking/tile010.png" id="58_jepbc"]
 [ext_resource type="AudioStream" uid="uid://do5vnlxf0extb" path="res://Assets/Sound/voice/lady.mp3" id="58_o5air"]
 [ext_resource type="Texture2D" uid="uid://dub5ach2fxwk3" path="res://Assets/Visuals/Characters/Walking/tile024.png" id="59_8qwf0"]
 [ext_resource type="Texture2D" uid="uid://j6rkjscl31ew" path="res://Assets/Visuals/Buildings/CP_V1.0.4.png" id="60_c0jsx"]
 [ext_resource type="Texture2D" uid="uid://x6y72w6mtyyu" path="res://Assets/Visuals/Buildings/tile000 (2).png" id="61_gmint"]
 [ext_resource type="Texture2D" uid="uid://b3xocdm376h2l" path="res://Assets/Visuals/Buildings/tile002.png" id="62_6q1q8"]
-[ext_resource type="Texture2D" uid="uid://8gprwwkkfp85" path="res://Assets/Visuals/Characters/Walking/tile042.png" id="63_4fhod"]
 [ext_resource type="Texture2D" uid="uid://cw4ar028q056o" path="res://Assets/Visuals/Buildings/tile005.png" id="63_eqbr3"]
 [ext_resource type="Texture2D" uid="uid://cedsjyb308l8u" path="res://Assets/Visuals/Buildings/tile001 (2).png" id="64_413of"]
 [ext_resource type="Texture2D" uid="uid://deqg3ucw3m2ig" path="res://Assets/Visuals/Buildings/mmmm.png" id="65_drfum"]
-[ext_resource type="Texture2D" uid="uid://dsq20280caltx" path="res://Assets/Visuals/Characters/Walking/tile019.png" id="65_jkhoa"]
 [ext_resource type="Texture2D" uid="uid://rr3yxh0tfvx5" path="res://Assets/Visuals/Buildings/tile006.png" id="66_v75lk"]
 [ext_resource type="Texture2D" uid="uid://dy173xv4tkuw4" path="res://Assets/Visuals/Buildings/tile001.png" id="67_jcs6d"]
 [ext_resource type="Texture2D" uid="uid://b4kjsd3gkqh1s" path="res://Assets/Visuals/Buildings/hous.png" id="68_6bfic"]
 [ext_resource type="Texture2D" uid="uid://c2bgqv5e0m3hh" path="res://Assets/Visuals/Buildings/tile000.png" id="69_t8c5t"]
 [ext_resource type="Texture2D" uid="uid://d271itritlybu" path="res://Assets/Visuals/Buildings/tile004.png" id="70_ilqfo"]
-[ext_resource type="Texture2D" uid="uid://1msynb167qvu" path="res://Assets/Visuals/Characters/Walking/tile012.png" id="70_las2s"]
 [ext_resource type="Texture2D" uid="uid://cklyt80i8xkg6" path="res://Assets/Visuals/Buildings/m.png" id="71_8w4u7"]
 [ext_resource type="Texture2D" uid="uid://cm7o8xk1b5nby" path="res://Assets/Visuals/Objects/mach.png" id="72_b8hlm"]
 [ext_resource type="Texture2D" uid="uid://c84qxuvue2diy" path="res://Assets/Visuals/Objects/thing006.png" id="73_kcfog"]
-[ext_resource type="Texture2D" uid="uid://b8sacpcd7ttem" path="res://Assets/Visuals/Characters/Walking/tile011.png" id="73_vmpyw"]
 [ext_resource type="Texture2D" uid="uid://143h8b07i7h6" path="res://Assets/Visuals/Objects/thing004.png" id="74_bctdk"]
 [ext_resource type="Texture2D" uid="uid://bl4dmjhwimytp" path="res://Assets/Visuals/Objects/thing005.png" id="75_h84c4"]
 [ext_resource type="Texture2D" uid="uid://c3w2p57mbmgi" path="res://Assets/Visuals/Objects/thing007.png" id="76_abhtj"]
@@ -136,6 +124,7 @@
 [ext_resource type="Texture2D" uid="uid://b52o20kcxhtf" path="res://Assets/Visuals/Road/roa54.png" id="103_tvw7x"]
 [ext_resource type="Texture2D" uid="uid://c8tct87y27vml" path="res://Assets/Visuals/Road/road1.png" id="104_3avis"]
 [ext_resource type="Texture2D" uid="uid://br72c5vt28w2l" path="res://Assets/Visuals/Road/road7.png" id="105_6gq2b"]
+[ext_resource type="SpriteFrames" uid="uid://djeq28f5k5id8" path="res://Animations/walkg1.tres" id="106_hnsyr"]
 [ext_resource type="Texture2D" uid="uid://c6ycbpmho1d6p" path="res://Assets/Visuals/Road/road3.png" id="106_ivx0d"]
 [ext_resource type="Texture2D" uid="uid://gcis5hw7is18" path="res://Assets/Visuals/Road/road4.png" id="107_i1dny"]
 [ext_resource type="Texture2D" uid="uid://b4wiwb0eqt8hc" path="res://Assets/Visuals/Road/road.png" id="108_58w7a"]
@@ -148,6 +137,11 @@
 [ext_resource type="Texture2D" uid="uid://kjn38g5h12gx" path="res://Assets/Visuals/Vehicles/tile000.png" id="116_iltc7"]
 [ext_resource type="Texture2D" uid="uid://6e1f8asiuoof" path="res://Assets/Visuals/Vehicles/van2.png" id="117_wkpwm"]
 [ext_resource type="Texture2D" uid="uid://df0cd8xg713pj" path="res://Assets/Visuals/Vehicles/tile000export.png" id="118_jluiu"]
+[ext_resource type="SpriteFrames" uid="uid://cjhtu13n12eqx" path="res://Animations/walkg2.tres" id="125_vfgtb"]
+[ext_resource type="SpriteFrames" uid="uid://mgprugt2a8br" path="res://Animations/walkg3.tres" id="134_wukuu"]
+[ext_resource type="SpriteFrames" uid="uid://dowhoqv4q5llx" path="res://Animations/walkg4.tres" id="136_u1360"]
+[ext_resource type="SpriteFrames" uid="uid://i6lhcp3qhov7" path="res://Animations/walkg5.tres" id="139_gvtv4"]
+[ext_resource type="SpriteFrames" uid="uid://cgbte4lxudtc2" path="res://Animations/walkg6.tres" id="141_wvuom"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y3b1i"]
 texture = ExtResource("13_w5puh")
@@ -353,16 +347,10 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 "
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_d7snd"]
-frames = 2
-frame_0/texture = ExtResource("33_74vjn")
-frame_1/texture = ExtResource("34_gilcy")
-frame_1/duration = 1.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_j15qb"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ieou"]
 size = Vector2(63, 90)
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_bdegv"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_3uabp"]
 frames = 3
 speed_scale = 4.0
 frame_0/texture = ExtResource("39_kov4a")
@@ -371,78 +359,46 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("41_74700")
 frame_2/duration = 0.5
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkfup"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ij2jr"]
 size = Vector2(65, 63)
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_ibjwo"]
-frames = 2
-speed_scale = 0.8
-frame_0/texture = ExtResource("52_5b051")
-frame_1/texture = ExtResource("47_gr75w")
-frame_1/duration = 1.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xlhk"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ons7b"]
 size = Vector2(86, 51)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_itvh7"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4rxq"]
 size = Vector2(33, 53)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_566as"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_30w72"]
 size = Vector2(56, 44)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mseg"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x87gt"]
 size = Vector2(42, 49)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2y0k8"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3w7g0"]
 size = Vector2(63, 48)
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_hgkw6"]
-frames = 2
-frame_0/texture = ExtResource("52_q71wj")
-frame_1/texture = ExtResource("63_4fhod")
-frame_1/duration = 1.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k6qx2"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2djfn"]
 size = Vector2(63, 42)
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_o23ji"]
-frames = 2
-frame_0/texture = ExtResource("65_jkhoa")
-frame_1/texture = ExtResource("53_fk2mj")
-frame_1/duration = 1.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_djg7r"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s850q"]
 size = Vector2(46, 65)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_niocx"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vcwr3"]
 size = Vector2(48, 36)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8f0o4"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gsihk"]
 size = Vector2(44, 52)
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_iprfs"]
-frames = 2
-frame_0/texture = ExtResource("56_4gnag")
-frame_1/texture = ExtResource("70_las2s")
-frame_1/duration = 1.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a6ml6"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7b5b"]
 size = Vector2(66, 59)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8o3wu"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_udk0f"]
 size = Vector2(83, 59)
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_d4k3l"]
-frames = 2
-speed_scale = 0.8
-frame_0/texture = ExtResource("58_jepbc")
-frame_1/texture = ExtResource("73_vmpyw")
-frame_1/duration = 1.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yeccl"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvbc2"]
 size = Vector2(58, 38)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6h1rq"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ti258"]
 size = Vector2(64, 45)
 
 [node name="Node2D" type="Node2D"]
@@ -11428,14 +11384,15 @@ position = Vector2(93, -10.0002)
 shape = SubResource("RectangleShape2D_ypyhg")
 
 [node name="NPCs" type="Node2D" parent="."]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
+position = Vector2(-4, 0)
 
-[node name="Sprite2D12" type="Sprite2D" parent="NPCs"]
+[node name="Sprite2D12" type="AnimatedSprite2D" parent="NPCs"]
 z_index = 25
 texture_filter = 1
 position = Vector2(568, -90)
-texture = SubResource("AnimatedTexture_d7snd")
+sprite_frames = ExtResource("106_hnsyr")
+animation = &"walkboy"
+frame_progress = 0.553757
 script = ExtResource("34_o34h1")
 
 [node name="walkingTime" type="Timer" parent="NPCs/Sprite2D12"]
@@ -11462,6 +11419,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("44_vp6m4")
 texture_progress = ExtResource("45_2diep")
 script = ExtResource("38_ldlki")
+metadata/_edit_use_anchors_ = true
 
 [node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D12/Boy/TextureProgressBar"]
 stream = ExtResource("39_h7v0m")
@@ -11473,7 +11431,7 @@ volume_db = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D12/Boy"]
 position = Vector2(4.5, -7)
-shape = SubResource("RectangleShape2D_j15qb")
+shape = SubResource("RectangleShape2D_0ieou")
 
 [node name="Aimtut" type="TextureRect" parent="NPCs/Sprite2D12/Boy"]
 top_level = true
@@ -11487,6 +11445,7 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("9_vs8x1")
 stretch_mode = 4
 script = ExtResource("37_l4utk")
+metadata/_edit_use_anchors_ = true
 
 [node name="Dialogue2" type="Label" parent="NPCs/Sprite2D12/Boy/Aimtut"]
 z_index = 70
@@ -11505,6 +11464,7 @@ theme_override_fonts/font = ExtResource("38_wyj3j")
 text = "  Aim at customers 
  to serve ice-cream"
 label_settings = ExtResource("13_y7x3u")
+metadata/_edit_use_anchors_ = true
 
 [node name="Tuttimer" type="Timer" parent="NPCs/Sprite2D12/Boy/Aimtut"]
 wait_time = 3.0
@@ -11519,7 +11479,7 @@ z_index = 70
 texture_filter = 1
 position = Vector2(-72, 104)
 scale = Vector2(4, 4)
-texture = SubResource("AnimatedTexture_bdegv")
+texture = SubResource("AnimatedTexture_3uabp")
 
 [node name="Dialogue1" type="Label" parent="NPCs/Sprite2D12/Boy"]
 z_index = 25
@@ -11571,6 +11531,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("44_vp6m4")
 texture_progress = ExtResource("45_2diep")
 script = ExtResource("51_gnsp8")
+metadata/_edit_use_anchors_ = true
 
 [node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D11/Girl/TextureProgressBar"]
 stream = ExtResource("39_h7v0m")
@@ -11582,7 +11543,7 @@ volume_db = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D11/Girl"]
 position = Vector2(12.5, 21.5)
-shape = SubResource("RectangleShape2D_wkfup")
+shape = SubResource("RectangleShape2D_ij2jr")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D11/Girl"]
 z_index = 25
@@ -11610,15 +11571,16 @@ stream = ExtResource("44_57ou1")
 volume_db = -15.0
 pitch_scale = 1.5
 
-[node name="Sprite2D10" type="Sprite2D" parent="NPCs"]
+[node name="Sprite2D10" type="AnimatedSprite2D" parent="NPCs"]
 z_index = 15
 texture_filter = 1
 position = Vector2(921, -340)
-texture = SubResource("AnimatedTexture_ibjwo")
+sprite_frames = ExtResource("125_vfgtb")
+animation = &"walkoldman"
 script = ExtResource("53_k307t")
 
 [node name="walkTime" type="Timer" parent="NPCs/Sprite2D10"]
-wait_time = 30.0
+wait_time = 10.0
 one_shot = true
 
 [node name="OldMan" type="Area2D" parent="NPCs/Sprite2D10"]
@@ -11638,6 +11600,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("44_vp6m4")
 texture_progress = ExtResource("45_2diep")
 script = ExtResource("51_gnsp8")
+metadata/_edit_use_anchors_ = true
 
 [node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D10/OldMan/TextureProgressBar"]
 stream = ExtResource("39_h7v0m")
@@ -11649,7 +11612,7 @@ volume_db = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D10/OldMan"]
 position = Vector2(5, -10)
-shape = SubResource("RectangleShape2D_1xlhk")
+shape = SubResource("RectangleShape2D_ons7b")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D10/OldMan"]
 z_index = 25
@@ -11702,6 +11665,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("44_vp6m4")
 texture_progress = ExtResource("45_2diep")
 script = ExtResource("51_gnsp8")
+metadata/_edit_use_anchors_ = true
 
 [node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D9/Man3/TextureProgressBar"]
 stream = ExtResource("39_h7v0m")
@@ -11713,7 +11677,7 @@ volume_db = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D9/Man3"]
 position = Vector2(9, 14)
-shape = SubResource("RectangleShape2D_itvh7")
+shape = SubResource("RectangleShape2D_c4rxq")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D9/Man3"]
 z_index = 40
@@ -11764,6 +11728,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("44_vp6m4")
 texture_progress = ExtResource("45_2diep")
 script = ExtResource("51_gnsp8")
+metadata/_edit_use_anchors_ = true
 
 [node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D8/Trucker/TextureProgressBar"]
 stream = ExtResource("39_h7v0m")
@@ -11775,7 +11740,7 @@ volume_db = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D8/Trucker"]
 position = Vector2(-18, 12)
-shape = SubResource("RectangleShape2D_566as")
+shape = SubResource("RectangleShape2D_30w72")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D8/Trucker"]
 z_index = 30
@@ -11827,6 +11792,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("44_vp6m4")
 texture_progress = ExtResource("45_2diep")
 script = ExtResource("51_gnsp8")
+metadata/_edit_use_anchors_ = true
 
 [node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D7/Punk/TextureProgressBar"]
 stream = ExtResource("39_h7v0m")
@@ -11838,7 +11804,7 @@ volume_db = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D7/Punk"]
 position = Vector2(-5, 4)
-shape = SubResource("RectangleShape2D_7mseg")
+shape = SubResource("RectangleShape2D_x87gt")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D7/Punk"]
 z_index = 25
@@ -11890,6 +11856,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("44_vp6m4")
 texture_progress = ExtResource("45_2diep")
 script = ExtResource("51_gnsp8")
+metadata/_edit_use_anchors_ = true
 
 [node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D6/Lady/TextureProgressBar"]
 stream = ExtResource("39_h7v0m")
@@ -11901,7 +11868,7 @@ volume_db = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D6/Lady"]
 position = Vector2(-4.5, 14)
-shape = SubResource("RectangleShape2D_2y0k8")
+shape = SubResource("RectangleShape2D_3w7g0")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D6/Lady"]
 z_index = 25
@@ -11929,11 +11896,12 @@ stream = ExtResource("58_o5air")
 volume_db = -15.0
 pitch_scale = 1.15
 
-[node name="Sprite2D5" type="Sprite2D" parent="NPCs"]
+[node name="Sprite2D5" type="AnimatedSprite2D" parent="NPCs"]
 z_index = 15
 texture_filter = 1
 position = Vector2(1186, 285)
-texture = SubResource("AnimatedTexture_hgkw6")
+sprite_frames = ExtResource("134_wukuu")
+animation = &"lady"
 script = ExtResource("35_4egss")
 
 [node name="walkTime" type="Timer" parent="NPCs/Sprite2D5"]
@@ -11958,6 +11926,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("44_vp6m4")
 texture_progress = ExtResource("45_2diep")
 script = ExtResource("51_gnsp8")
+metadata/_edit_use_anchors_ = true
 
 [node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D5/Teenager/TextureProgressBar"]
 stream = ExtResource("39_h7v0m")
@@ -11969,7 +11938,7 @@ volume_db = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D5/Teenager"]
 position = Vector2(-21.5, -4)
-shape = SubResource("RectangleShape2D_k6qx2")
+shape = SubResource("RectangleShape2D_2djfn")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D5/Teenager"]
 z_index = 25
@@ -11997,11 +11966,13 @@ stream = ExtResource("58_o5air")
 volume_db = -15.0
 pitch_scale = 1.45
 
-[node name="Sprite2D" type="Sprite2D" parent="NPCs"]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="NPCs"]
 z_index = 15
 texture_filter = 1
 position = Vector2(76, 38)
-texture = SubResource("AnimatedTexture_o23ji")
+sprite_frames = ExtResource("136_u1360")
+animation = &"lady"
+frame_progress = 0.949327
 script = ExtResource("35_4egss")
 
 [node name="walkTime" type="Timer" parent="NPCs/Sprite2D"]
@@ -12026,6 +11997,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("44_vp6m4")
 texture_progress = ExtResource("45_2diep")
 script = ExtResource("51_gnsp8")
+metadata/_edit_use_anchors_ = true
 
 [node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D/Lady2/TextureProgressBar"]
 stream = ExtResource("39_h7v0m")
@@ -12037,7 +12009,7 @@ volume_db = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D/Lady2"]
 position = Vector2(13, 0.5)
-shape = SubResource("RectangleShape2D_djg7r")
+shape = SubResource("RectangleShape2D_s850q")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D/Lady2"]
 z_index = 25
@@ -12086,6 +12058,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("44_vp6m4")
 texture_progress = ExtResource("45_2diep")
 script = ExtResource("51_gnsp8")
+metadata/_edit_use_anchors_ = true
 
 [node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D2/Teenager2/TextureProgressBar"]
 stream = ExtResource("39_h7v0m")
@@ -12097,7 +12070,7 @@ volume_db = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D2/Teenager2"]
 position = Vector2(0, 8)
-shape = SubResource("RectangleShape2D_niocx")
+shape = SubResource("RectangleShape2D_vcwr3")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D2/Teenager2"]
 z_index = 30
@@ -12148,6 +12121,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("44_vp6m4")
 texture_progress = ExtResource("45_2diep")
 script = ExtResource("51_gnsp8")
+metadata/_edit_use_anchors_ = true
 
 [node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D3/Guy/TextureProgressBar"]
 stream = ExtResource("39_h7v0m")
@@ -12159,7 +12133,7 @@ volume_db = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D3/Guy"]
 position = Vector2(12, 16)
-shape = SubResource("RectangleShape2D_8f0o4")
+shape = SubResource("RectangleShape2D_gsihk")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D3/Guy"]
 z_index = 40
@@ -12188,11 +12162,12 @@ stream = ExtResource("54_uj8ai")
 volume_db = -15.0
 pitch_scale = 2.5
 
-[node name="Sprite2D4" type="Sprite2D" parent="NPCs"]
+[node name="Sprite2D4" type="AnimatedSprite2D" parent="NPCs"]
 z_index = 15
 texture_filter = 1
 position = Vector2(987, 169)
-texture = SubResource("AnimatedTexture_iprfs")
+sprite_frames = ExtResource("139_gvtv4")
+animation = &"new_animation"
 script = ExtResource("35_4egss")
 
 [node name="walkTime" type="Timer" parent="NPCs/Sprite2D4"]
@@ -12217,6 +12192,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("44_vp6m4")
 texture_progress = ExtResource("45_2diep")
 script = ExtResource("51_gnsp8")
+metadata/_edit_use_anchors_ = true
 
 [node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D4/Man2/TextureProgressBar"]
 stream = ExtResource("39_h7v0m")
@@ -12228,7 +12204,7 @@ volume_db = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D4/Man2"]
 position = Vector2(-2, 4.5)
-shape = SubResource("RectangleShape2D_a6ml6")
+shape = SubResource("RectangleShape2D_k7b5b")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D4/Man2"]
 z_index = 25
@@ -12282,6 +12258,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("44_vp6m4")
 texture_progress = ExtResource("45_2diep")
 script = ExtResource("51_gnsp8")
+metadata/_edit_use_anchors_ = true
 
 [node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D13/Man/TextureProgressBar"]
 stream = ExtResource("39_h7v0m")
@@ -12293,7 +12270,7 @@ volume_db = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D13/Man"]
 position = Vector2(0, 8)
-shape = SubResource("RectangleShape2D_8o3wu")
+shape = SubResource("RectangleShape2D_udk0f")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D13/Man"]
 z_index = 25
@@ -12321,15 +12298,16 @@ stream = ExtResource("54_uj8ai")
 volume_db = -15.0
 pitch_scale = 1.1
 
-[node name="Sprite2D14" type="Sprite2D" parent="NPCs"]
+[node name="Sprite2D14" type="AnimatedSprite2D" parent="NPCs"]
 z_index = 40
 texture_filter = 1
 position = Vector2(342, -84)
-texture = SubResource("AnimatedTexture_d4k3l")
+sprite_frames = ExtResource("141_wvuom")
+animation = &"oldman2"
 script = ExtResource("53_k307t")
 
 [node name="walkTime" type="Timer" parent="NPCs/Sprite2D14"]
-wait_time = 30.0
+wait_time = 20.0
 one_shot = true
 
 [node name="Oldman2" type="Area2D" parent="NPCs/Sprite2D14"]
@@ -12349,6 +12327,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("44_vp6m4")
 texture_progress = ExtResource("45_2diep")
 script = ExtResource("51_gnsp8")
+metadata/_edit_use_anchors_ = true
 
 [node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D14/Oldman2/TextureProgressBar"]
 stream = ExtResource("39_h7v0m")
@@ -12360,7 +12339,7 @@ volume_db = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D14/Oldman2"]
 position = Vector2(0, 9)
-shape = SubResource("RectangleShape2D_yeccl")
+shape = SubResource("RectangleShape2D_fvbc2")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D14/Oldman2"]
 z_index = 25
@@ -12412,6 +12391,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("44_vp6m4")
 texture_progress = ExtResource("45_2diep")
 script = ExtResource("51_gnsp8")
+metadata/_edit_use_anchors_ = true
 
 [node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D15/Scientist/TextureProgressBar"]
 stream = ExtResource("39_h7v0m")
@@ -12424,7 +12404,7 @@ pitch_scale = 1.25
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D15/Scientist"]
 position = Vector2(3, -0.5)
-shape = SubResource("RectangleShape2D_6h1rq")
+shape = SubResource("RectangleShape2D_ti258")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D15/Scientist"]
 z_index = 25
@@ -12462,16 +12442,9 @@ pitch_scale = 2.0
 [connection signal="timeout" from="UI/Control/Tutorial/Mouse-left/Timer2" to="UI/Control/Tutorial/Mouse-left/Mouse-middle" method="_on_timer_timeout"]
 [connection signal="timeout" from="UI/Control/Tutorial/Mouse-left/Timer2" to="Player" method="_on_tuttimer_timeout"]
 [connection signal="timeout" from="UI/Control/Tutorial/Mouse-left/Timer2" to="Player/Van/Cone/Shoot" method="_on_timer_2_timeout"]
-[connection signal="timeout" from="UI/Control/Tutorial/Mouse-left/Timer2" to="NPCs/Sprite2D12" method="_on_timer_timeout"]
 [connection signal="timeout" from="NPCs/Sprite2D12/walkingTime" to="NPCs/Sprite2D12" method="_on_walking_time_timeout"]
-[connection signal="area_entered" from="NPCs/Sprite2D12/Boy" to="Player/Van/Cone/Shoot" method="_on_area_entered"]
 [connection signal="area_entered" from="NPCs/Sprite2D12/Boy" to="NPCs/Sprite2D12/Boy/TextureProgressBar" method="_on_boy_area_entered"]
 [connection signal="body_entered" from="NPCs/Sprite2D12/Boy" to="NPCs/Sprite2D12/Boy" method="_on_body_entered"]
 [connection signal="body_exited" from="NPCs/Sprite2D12/Boy" to="NPCs/Sprite2D12/Boy" method="_on_body_exited"]
 [connection signal="timeout" from="NPCs/Sprite2D12/Boy/Aimtut/Tuttimer" to="NPCs/Sprite2D12/Boy/Aimtut" method="_on_tuttimer_timeout"]
 [connection signal="timeout" from="NPCs/Sprite2D12/Boy/Aimtut/Tuttimer2" to="NPCs/Sprite2D12/Boy/Aimtut" method="_on_tuttimer_2_timeout"]
-[connection signal="timeout" from="NPCs/Sprite2D10/walkTime" to="NPCs/Sprite2D12" method="_on_walk_time_timeout"]
-[connection signal="timeout" from="NPCs/Sprite2D5/walkTime" to="NPCs/Sprite2D12" method="_on_walk_time_timeout"]
-[connection signal="timeout" from="NPCs/Sprite2D/walkTime" to="NPCs/Sprite2D12" method="_on_walk_time_timeout"]
-[connection signal="timeout" from="NPCs/Sprite2D4/walkTime" to="NPCs/Sprite2D12" method="_on_walk_time_timeout"]
-[connection signal="timeout" from="NPCs/Sprite2D14/walkTime" to="NPCs/Sprite2D12" method="_on_walk_time_timeout"]

@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://djeq28f5k5id8"]
+
+[ext_resource type="Texture2D" uid="uid://dunrm0s3s5rkd" path="res://Assets/Visuals/Characters/Walking/tile109.png" id="1_25a33"]
+[ext_resource type="Texture2D" uid="uid://bcy14fj67kbd5" path="res://Assets/Visuals/Characters/Walking/tile108.png" id="2_6xb64"]
+
+[resource]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_25a33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6xb64")
+}],
+"loop": true,
+"name": &"walkboy",
+"speed": 2.0
+}]

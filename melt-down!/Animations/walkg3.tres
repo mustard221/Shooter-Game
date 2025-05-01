@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://mgprugt2a8br"]
+
+[ext_resource type="Texture2D" uid="uid://8gprwwkkfp85" path="res://Assets/Visuals/Characters/Walking/tile042.png" id="1_88olv"]
+[ext_resource type="Texture2D" uid="uid://chqab2gtc86eq" path="res://Assets/Visuals/Characters/Walking/tile043.png" id="2_y75mg"]
+
+[resource]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_88olv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_y75mg")
+}],
+"loop": true,
+"name": &"lady",
+"speed": 2.0
+}]

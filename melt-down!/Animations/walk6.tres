@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://i24im0hkfs15"]
+
+[ext_resource type="Texture2D" uid="uid://dpwiywwp3t1kq" path="res://Assets/Visuals/Characters/Walking/tile010.png" id="1_o6fg1"]
+[ext_resource type="Texture2D" uid="uid://b8sacpcd7ttem" path="res://Assets/Visuals/Characters/Walking/tile011.png" id="2_hnoln"]
+
+[resource]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_o6fg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hnoln")
+}],
+"loop": true,
+"name": &"oldman2",
+"speed": 5.0
+}]

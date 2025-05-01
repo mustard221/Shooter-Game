@@ -1,7 +1,6 @@
-extends Sprite2D
+extends AnimatedSprite2D
 
 @onready var timer: Timer = $walkingTime
-@onready var animated_texture: AnimatedTexture = self.texture
 
 var speed = 10 
 var can_move = false
@@ -15,9 +14,8 @@ func _physics_process(delta: float) -> void:
 		position.y += speed * delta 
 
 func _on_walking_time_timeout() -> void:
-	can_move = false
+	can_move = false 
 	freeze_animation()
 	
 func freeze_animation() -> void:
-	if animated_texture:
-		animated_texture.pause = true
+	stop()
