@@ -4,6 +4,7 @@ extends Label
 @onready var timeUp: AudioStreamPlayer = $"Bedside-clock-alarm-95792"
 @onready var music: AudioStreamPlayer = $end
 @onready var bgMusic: AudioStreamPlayer = $"../../../../Player/Van/bgmusic"
+@onready var clock_icon: Sprite2D = $"../Clock"
 
 @onready var customer_counter = get_node("../../../..")
 
@@ -33,18 +34,20 @@ func _process(delta: float) -> void:
 			if customer_counter.counter == 0:
 				counter_reached = true
 				ended_by_counter = true
-				
 				if is_instance_valid(music):
-					music.play()  # <-- Play music immediately when counter reached
-
-				end_game()  # Then end the game
-
+					music.play() 
+				end_game()  #ends game if counter is reached
+				
+		# timer volume is louder when 10 seconds left
+		if timer.time_left <= 10 and clock.volume_db != 2:
+			clock.volume_db = 2 
+			clock_icon.self_modulate = Color.RED
 
 func _on_timer_timeout() -> void:
 	if not ended_by_counter:
-		end_game()
+		end_game() #ends game if time is up
 
-func end_game() -> void:
+func end_game() -> void: #disabling game elements and adding end screen
 	if is_instance_valid(mouse1):
 		mouse1.queue_free()
 	if is_instance_valid(timer):
@@ -78,7 +81,7 @@ func end_game() -> void:
 		node.set_process(false)
 		node.set_physics_process(false)
 		
-func _on_button_pressed() -> void:
+func _on_button_pressed() -> void: # creating the end screen
 	if is_instance_valid(timeUp):
 		timeUp.stop()
 		

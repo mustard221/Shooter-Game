@@ -19,15 +19,18 @@ func _ready():
 	add_child(timer)
 	create_tween()
 	
-	sound.volume_db = 0  # full volume
 	sound.stop()
 
 func _on_boy_area_entered(area: Area2D) -> void:
-	if area.name == "icecream" and not is_done:
+	if area.name == "icecream" and not is_done: #detecting when being shot
 		timer.start()
 		shot()
 		if not sound.playing:
+			sound.volume_db = 0 
+			sound.pitch_scale = 5.0
 			sound.play()
+			sound.volume_db = 0 
+			sound.pitch_scale = 5.0
 
 func shot():
 	print("shot fired")

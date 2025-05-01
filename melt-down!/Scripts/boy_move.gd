@@ -6,6 +6,7 @@ var speed = 10
 var can_move = false
 
 func _on_timer_timeout() -> void:
+	play()
 	can_move = true
 	timer.start()
 

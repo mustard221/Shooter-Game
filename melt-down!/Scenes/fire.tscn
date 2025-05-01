@@ -32,6 +32,9 @@ gravity_scale = 0.0
 script = ExtResource("2_vw34e")
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+modulate = Color(1, 1, 1, 0.784314)
+z_index = -35
+scale = Vector2(0.9, 0.9)
 texture = ExtResource("1_71ecs")
 
 [node name="Timer" type="Timer" parent="RigidBody2D"]
@@ -39,7 +42,7 @@ one_shot = true
 autostart = true
 
 [node name="Timer2" type="Timer" parent="RigidBody2D"]
-wait_time = 0.15
+wait_time = 0.1
 one_shot = true
 autostart = true
 

@@ -4,6 +4,7 @@ var speed = 10
 var can_move = true
 
 func _ready() -> void:
+	play()
 	var timer = get_node("walkTime")
 	
 	if timer and timer is Timer:

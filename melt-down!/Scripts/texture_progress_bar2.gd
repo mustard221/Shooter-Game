@@ -9,7 +9,7 @@ var timer: Timer
 var is_done: bool = false
 
 func _ready():
-	add_to_group("progress_bars") 
+	add_to_group("progress_bars")
 	
 	if particles:
 		particles.emitting = false
@@ -18,7 +18,6 @@ func _ready():
 	timer.wait_time = 0.1
 	add_child(timer)
 	
-	sound.volume_db = 0  # full volume
 	sound.stop()
 	
 	var area = get_parent()
@@ -30,8 +29,12 @@ func _on_area_entered(area: Area2D) -> void:
 		timer.start()
 		shot()
 		if not sound.playing:
+			sound.volume_db = 0  
+			sound.pitch_scale = 5.0 
 			sound.play()
-			
+			sound.volume_db = 0  # full volume
+			sound.pitch_scale = 5.0
+
 func shot():
 	print("shot fired")
 	value += 2
