@@ -1,4 +1,4 @@
-[gd_scene load_steps=214 format=3 uid="uid://ccfosk8ja5712"]
+[gd_scene load_steps=215 format=3 uid="uid://ccfosk8ja5712"]
 
 [ext_resource type="Script" path="res://Scripts/counter.gd" id="1_5tyly"]
 [ext_resource type="Texture2D" uid="uid://o1kjsdn1d7ik" path="res://Assets/Visuals/UI/More ui/Buttons/box2.png" id="1_cfb0c"]
@@ -137,6 +137,7 @@
 [ext_resource type="Texture2D" uid="uid://kjn38g5h12gx" path="res://Assets/Visuals/Vehicles/tile000.png" id="116_iltc7"]
 [ext_resource type="Texture2D" uid="uid://6e1f8asiuoof" path="res://Assets/Visuals/Vehicles/van2.png" id="117_wkpwm"]
 [ext_resource type="Texture2D" uid="uid://df0cd8xg713pj" path="res://Assets/Visuals/Vehicles/tile000export.png" id="118_jluiu"]
+[ext_resource type="Material" uid="uid://b8tdsxt454cv6" path="res://Animations/particles.tres" id="122_uuoi1"]
 [ext_resource type="SpriteFrames" uid="uid://cjhtu13n12eqx" path="res://Animations/walkg2.tres" id="125_vfgtb"]
 [ext_resource type="SpriteFrames" uid="uid://mgprugt2a8br" path="res://Animations/walkg3.tres" id="134_wukuu"]
 [ext_resource type="SpriteFrames" uid="uid://dowhoqv4q5llx" path="res://Animations/walkg4.tres" id="136_u1360"]
@@ -11429,6 +11430,17 @@ pitch_scale = 5.0
 stream = ExtResource("40_gmqki")
 volume_db = 5.0
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="NPCs/Sprite2D12/Boy/TextureProgressBar"]
+z_index = 1000
+position = Vector2(20, 39)
+emitting = false
+amount = 25
+process_material = ExtResource("122_uuoi1")
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.1
+randomness = 0.5
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D12/Boy"]
 position = Vector2(4.5, -7)
 shape = SubResource("RectangleShape2D_0ieou")
@@ -11541,6 +11553,17 @@ pitch_scale = 5.0
 stream = ExtResource("40_gmqki")
 volume_db = 5.0
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="NPCs/Sprite2D11/Girl/TextureProgressBar"]
+z_index = 1000
+position = Vector2(21, 38)
+emitting = false
+amount = 25
+process_material = ExtResource("122_uuoi1")
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.1
+randomness = 0.5
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D11/Girl"]
 position = Vector2(12.5, 21.5)
 shape = SubResource("RectangleShape2D_ij2jr")
@@ -11610,6 +11633,17 @@ pitch_scale = 5.0
 stream = ExtResource("40_gmqki")
 volume_db = 5.0
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="NPCs/Sprite2D10/OldMan/TextureProgressBar"]
+z_index = 1000
+position = Vector2(19, 40)
+emitting = false
+amount = 25
+process_material = ExtResource("122_uuoi1")
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.1
+randomness = 0.5
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D10/OldMan"]
 position = Vector2(5, -10)
 shape = SubResource("RectangleShape2D_ons7b")
@@ -11675,6 +11709,17 @@ pitch_scale = 5.0
 stream = ExtResource("40_gmqki")
 volume_db = 5.0
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="NPCs/Sprite2D9/Man3/TextureProgressBar"]
+z_index = 1000
+position = Vector2(20, 43)
+emitting = false
+amount = 25
+process_material = ExtResource("122_uuoi1")
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.1
+randomness = 0.5
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D9/Man3"]
 position = Vector2(9, 14)
 shape = SubResource("RectangleShape2D_c4rxq")
@@ -11737,6 +11782,17 @@ pitch_scale = 5.0
 [node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D8/Trucker/TextureProgressBar"]
 stream = ExtResource("40_gmqki")
 volume_db = 5.0
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="NPCs/Sprite2D8/Trucker/TextureProgressBar"]
+z_index = 1000
+position = Vector2(19, 40)
+emitting = false
+amount = 25
+process_material = ExtResource("122_uuoi1")
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.1
+randomness = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D8/Trucker"]
 position = Vector2(-18, 12)
@@ -11802,6 +11858,17 @@ pitch_scale = 5.0
 stream = ExtResource("40_gmqki")
 volume_db = 5.0
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="NPCs/Sprite2D7/Punk/TextureProgressBar"]
+z_index = 1000
+position = Vector2(19, 43)
+emitting = false
+amount = 25
+process_material = ExtResource("122_uuoi1")
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.1
+randomness = 0.5
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D7/Punk"]
 position = Vector2(-5, 4)
 shape = SubResource("RectangleShape2D_x87gt")
@@ -11865,6 +11932,17 @@ pitch_scale = 5.0
 [node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D6/Lady/TextureProgressBar"]
 stream = ExtResource("40_gmqki")
 volume_db = 5.0
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="NPCs/Sprite2D6/Lady/TextureProgressBar"]
+z_index = 1000
+position = Vector2(20, 40)
+emitting = false
+amount = 25
+process_material = ExtResource("122_uuoi1")
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.1
+randomness = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D6/Lady"]
 position = Vector2(-4.5, 14)
@@ -11935,6 +12013,17 @@ pitch_scale = 5.0
 [node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D5/Teenager/TextureProgressBar"]
 stream = ExtResource("40_gmqki")
 volume_db = 5.0
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="NPCs/Sprite2D5/Teenager/TextureProgressBar"]
+z_index = 1000
+position = Vector2(18, 42)
+emitting = false
+amount = 25
+process_material = ExtResource("122_uuoi1")
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.1
+randomness = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D5/Teenager"]
 position = Vector2(-21.5, -4)
@@ -12007,6 +12096,17 @@ pitch_scale = 5.0
 stream = ExtResource("40_gmqki")
 volume_db = 5.0
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="NPCs/Sprite2D/Lady2/TextureProgressBar"]
+z_index = 1000
+position = Vector2(21, 39)
+emitting = false
+amount = 25
+process_material = ExtResource("122_uuoi1")
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.1
+randomness = 0.5
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D/Lady2"]
 position = Vector2(13, 0.5)
 shape = SubResource("RectangleShape2D_s850q")
@@ -12067,6 +12167,17 @@ pitch_scale = 5.0
 [node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D2/Teenager2/TextureProgressBar"]
 stream = ExtResource("40_gmqki")
 volume_db = 5.0
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="NPCs/Sprite2D2/Teenager2/TextureProgressBar"]
+z_index = 1000
+position = Vector2(22, 42)
+emitting = false
+amount = 25
+process_material = ExtResource("122_uuoi1")
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.1
+randomness = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D2/Teenager2"]
 position = Vector2(0, 8)
@@ -12130,6 +12241,17 @@ pitch_scale = 5.0
 [node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D3/Guy/TextureProgressBar"]
 stream = ExtResource("40_gmqki")
 volume_db = 5.0
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="NPCs/Sprite2D3/Guy/TextureProgressBar"]
+z_index = 1000
+position = Vector2(24, 41)
+emitting = false
+amount = 25
+process_material = ExtResource("122_uuoi1")
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.1
+randomness = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D3/Guy"]
 position = Vector2(12, 16)
@@ -12202,6 +12324,17 @@ pitch_scale = 5.0
 stream = ExtResource("40_gmqki")
 volume_db = 5.0
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="NPCs/Sprite2D4/Man2/TextureProgressBar"]
+z_index = 1000
+position = Vector2(20, 39)
+emitting = false
+amount = 25
+process_material = ExtResource("122_uuoi1")
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.1
+randomness = 0.5
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D4/Man2"]
 position = Vector2(-2, 4.5)
 shape = SubResource("RectangleShape2D_k7b5b")
@@ -12267,6 +12400,17 @@ pitch_scale = 5.0
 [node name="Yay-6120" type="AudioStreamPlayer" parent="NPCs/Sprite2D13/Man/TextureProgressBar"]
 stream = ExtResource("40_gmqki")
 volume_db = 5.0
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="NPCs/Sprite2D13/Man/TextureProgressBar"]
+z_index = 1000
+position = Vector2(23, 42)
+emitting = false
+amount = 25
+process_material = ExtResource("122_uuoi1")
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.1
+randomness = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D13/Man"]
 position = Vector2(0, 8)
@@ -12337,6 +12481,17 @@ pitch_scale = 5.0
 stream = ExtResource("40_gmqki")
 volume_db = 5.0
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="NPCs/Sprite2D14/Oldman2/TextureProgressBar"]
+z_index = 1000
+position = Vector2(21, 44)
+emitting = false
+amount = 25
+process_material = ExtResource("122_uuoi1")
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.1
+randomness = 0.5
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D14/Oldman2"]
 position = Vector2(0, 9)
 shape = SubResource("RectangleShape2D_fvbc2")
@@ -12402,6 +12557,17 @@ stream = ExtResource("40_gmqki")
 volume_db = 5.0
 pitch_scale = 1.25
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="NPCs/Sprite2D15/Scientist/TextureProgressBar"]
+z_index = 1000
+position = Vector2(20, 41)
+emitting = false
+amount = 25
+process_material = ExtResource("122_uuoi1")
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.1
+randomness = 0.5
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D15/Scientist"]
 position = Vector2(3, -0.5)
 shape = SubResource("RectangleShape2D_ti258")
@@ -12442,6 +12608,7 @@ pitch_scale = 2.0
 [connection signal="timeout" from="UI/Control/Tutorial/Mouse-left/Timer2" to="UI/Control/Tutorial/Mouse-left/Mouse-middle" method="_on_timer_timeout"]
 [connection signal="timeout" from="UI/Control/Tutorial/Mouse-left/Timer2" to="Player" method="_on_tuttimer_timeout"]
 [connection signal="timeout" from="UI/Control/Tutorial/Mouse-left/Timer2" to="Player/Van/Cone/Shoot" method="_on_timer_2_timeout"]
+[connection signal="timeout" from="UI/Control/Tutorial/Mouse-left/Timer2" to="NPCs/Sprite2D12" method="_on_timer_timeout"]
 [connection signal="timeout" from="NPCs/Sprite2D12/walkingTime" to="NPCs/Sprite2D12" method="_on_walking_time_timeout"]
 [connection signal="area_entered" from="NPCs/Sprite2D12/Boy" to="NPCs/Sprite2D12/Boy/TextureProgressBar" method="_on_boy_area_entered"]
 [connection signal="body_entered" from="NPCs/Sprite2D12/Boy" to="NPCs/Sprite2D12/Boy" method="_on_body_entered"]

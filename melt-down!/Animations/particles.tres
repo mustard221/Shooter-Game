@@ -1,0 +1,20 @@
+[gd_resource type="ParticleProcessMaterial" format=3 uid="uid://b8tdsxt454cv6"]
+
+[resource]
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 20.0
+angle_min = -180.0
+angle_max = 180.0
+inherit_velocity_ratio = 5.0
+direction = Vector3(100, 100, 0)
+spread = 180.0
+angular_velocity_min = -720.0
+angular_velocity_max = 720.0
+radial_velocity_min = -23.95
+radial_velocity_max = 23.95
+gravity = Vector3(0, 98, 0)
+color = Color(0.976471, 0.298039, 0.858824, 0.909804)
+hue_variation_min = -1.0
+hue_variation_max = 1.0
