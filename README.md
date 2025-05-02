@@ -77,8 +77,8 @@ Visual and audio elements are implemented to guide players and provide a more en
     Original art made with Aseprite
     Gameplay video made with Clipchamp.
 
-What I Am Most Proud of in the Assignment:
+## What I Am Most Proud of in the Assignment:
 Learning more, new skills and increasing my comfortability with using Godot. I also quite liked the theme I went for and overall enjoyed creating the game.
 
-What I Learned:
+## What I Learned:
 I learned many new elements within Godot, such as having a greater understanding of different nodes and mechanics I hadn't used much before. I've gotten a much stronger foundation in using Godot.
