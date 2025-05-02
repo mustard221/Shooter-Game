@@ -33,15 +33,15 @@ The game’s points are earned by spreading happiness; feeding ice cream to the 
 
 ## Instructions for Use:
 
-The game will begin with a basic UI tutorial, explaining the mechanics and goal of the game.
+The game begins with a short UI tutorial, explaining the mechanics and goal of the game.
 
 Controls are as follows:
 - WASD to drive and steer
 - Left click to shoot
-- Use mouse movement to aim
+- Mouse to aim
 - Hold "E" to make another batch of ice cream and reload the turret
 
-Simply find customers and shoot ice cream towards them until their heart icon is filled and they are happy, you must help as many people as possible before time runs out!
+Simply find customers and shoot ice cream towards them until their heart icon is filled and they are satisfied, you must help as many people as possible before time runs out!
 
 
 ## How It Works:
@@ -52,14 +52,16 @@ Visual and audio elements are implemented to guide players and provide a more en
 
 ## List of Classes/Assets & References in the Project:
  
-    Game made using Godot.
+    Game Engine: 
+    Godot
      
-    Scripts are self-written, with some guidance mainly using "Godot Docs" & "Godot Forum".
+    Scripts: 
+    Self-written with reference from "Godot Docs" & "Godot Forum".
     
-    Music/Sound are free-to-use assets from "Pixabay.com" and "Freesound.org".
+    Music/Sound: 
+    Free-to-use assets from "Pixabay.com" and "Freesound.org".
     
-    Links to visual assets used:
-    
+    Visuals:
     UI: 
     - https://bdragon1727.itch.io/basic-pixel-gui-and-buttons-pack-2
     - https://antrixglow98.itch.io/basicsbarsandicons
@@ -72,10 +74,11 @@ Visual and audio elements are implemented to guide players and provide a more en
     Environment:
     - https://nyknck.itch.io/citypackpixelart
 
-    Remaining visual assets were made using Aseprite.
+    Original art made with Aseprite
+    Gameplay video made with Clipchamp.
 
 What I Am Most Proud of in the Assignment:
 Learning more, new skills and increasing my comfortability with using Godot. I also quite liked the theme I went for and overall enjoyed creating the game.
 
 What I Learned:
-I learned many new elements within Godot, such as having a greater understanding of different nodes I hadn't really used before and figuring out new ways to code things.
+I learned many new elements within Godot, such as having a greater understanding of different nodes and mechanics I hadn't used much before. I've gotten a much stronger foundation in using Godot.
