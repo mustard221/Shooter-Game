@@ -1,23 +1,23 @@
 Laila Marie Bueno Roche / C24432034 / Game Design
 
-#Melt Down!
+# Melt Down!
 
 
-Video:
+## Video:
 
 (YouTube link)
 
-Screenshots:
+## Screenshots:
 
 
-Description of the Project:
+## Description of the Project:
 
 "Melt Down!" is a chirpy ice cream shooter where you take on the role of an ice cream van, spreading sweetness and positivity to the world. Armed with an ice cream turret, you roam through a sun-scorched city during a summer heatwave, serving ice cream to the thirsty and weary citizens of the city.
 
 The game’s points are earned by spreading happiness; feeding ice cream to the citizens and creating harmony. The more joy you bring, the better you'll do!
 
 
-Instructions for Use:
+## Instructions for Use:
 
 The game will begin with a basic UI tutorial, explaining the mechanics and goal of the game.
 
@@ -30,13 +30,13 @@ Controls are as follows:
 Simply find customers and shoot ice cream towards them until their heart icon is filled and they are happy, you must help as many people as possible before time runs out!
 
 
-How It Works:
+## How It Works:
 The game works by detecting player input (Keyboard & Mouse) to move, aim and shoot. NPCs have progress bars that fill when the ice cream sprites collide with them, then once full they are subtracted from the counter and added into the end-of-game points calculation. A timer is displayed and represents the time limit of the game, once it's over, the game ends unless all NPCs have been served.
 
 Visual and audio elements are implemented to guide players and provide a more enjoyable experience, such as dialogue, particles, sound effects and more!
 
 
-List of Classes/Assets & References in the Project:
+## List of Classes/Assets & References in the Project:
  
     Game made using Godot.
      
