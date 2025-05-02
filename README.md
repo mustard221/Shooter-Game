@@ -8,19 +8,19 @@ Laila Marie Bueno Roche / C24432034 / Game Design
 [(YouTube link)](https://youtu.be/cAXgadR0QfU)
 
 ## Screenshots:
-Start Screen Menu
+### Start Screen Menu
 <img width="808" alt="Screenshot 2025-05-02 151233" src="https://github.com/user-attachments/assets/6dd88b69-fb69-42bc-8096-6788bff4280e" />
 
-Tutorial Snippet
+### Tutorial Snippet
 <img width="811" alt="Screenshot 2025-05-02 151313" src="https://github.com/user-attachments/assets/5eb82852-6189-4c87-b277-4615892784e1" />
 
-Gameplay
+### Gameplay
 <img width="807" alt="Screenshot 2025-05-02 151428" src="https://github.com/user-attachments/assets/ccae1a58-9390-45f2-b4fe-dc895c7533fb" />
 
-Game Over Screen
+### Game Over Screen
 <img width="811" alt="Screenshot 2025-05-02 151827" src="https://github.com/user-attachments/assets/cfa78764-2ae5-4add-8de0-a0c672483724" />
 
-End Screen Menu / Score
+### End Screen Menu / Score
 <img width="809" alt="Screenshot 2025-05-02 151843" src="https://github.com/user-attachments/assets/43ef1bcf-6fe9-4f2e-9e07-963ad5c42c80" />
 
 
