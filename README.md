@@ -1,1 +1,1 @@
-This branch includes all game files and working progress.
+This branch includes all game files and work progress.
