@@ -84,4 +84,4 @@ Learning more, new skills and increasing my comfortability with using Godot. I a
 I learned many new elements within Godot, such as having a greater understanding of different nodes and mechanics I hadn't used much before. I've gotten a much stronger foundation in using Godot.
 
 ## Game Design Document:
-[(GDD Link)](https://tudublin-my.sharepoint.com/:w:/g/personal/c24432034_mytudublin_ie/EV7xZYBmOiJPky98xU02kNYB6ZYz1-erQY7l6Lpgi_-9vw?e=XckWDK)
+[(GDD Link)](https://tudublin-my.sharepoint.com/:w:/g/personal/c24432034_mytudublin_ie/EV7xZYBmOiJPky98xU02kNYB6ZYz1-erQY7l6Lpgi_-9vw?e=zmG4nJ)
