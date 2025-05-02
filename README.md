@@ -5,10 +5,18 @@ Laila Marie Bueno Roche / C24432034 / Game Design
 
 ## Video:
 
-(YouTube link)
+[(YouTube link)](https://youtu.be/cAXgadR0QfU)
 
 ## Screenshots:
+<img width="808" alt="Screenshot 2025-05-02 151233" src="https://github.com/user-attachments/assets/6dd88b69-fb69-42bc-8096-6788bff4280e" />
 
+<img width="811" alt="Screenshot 2025-05-02 151313" src="https://github.com/user-attachments/assets/5eb82852-6189-4c87-b277-4615892784e1" />
+
+<img width="807" alt="Screenshot 2025-05-02 151428" src="https://github.com/user-attachments/assets/ccae1a58-9390-45f2-b4fe-dc895c7533fb" />
+
+<img width="811" alt="Screenshot 2025-05-02 151827" src="https://github.com/user-attachments/assets/cfa78764-2ae5-4add-8de0-a0c672483724" />
+
+<img width="809" alt="Screenshot 2025-05-02 151843" src="https://github.com/user-attachments/assets/43ef1bcf-6fe9-4f2e-9e07-963ad5c42c80" />
 
 ## Description of the Project:
 
@@ -59,7 +67,6 @@ Visual and audio elements are implemented to guide players and provide a more en
     - https://nyknck.itch.io/citypackpixelart
 
     Remaining visual assets were made using Aseprite.
-
 
 What I Am Most Proud of in the Assignment:
 
