@@ -36,7 +36,7 @@ The game’s points are earned by spreading happiness; feeding ice cream to the 
 The game begins with a short UI tutorial, explaining the mechanics and goal of the game.
 
 Controls are as follows:
-- WASD to drive and steer
+- "WASD" to drive and steer
 - Left click to shoot
 - Mouse to aim
 - Hold "E" to make another batch of ice cream and reload the turret
@@ -82,3 +82,6 @@ Learning more, new skills and increasing my comfortability with using Godot. I a
 
 ## What I Learned:
 I learned many new elements within Godot, such as having a greater understanding of different nodes and mechanics I hadn't used much before. I've gotten a much stronger foundation in using Godot.
+
+## Game Design Document:
+[(GDD Link)](https://tudublin-my.sharepoint.com/:w:/g/personal/c24432034_mytudublin_ie/EV7xZYBmOiJPky98xU02kNYB6ZYz1-erQY7l6Lpgi_-9vw?e=XckWDK)
