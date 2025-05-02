@@ -8,15 +8,21 @@ Laila Marie Bueno Roche / C24432034 / Game Design
 [(YouTube link)](https://youtu.be/cAXgadR0QfU)
 
 ## Screenshots:
+Start Screen Menu
 <img width="808" alt="Screenshot 2025-05-02 151233" src="https://github.com/user-attachments/assets/6dd88b69-fb69-42bc-8096-6788bff4280e" />
 
+Tutorial Snippet
 <img width="811" alt="Screenshot 2025-05-02 151313" src="https://github.com/user-attachments/assets/5eb82852-6189-4c87-b277-4615892784e1" />
 
+Gameplay
 <img width="807" alt="Screenshot 2025-05-02 151428" src="https://github.com/user-attachments/assets/ccae1a58-9390-45f2-b4fe-dc895c7533fb" />
 
+Game Over Screen
 <img width="811" alt="Screenshot 2025-05-02 151827" src="https://github.com/user-attachments/assets/cfa78764-2ae5-4add-8de0-a0c672483724" />
 
+End Screen Menu / Score
 <img width="809" alt="Screenshot 2025-05-02 151843" src="https://github.com/user-attachments/assets/43ef1bcf-6fe9-4f2e-9e07-963ad5c42c80" />
+
 
 ## Description of the Project:
 
@@ -69,6 +75,7 @@ Visual and audio elements are implemented to guide players and provide a more en
     Remaining visual assets were made using Aseprite.
 
 What I Am Most Proud of in the Assignment:
-
+Learning more, new skills and increasing my comfortability with using Godot. I also quite liked the theme I went for and overall enjoyed creating the game.
 
 What I Learned:
+I learned many new elements within Godot, such as having a greater understanding of different nodes I hadn't really used before and figuring out new ways to code things.
