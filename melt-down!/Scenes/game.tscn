@@ -364,43 +364,43 @@ frame_2/texture = ExtResource("41_74700")
 frame_2/duration = 0.5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ij2jr"]
-size = Vector2(65, 63)
+size = Vector2(73, 73)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ons7b"]
-size = Vector2(86, 51)
+size = Vector2(86, 66.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c4rxq"]
 size = Vector2(33, 53)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_30w72"]
-size = Vector2(56, 44)
+size = Vector2(73, 65)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x87gt"]
-size = Vector2(42, 49)
+size = Vector2(55, 49)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3w7g0"]
-size = Vector2(63, 48)
+size = Vector2(63, 67)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2djfn"]
 size = Vector2(63, 42)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s850q"]
-size = Vector2(46, 65)
+size = Vector2(61, 74)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vcwr3"]
-size = Vector2(48, 36)
+size = Vector2(48, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gsihk"]
-size = Vector2(44, 52)
+size = Vector2(67, 71)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k7b5b"]
 size = Vector2(66, 59)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udk0f"]
-size = Vector2(83, 59)
+size = Vector2(112.5, 59)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fvbc2"]
-size = Vector2(58, 38)
+size = Vector2(58, 53)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ti258"]
 size = Vector2(64, 45)
@@ -648,28 +648,29 @@ texture_progress = ExtResource("8_jilws")
 z_index = -1
 texture_filter = 1
 layout_mode = 0
-offset_left = 972.0
-offset_top = 283.0
-offset_right = 1602.0
-offset_bottom = 513.0
+offset_left = 1442.0
+offset_top = 300.0
+offset_right = 2315.0
+offset_bottom = 724.0
 texture = ExtResource("9_vs8x1")
 stretch_mode = 4
 
 [node name="Icon144" type="Sprite2D" parent="UI/Control/Shoot"]
 z_index = 50
 texture_filter = 1
-position = Vector2(-64, 110)
+position = Vector2(-68, 145)
 scale = Vector2(4, 4)
 texture = SubResource("AnimatedTexture_quf3a")
 
 [node name="Instruction" type="Label" parent="UI/Control/Shoot"]
 layout_mode = 0
-offset_left = 11.0
-offset_top = 45.0
-offset_right = 971.0
-offset_bottom = 176.0
-text = " Hold \"E\" to refill 
-   the ice-cream"
+offset_left = 46.0
+offset_top = 51.0
+offset_right = 1006.0
+offset_bottom = 249.0
+text = "   Hold \"E\" to refill! 
+ You can fire once you've 
+finished making the batch."
 label_settings = ExtResource("13_y7x3u")
 
 [node name="Tutorial" type="Label" parent="UI/Control"]
@@ -830,6 +831,8 @@ pitch_scale = 0.75
 [node name="World" type="Node2D" parent="."]
 z_index = 10
 position = Vector2(590, 47)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Buildings" type="Node2D" parent="World"]
 position = Vector2(-215, 154)
@@ -11309,7 +11312,7 @@ one_shot = true
 [node name="Icon060" type="Sprite2D" parent="NPCs/Sprite2D12/Boy/Aimtut"]
 z_index = 70
 texture_filter = 1
-position = Vector2(-72, 104)
+position = Vector2(-265, 60.0001)
 scale = Vector2(4, 4)
 texture = SubResource("AnimatedTexture_3uabp")
 
@@ -11384,7 +11387,7 @@ explosiveness = 0.1
 randomness = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D11/Girl"]
-position = Vector2(12.5, 21.5)
+position = Vector2(16.5, 26.5)
 shape = SubResource("RectangleShape2D_ij2jr")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D11/Girl"]
@@ -11463,7 +11466,7 @@ explosiveness = 0.1
 randomness = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D10/OldMan"]
-position = Vector2(5, -10)
+position = Vector2(5, -17.75)
 shape = SubResource("RectangleShape2D_ons7b")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D10/OldMan"]
@@ -11611,7 +11614,7 @@ explosiveness = 0.1
 randomness = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D8/Trucker"]
-position = Vector2(-18, 12)
+position = Vector2(-26.5, 22.5)
 shape = SubResource("RectangleShape2D_30w72")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D8/Trucker"]
@@ -11685,7 +11688,7 @@ explosiveness = 0.1
 randomness = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D7/Punk"]
-position = Vector2(-5, 4)
+position = Vector2(-11.5, 4)
 shape = SubResource("RectangleShape2D_x87gt")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D7/Punk"]
@@ -11759,7 +11762,7 @@ explosiveness = 0.1
 randomness = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D6/Lady"]
-position = Vector2(-4.5, 14)
+position = Vector2(-4.5, 23.5)
 shape = SubResource("RectangleShape2D_3w7g0")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D6/Lady"]
@@ -11851,15 +11854,15 @@ offset_right = 170.0
 offset_bottom = 22.0
 scale = Vector2(0.5, 0.5)
 theme_override_fonts/font = ExtResource("38_wyj3j")
-text = "I’d trade my 
-life savings for 
-ice-cream."
+text = "I would trade 
+my life savings 
+for ice-cream."
 label_settings = ExtResource("42_w5r75")
 metadata/_edit_use_anchors_ = true
 
 [node name="Text-export" type="Sprite2D" parent="NPCs/Sprite2D5/Teenager/Dialogue"]
 z_index = -1
-position = Vector2(44, 24)
+position = Vector2(46, 18)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("43_5hayd")
 
@@ -11920,7 +11923,7 @@ explosiveness = 0.1
 randomness = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D/Lady2"]
-position = Vector2(13, 0.5)
+position = Vector2(20.5, 5)
 shape = SubResource("RectangleShape2D_s850q")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D/Lady2"]
@@ -11969,6 +11972,7 @@ fill_mode = 3
 nine_patch_stretch = true
 texture_under = ExtResource("44_vp6m4")
 texture_progress = ExtResource("45_2diep")
+script = ExtResource("51_gnsp8")
 metadata/_edit_use_anchors_ = true
 
 [node name="fill" type="AudioStreamPlayer" parent="NPCs/Sprite2D2/Teenager2/TextureProgressBar"]
@@ -11990,7 +11994,7 @@ explosiveness = 0.1
 randomness = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D2/Teenager2"]
-position = Vector2(0, 8)
+position = Vector2(0, 14)
 shape = SubResource("RectangleShape2D_vcwr3")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D2/Teenager2"]
@@ -12063,7 +12067,7 @@ explosiveness = 0.1
 randomness = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D3/Guy"]
-position = Vector2(12, 16)
+position = Vector2(23.5, 25.5)
 shape = SubResource("RectangleShape2D_gsihk")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D3/Guy"]
@@ -12156,7 +12160,7 @@ offset_right = 179.0
 offset_bottom = 26.0
 scale = Vector2(0.5, 0.5)
 theme_override_fonts/font = ExtResource("38_wyj3j")
-text = "I hope there’s
+text = "I hope for
 a hero with 
 some ice-cream."
 label_settings = ExtResource("42_w5r75")
@@ -12165,7 +12169,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Text-export" type="Sprite2D" parent="NPCs/Sprite2D4/Man2/Dialogue"]
 z_index = -1
-position = Vector2(42, 26)
+position = Vector2(44, 18)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("43_5hayd")
 
@@ -12220,7 +12224,7 @@ explosiveness = 0.1
 randomness = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D13/Man"]
-position = Vector2(0, 8)
+position = Vector2(14.75, 8)
 shape = SubResource("RectangleShape2D_udk0f")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D13/Man"]
@@ -12299,7 +12303,7 @@ explosiveness = 0.1
 randomness = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Sprite2D14/Oldman2"]
-position = Vector2(0, 9)
+position = Vector2(0, 16.5)
 shape = SubResource("RectangleShape2D_fvbc2")
 
 [node name="Dialogue" type="Label" parent="NPCs/Sprite2D14/Oldman2"]
